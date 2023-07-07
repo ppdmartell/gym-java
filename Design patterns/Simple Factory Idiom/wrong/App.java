@@ -1,4 +1,4 @@
-/* This approach is wrong because the Shelter class is open for modifications which goes against the Open/Closed design principle */
+/* This approach is wrong because the Shelter class is open for modifications which violates the Single Responsibility and Open/Closed design principles*/
 
 public class App {
 
@@ -18,6 +18,7 @@ class Shelter {
 		Animal animal = null;
 		if(request.equals("cat")) animal = new Cat();
 		if(request.equals("dog")) animal = new Dog();
+		//prepare for delivery to the new owner actions
 		return animal;
 	}
 
