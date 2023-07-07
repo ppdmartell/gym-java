@@ -1,0 +1,137 @@
+Java
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1- Design principles (SOLID) and Design patterns
+2- Go through collections. How are they internally implemented. Which collections are used for a certain approach. Equals and hashCode contract.
+3- Executor framework. Thread pool
+4- Futures
+5- Multi-threading. Concurrency and paralellism
+6- Comparable and Comparator
+7- Locks
+8- Lazy and eager initialization in simple Java code
+9- Lambdas and stream framework(lambdas: Consumer, BiConsumer, Supplier, Predicate). Lazy streams
+10- Singleton, Builder, Abstract factory, Adapter, Decorator, Proxy, Facade, ...
+11- How to make an immutable object in Java
+12- Difference between using Iterator on a Map and an ArrayList
+13- Difference between using Iterator on a Set and an ArrayList
+14- Learn about the Callable interface and use of futures, completable futures
+15- ScheduledExecutorService, ExecutorService and cronjobs (see docs.oracle link provided)
+16- Multithreading see about join(), notify(), locks, deadlocks, starvation. Read about general concurrent programming. What are monitors, semaphors and locks. Notify and notifyAll methods. Synchronize and volatile. Fork/join latch barrier. Thread states. Sync and wait,deadlock, reentrant lock, Runnable
+17- File manipulation reading and writing to buffers(Buffered streams [BufferedInputStream and BufferedOutputStream])
+18- Java module system (introduced in version 9)
+19- Fail-safe vs Fail-fast iterators (use Iterator's remove method instead of the collections's remove method)
+20- Difference between LinkedBlockingQueue and BlockingQueue
+21- Intermediate operation Map, how many parameters can it take?
+22- Classpath and class loader in Java
+23- Java Exceptions. Exception hierarchies. Checked exception, un-checked exceptions and runtime exceptions
+24- Connection pools (JDBC)
+25- Java class loading mechanism
+26- Static blocks of code!
+27- Various types of classes (immutable, anonymous, abstract, generic). Java inner classes. Use, declaration. How do they work and under what scenarios should we use them. What is a static class and what's used for?
+28- Composition and aggregation
+29- Java Persistence API
+30- Sort and ArrayList of addresses based on a customized Comparator (use a class attribute)
+31- Comparator and Thread are both functional interfaces, so they can be used in a lambda expression
+32- Learn more about Serializable interface and serialization (is a memory representation of an object in bits)
+33- Create a small study-case/application that applies serialization and de-serialization
+34- Learn more about Generics, wildcards and supertypes. Different ways of using generics in classes, methods and types. Bounded and unbounded wildcards and supertypes. They are compile-time, once they are used it's runtime and they only know about the being-used type (String, Object, Integer, ...)
+35- Learn about how Java deals with Date and time (Date API)
+36- Use of Optional instead of null to avoid NullExceptions
+37- Reactive programming in Java
+38- Core Java features
+39- Standard and Advanced libraries
+40- Buffered streams
+41- Cloning (deep cloning vs shallow cloning)
+42- JVM: Garbage collection,  heap structure etc., full/partial/parallel GC, class loading, JVN config
+43- JUnit and Mockito
+44- Test coverage. What is it? How can you implement one?
+45- Annotations
+46- How to actually connect to a database using Java code and not frameworks or libraries
+47- JDBC architecture
+48- What is a try with resource (things between parenthesis in a try statement)
+49- Transient Java keyword and what's used for?
+49- How to create a JAR and that way become your Java app portable
+
+
+
+Microservices
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+50- Microservices patterns
+51- Lean about Service Aggregator and Service Registry patterns (Microservices design architecture)
+52- DDD and its relationship to microservices and microservices architectures
+53- Event-Driven development
+54- Learn about Service Discovery and Eureka
+55- Learn about Vertical scaling and horizontal scaling
+
+
+Spring
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+56- Aspect-Oriented Programming. Cross-cutting concerns (logging and others. They are horizontals). Spring AOP
+57- Create an example application with AOP programming
+58- Context container. What is it, what it does?
+59- Why was Spring originated? (hint: boiler-plated code)
+60- What is IoC (Inversion of Control) and DI (Dependency injection)
+61- What is the Hollywood principle?
+62- What is the application context in Spring?
+63- What is a Servlet and how it evolved?
+64- What is the Spring MVC flow?
+65- What is DispatcherServlet?
+66- What is FrontController?
+66- What is the @Configuration annotation used for?
+67- Differences between Spring Core, Spring MVC and Spring Boot?
+68- How, in functionally terms, is @RestController different than @Controller?
+69- Learn about Spring exception-handling module (@ResponseStatus,@ExceptionHandler and @ControllerAdvice)
+70- Learn about the scope of a bean.Where is it accessible from? And for how long?
+71- Scopes of a bean (Singleton, Prototype, Request, Session, Test, ...)
+72- Differences between Spring Core and Spring MVC
+73- Different types of Spring frameworks (Data, Security, Messaging, ...)
+74- What is @Datasource bean?
+75- How can you create a JDBC template bean?
+76- Spring JPA, Spring JDBC and Spring JDBC template, Spring Data
+77- DAO objects
+78- Differences between Spring Data JPA and Spring Data JDBC
+79- What is JPA?
+80- What's the difference between Java JPA and Spring JPA?
+81- How to switch from Tomcat to Jetty. Create a small Spring boot application and do this
+82- ACID meaning
+83- Learn about how Spring manages auto-configuration
+83- How to create a JAR and that way become your Spring app portable
+
+
+
+SQL and NoSQL
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+84- What is a relational database
+85- Learn about NoSQL (Cassandra, MongoDB, GraphQL)
+86- CAP theorem in NoSQL RDBMS
+87- Splunk and logging
+88- What is ACID?
+89- What is a transaction?
+90- How can you create a database transaction using Java code?
+91- What is to normalize a table and why it is used for?
+92- What are the commit and rollback commands for?
+93- What is OLTP and OLAP? [See the link for database interviews]
+94- Difference between truncate, delete and drop
+95- How can you call an store procedure (SP) from Java code and pass parameters to it?
+96- Sintax to create an SP in SQL language
+97- What is PL/SQL?
+98- What is Hibernate?
+99- What is HQL?
+100- What is partitioning?
+101- What is sharding and the difference to partitioning?
+102- What is a sequence and how do you declare one on the Spring side? [for an auto-incremental ID, for example]
+103- What Splunk is?
+
+
+
+Algorithms
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+104- Traversing algorithms. Searching and sorting algorithms
+105- BFS and DFS, Binary search and Merge sort,Selection sort, Radix sort, Counting sort, Tim sort. Learn about balanced trees, Black-red trees
+106- Tree and Graph
+107- What is BigO notation
+108- Computational time complexity for algorithms
+
+
+
+
+
