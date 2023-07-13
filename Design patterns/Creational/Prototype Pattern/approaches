@@ -1,0 +1,17 @@
+There are two approaches I have seen when it comes to the Prototype Pattern. The first approach [1] is based on the creation of an abstract class
+with a method named clone(). The second [2] uses the built-in Cloneable interface provided by Java and demands you implement a control mechanism
+for the checked exception CloneNotSupportedException. This second one is related to the third [3] link in the resources, which if the official
+documentation web page from Oracle for JDK 8.
+
+The main goal of the Prototype Pattern is basically clonning an object to obtain a second one. The first approach indicates that this should be done
+using the object and not couple this process to the class, because sometimes all you have is an abstraction of the object and you don't know what specific
+implementing class is behind it. For example, you have to clone an object coming from parameters, but it is indicated as an abstraction,
+for example Vehicle. And vehicle is implemented by two classes Car and Bus. How do you know what type of object is the one being received? You
+could know using if and "instanceof", but this could leave the class open for modification, thus violating the Open/Closed Design Principle.
+
+
+
+Resources:
+[1] https://www.youtube.com/watch?v=DcFhITC9v0E
+[2] https://www.youtube.com/watch?v=nZ76x13Nm8Q
+[3] https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneable.html
