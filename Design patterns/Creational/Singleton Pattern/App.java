@@ -1,3 +1,15 @@
+/*
+The Singleton Pattern allows you to create one and only one instance of a class (optimally accessible from everywhere).
+Do not confuse unique with immutable. Even when the object is unique, doesn't have to be immutable.
+
+Notes:
+- Pay special attention at the lines of code handling multi-threading, one unique object is obviously exposed to being
+used by several threads and maybe even several parts of the application. Multi-threading handling is a must for this pattern.
+
+Resources:
+[1] https://www.youtube.com/watch?v=tSZn4wkBIu8
+*/
+
 public class App {
 	public static void main(String[] args) {
 		Singleton obj = Singleton.getInstance("New object");
