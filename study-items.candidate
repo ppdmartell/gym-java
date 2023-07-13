@@ -10,6 +10,7 @@ Java
 8- Lazy and eager initialization in simple Java code
 9- Lambdas and stream framework(lambdas: Consumer, BiConsumer, Supplier, Predicate). Lazy streams
 10- Singleton, Builder, Abstract factory, Adapter, Decorator, Proxy, Facade, ...
+10- Why is the Singleton Pattern consider an anti-pattern?
 11- How to make an immutable object in Java
 12- Difference between using Iterator on a Map and an ArrayList
 13- Difference between using Iterator on a Set and an ArrayList
