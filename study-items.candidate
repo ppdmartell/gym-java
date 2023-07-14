@@ -51,6 +51,7 @@ Java
 48- What is a try with resource (things between parenthesis in a try statement)
 49- Transient Java keyword and what's used for?
 49- How to create a JAR and that way become your Java app portable
+49- What is unboxing and auto-boxing? How can you upcast and downcast? Are those questions related?
 
 
 
