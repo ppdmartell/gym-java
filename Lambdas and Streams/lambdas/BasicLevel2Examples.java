@@ -1,5 +1,8 @@
 /*
 Let's now advance a bit more and using functional interfaces as parameters to methods. Mostly custom ones.
+
+Resources:
+[1] https://www.youtube.com/watch?v=MqsCdbMQjWc&list=PLqq-6Pq4lTTa9YGfyhyW2CqdtW9RtY-I3&index=14&pp=iAQB
 */
 
 import java.util.ArrayList;
