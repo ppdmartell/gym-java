@@ -12,7 +12,7 @@ Resources:
 
 */
 
-class App {
+class BasicExamples {
 	public static void main(String[] args) {
 		Print simplePrint = () -> System.out.println("This is an example of using a no-args lambda expression.");
 		simplePrint.print();
