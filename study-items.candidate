@@ -12,8 +12,8 @@ Java
 10- Singleton, Builder, Abstract factory, Adapter, Decorator, Proxy, Facade, ...
 10- Why is the Singleton Pattern consider an anti-pattern?
 11- How to make an immutable object in Java
-12- Difference between using Iterator on a Map and an ArrayList
-13- Difference between using Iterator on a Set and an ArrayList
+12- Difference between using Iterator on a HashMap and an ArrayList
+13- Difference between using Iterator on a HashSet and an ArrayList
 14- Learn about the Callable interface and use of futures, completable futures
 15- ScheduledExecutorService, ExecutorService and cronjobs (see docs.oracle link provided)
 16- Multithreading see about join(), notify(), locks, deadlocks, starvation. Read about general concurrent programming. What are monitors, semaphors and locks. Notify and notifyAll methods. Synchronize and volatile. Fork/join latch barrier. Thread states. Sync and wait,deadlock, reentrant lock, Runnable
@@ -52,6 +52,8 @@ Java
 49- Transient Java keyword and what's used for?
 49- How to create a JAR and that way become your Java app portable
 49- What is unboxing and auto-boxing? How can you upcast and downcast? Are those questions related?
+49- How can you convert a simple array into a streameable one. How can you convert and ArrayList into a streameable one?
+49- Difference between "private final int variable = 10" and "private final Integer variable = 10". Answer is in chatgpt Senior Java Lead chat.
 
 
 
