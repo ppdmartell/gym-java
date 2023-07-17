@@ -5,6 +5,8 @@ using with lambda expressions. This saves time and effort. They lie under the ja
 Resources:
 [1] https://www.youtube.com/watch?v=yubVRLP9Htw&list=PLqq-6Pq4lTTa9YGfyhyW2CqdtW9RtY-I3&index=15&pp=iAQB
 [2] https://docs.oracle.com/javase/8/docs/api/java/util/function/package-summary.html
+[3] https://www.youtube.com/watch?v=WcLum7g6ImU&list=PLqq-6Pq4lTTa9YGfyhyW2CqdtW9RtY-I3&index=19&pp=iAQB (about Closures, final and effectively final)
+[4] https://www.youtube.com/watch?v=x9ovGHK7r2E&list=PLqq-6Pq4lTTa9YGfyhyW2CqdtW9RtY-I3&index=20&pp=iAQB (about the use of keyword this in lambda expressions)
 */
 
 import java.util.function.BiConsumer;
@@ -12,6 +14,7 @@ import java.util.function.DoubleToIntFunction;
 import java.util.function.Predicate;
 import java.util.function.Function;
 import java.util.function.Supplier;
+import java.util.function.BiPredicate;
 
 class BasicBuiltInInterfaces {
 	public static void main(String[] args) {
@@ -30,6 +33,16 @@ class BasicBuiltInInterfaces {
 
 		Supplier<Long> supplier = () -> 4664L;
 		System.out.println("An example of a Supplier<T> that returns a Long (T): " + supplier.get());
+
+		//This is an excercise of the study-items file for the entering interview. Now I realize I didn't grasp the use of BiPredicate.
+		BiPredicate<Integer,Integer> biPredicate = (a, b) -> {
+			if(a % 2 == 0) {
+				System.out.println("The sum of a[" + a + "] and b[" + b + "] is: " + (a + b));
+				return true;
+			}
+			return false;
+		};
+		System.out.println("Is number 10 even?: " + biPredicate.test(10, 12));
 	}
 }
 
@@ -37,7 +50,7 @@ class BasicBuiltInInterfaces {
 /*
 Just in case, and to keep it here, an explanation about trying to modify the value of a variable
 inside a lambda expression. It is not possible unless you use atomic types (e.g. AtomicInteger for an Integer-type
-variable).
+variable). This belongs to the Closures concept (see resource [3]).
 
 Q: Assistant, if you use a variable inside a lambda function, but this variable was declared outside and before,
 does this variable become immutable by definition? For example:
