@@ -55,7 +55,7 @@ Java
 49- How can you convert a simple array into a streameable one. How can you convert and ArrayList into a streameable one?
 49- Difference between "private final int variable = 10" and "private final Integer variable = 10". [Answer is in chatgpt Senior Java Lead chat]
 49- What is a static import of a method and what's used for? [Answer is in chatgpt Senior Java Lead chat]
-49- What is spliterator and what's its purpose? How can it be used?
+49- What is spliterator and what's its purpose? How can it be used, providing examples if possible?
 
 
 
