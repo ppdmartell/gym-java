@@ -44,7 +44,7 @@ Java
 41- Cloning (deep cloning vs shallow cloning)
 42- JVM: Garbage collection,  heap structure etc., full/partial/parallel GC, class loading, JVN config
 43- JUnit and Mockito
-44- Test coverage. What is it? How can you implement one?
+44- Test coverage. What is it? How can you implement one? [See linkedin learning for the testing part]
 45- Annotations
 46- How to actually connect to a database using Java code and not frameworks or libraries
 47- JDBC architecture
