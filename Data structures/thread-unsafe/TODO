@@ -1,0 +1,14 @@
+Ideas for simple arrays[], ArraysList and LinkedList. Go through the resources and write conceptually how those three work.
+Get the material from gpt about contiguous blocks for arrays[] and how the retrieving time is constant (sum from the initial block
+to the desired one). Write about the underlying array for ArrayList and why it's a problem when you have inserting/deleting
+operations in the middle of the ArrayList.
+
+Resources:
+[1] https://www.youtube.com/watch?v=NbYgm0r7u6o
+[2] https://www.youtube.com/watch?v=5dscMs2hnDI
+[3] https://chat.openai.com/c/594e7820-badd-4bad-a709-75ada1cc31c6 [search phrase: "is constant and does not depend on the size"]
+[4] https://www.youtube.com/watch?v=4gvPmzWEwsY
+
+
+* There is an interesting entry about contiguous blocks for arrays[] and how they are abstracted away from the programmer
+by the JVM, opposite as what assembly language does (EAX).
