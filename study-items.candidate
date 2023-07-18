@@ -5,6 +5,7 @@ Java
 3- Executor framework. Thread pool
 4- Futures
 5- Multi-threading. Concurrency and paralellism
+5- What's a thread, a process, a program?
 6- Comparable and Comparator
 7- Locks
 8- Lazy and eager initialization in simple Java code

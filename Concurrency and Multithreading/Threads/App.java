@@ -37,7 +37,8 @@ requirements of your application.
 ---------------------------------------------------------------------------------------------------
 
 Something to note that when you call the method start() it will create a new thread, but if you
-call the method run(), it will just execute the instruction from the SAME thread [2].
+call the method run(), it will just execute the instruction from the SAME thread [2]. Even when
+they might look having similar in functionality, the reality is totally different.
 
 
 
@@ -50,24 +51,34 @@ Resources:
 class App {
 	public static void main(String[] args) {
 
-		//Way 1
+		//Way 1 by extendind Thread class
 		System.out.println("---------------WAY ONE----------------");
 		for(int i = 0; i < 10; i++) {
 			WayOne obj = new WayOne();
 			obj.start();  //Different behavior if you call obj.run() instead.
 		}
 
-		//Way 2
+		//Way 2 by implementing interface Runnable
 		System.out.println("\n---------------WAY TWO----------------");
 		for(int i = 0; i < 10; i++) {
 			Thread t = new Thread(new WayTwo());
 			t.start();
 		}
 
-		//Way 3
+		//Way 3 by using a lambda expression in the Thread class constructor
 		System.out.println("\n---------------WAY THREE----------------");
 		for(int i = 0; i < 10; i++) {
-			Thread t = new Thread();
+			new Thread(() -> {
+				String way = "[WAY 3]";
+				try {
+    				System.out.println(way + " Thread id running: " + Thread.currentThread().getId());
+				} catch(Exception e) {
+    				System.out.println("[ERROR] There was an unknown problem with the thread execution.");
+				}
+			}).start();
+			//new Thread(System.out::println).start();   <----- Method reference, but there is nothing to print.
+
+		//Way 4 by ExecutorService framework.
 		}
 	}
 }
@@ -76,8 +87,9 @@ class App {
 class WayOne extends Thread {
 	@Override
 	public void run() {
+		String way = "[WAY 1]";
 		try {
-			System.out.println("Thread id running: " + Thread.currentThread().getId());
+			System.out.println(way + " Thread id running: " + Thread.currentThread().getId());
 		} catch(Exception e) {
 			System.out.println("[ERROR] There was an unknown problem with the thread execution.");
 		}
@@ -88,8 +100,9 @@ class WayOne extends Thread {
 class WayTwo implements Runnable {
 	@Override
 	public void run() {
+		String way = "[WAY 2]";
 		try {
-   			System.out.println("Thread id running: " + Thread.currentThread().getId());
+   			System.out.println(way + " Thread id running: " + Thread.currentThread().getId());
 		} catch(Exception e) {
     		System.out.println("[ERROR] There was an unknown problem with the thread execution.");
 		}
