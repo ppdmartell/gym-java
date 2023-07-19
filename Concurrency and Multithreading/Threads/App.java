@@ -1,9 +1,12 @@
 /*
-A thread is  a separate flow of execution within a program. It represents and independent
-sequence of instructions that can be SCHEDULED and executed concurrently with OTHER threads.
-Like a tentacle of an octopus doing a task while other tasks are doing their tasks; sometimes
-two or more tentacles need to access the same resource and this needs to be managed beforehand,
-otherwise there could be problems.
+What is a Thread?
+
+A thread is  a separate flow of execution within a process (a program can have many processes).
+It represents and independent sequence of instructions that can be SCHEDULED and executed
+concurrently with OTHER threads. Like a tentacle of an octopus doing a task while other tasks
+are doing their tasks; sometimes two or more tentacles need to access the same resource and
+this needs to be managed beforehand, otherwise there could be problems. For a better explanation
+on this topic and resources consumption see [3].
 
 ---------------------------------------------------------------------------------------------------
 According to gpt there are several ways to create a thread:
@@ -40,45 +43,63 @@ Something to note that when you call the method start() it will create a new thr
 call the method run(), it will just execute the instruction from the SAME thread [2]. Even when
 they might look having similar in functionality, the reality is totally different.
 
+For more on creating threads see [4].
 
 
 Resources:
 [1] https://www.geeksforgeeks.org/multithreading-in-java/
 [2] https://chat.openai.com/c/594e7820-badd-4bad-a709-75ada1cc31c6 [search phrase: "Each thread runs independently and concurrently"]
+[3] https://www.youtube.com/watch?v=hN2Yrf4tqTY
+[4] https://www.youtube.com/watch?v=sUVJoUp8gBc
 */
 
+import java.util.concurrent.Executors;
+import java.util.concurrent.ExecutorService;
 
 class App {
 	public static void main(String[] args) {
 
-		//Way 1 by extendind Thread class
-		System.out.println("---------------WAY ONE----------------");
-		for(int i = 0; i < 10; i++) {
-			WayOne obj = new WayOne();
-			obj.start();  //Different behavior if you call obj.run() instead.
-		}
+			//Way 1 by extendind Thread class
+			System.out.println("---------------WAY ONE----------------");
+			for(int i = 0; i < 10; i++) {
+				WayOne obj = new WayOne();
+				obj.start();  //Different behavior if you call obj.run() instead.
+			}
 
-		//Way 2 by implementing interface Runnable
-		System.out.println("\n---------------WAY TWO----------------");
-		for(int i = 0; i < 10; i++) {
-			Thread t = new Thread(new WayTwo());
-			t.start();
-		}
+			//Way 2 by implementing interface Runnable
+			System.out.println("\n---------------WAY TWO----------------");
+			for(int i = 0; i < 10; i++) {
+				Thread t = new Thread(new WayTwo());
+				t.start();
+			}
 
-		//Way 3 by using a lambda expression in the Thread class constructor
-		System.out.println("\n---------------WAY THREE----------------");
-		for(int i = 0; i < 10; i++) {
-			new Thread(() -> {
-				String way = "[WAY 3]";
-				try {
-    				System.out.println(way + " Thread id running: " + Thread.currentThread().getId());
-				} catch(Exception e) {
-    				System.out.println("[ERROR] There was an unknown problem with the thread execution.");
-				}
-			}).start();
-			//new Thread(System.out::println).start();   <----- Method reference, but there is nothing to print.
+			//Way 3 by using a lambda expression in the Thread class constructor
+			System.out.println("\n---------------WAY THREE----------------");
+			for(int i = 0; i < 10; i++) {
+				new Thread(() -> {
+					String way = "[WAY 3] ";
+					try {
+    					System.out.println(way + " Thread id running: " + Thread.currentThread().getId());
+					} catch(Exception e) {
+    					System.out.println("[ERROR] There was an unknown problem with the thread execution.");
+					}
+				}).start();
+				//new Thread(System.out::println).start();   <----- Method reference, but there is nothing to print.
 
-		//Way 4 by ExecutorService framework.
+			//Way 4 by ExecutorService framework.
+			ExecutorService executorS = Executors.newSingleThreadExecutor();
+			for(int j = 0; j < 10; j++) {
+				executorS.execute(() -> {
+					String way = "[WAY 4]";
+					try {
+						System.out.println(way + " Thread id running: " + Thread.currentThread().getId());
+					} catch(Exception e) {
+						System.out.println("[ERROR] There was an unknown problem with the execution.");
+					}
+				});
+			}
+			executorS.shutdownNow(); // No idea why, but shutdownNow() actually makes the execution 10 times as intended.
+									 // with shutdown() the are like 100 executions.
 		}
 	}
 }
