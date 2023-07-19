@@ -17,7 +17,7 @@ Java
 13- Difference between using Iterator on a HashSet and an ArrayList
 14- Learn about the Callable interface and use of futures, completable futures
 15- ScheduledExecutorService, ExecutorService and cronjobs (see docs.oracle link provided)
-16- Multithreading see about join(), notify(), locks, deadlocks, starvation. Read about general concurrent programming. What are monitors, semaphors and locks. Notify and notifyAll methods. Synchronize and volatile. Fork/join latch barrier. Thread states. Sync and wait,deadlock, reentrant lock, Runnable
+!!!!!!!!!16- Multithreading see about join(), notify(), locks, deadlocks, starvation. Read about general concurrent programming. What are monitors, semaphors and locks. Notify and notifyAll methods. Synchronize and volatile. Fork/join latch barrier. Thread states. Sync and wait,deadlock, reentrant lock, Runnable
 17- File manipulation reading and writing to buffers(Buffered streams [BufferedInputStream and BufferedOutputStream])
 18- Java module system (introduced in version 9)
 19- Fail-safe vs Fail-fast iterators (use Iterator's remove method instead of the collections's remove method)
@@ -29,10 +29,9 @@ Java
 25- Java class loading mechanism
 26- Static blocks of code!
 27- Various types of classes (immutable, anonymous, abstract, generic). Java inner classes. Use, declaration. How do they work and under what scenarios should we use them. What is a static class and what's used for?
-28- Composition and aggregation
+28- Composition and aggregation and association
 29- Java Persistence API
 30- Sort and ArrayList of addresses based on a customized Comparator (use a class attribute)
-31- Comparator and Thread are both functional interfaces, so they can be used in a lambda expression
 32- Learn more about Serializable interface and serialization (is a memory representation of an object in bits)
 33- Create a small study-case/application that applies serialization and de-serialization
 34- Learn more about Generics, wildcards and supertypes. Different ways of using generics in classes, methods and types. Bounded and unbounded wildcards and supertypes. They are compile-time, once they are used it's runtime and they only know about the being-used type (String, Object, Integer, ...)
@@ -57,6 +56,7 @@ Java
 49- Difference between "private final int variable = 10" and "private final Integer variable = 10". [Answer is in chatgpt Senior Java Lead chat]
 49- What is a static import of a method and what's used for? [Answer is in chatgpt Senior Java Lead chat]
 49- What is spliterator and what's its purpose? How can it be used, providing examples if possible?
+49- RunnableFuture, FutureTask, ForkJoinTask.
 
 
 
