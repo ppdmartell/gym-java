@@ -103,7 +103,7 @@ Spring
 82- ACID meaning
 83- Learn about how Spring manages auto-configuration
 83- How to create a JAR and that way become your Spring app portable
-
+83- DAO vs Repository pattern
 
 
 SQL and NoSQL
