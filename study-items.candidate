@@ -18,7 +18,7 @@ Java
 13- Difference between using Iterator on a HashSet and an ArrayList
 14- Learn about the Callable interface and use of futures, completable futures
 15- ScheduledExecutorService, ExecutorService and cronjobs (see docs.oracle link provided)
-!!!!!!!!!16- Multithreading see about join(), notify(), locks, deadlocks, starvation. Read about general concurrent programming. What are monitors, semaphors and locks. Notify and notifyAll methods. Synchronize and volatile. Fork/join latch barrier. Thread states. Sync and wait,deadlock, reentrant lock, Runnable
+!!!!!!!!!16- Multithreading see about join(), notify(), locks, deadlocks, starvation. Read about general concurrent programming. What are monitors, semaphores and locks. Notify and notifyAll methods. Synchronize and volatile. Fork/join latch barrier. Thread states. Sync and wait,deadlock, reentrant lock, Runnable
 17- File manipulation reading and writing to buffers(Buffered streams [BufferedInputStream and BufferedOutputStream])
 18- Java module system (introduced in version 9)
 19- Fail-safe vs Fail-fast iterators (use Iterator's remove method instead of the collections's remove method)
