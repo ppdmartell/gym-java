@@ -31,9 +31,9 @@ class App {
 
 		Future<String> future1 = executor.submit(callable1);
 		try {
-			//Always try to assign the future get to a corresponding value before, then reuse the variable, not the future's ".get()". Otherwise, if you try to call it in a one liner the .get() won't return.
-			String result = future1.get();
-			if(future1.isDone()) System.out.println("The decoded serial number is: " + result);
+			//Always try to assign the future get to a corresponding value before, then reuse the variable, just in case..
+			//String result = future1.get();
+			System.out.println("The decoded serial number is: " + future1.get());
 		} catch (ExecutionException e) {
 			e.printStackTrace();
 		} catch (InterruptedException e) {

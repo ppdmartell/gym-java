@@ -16,8 +16,10 @@ Resources:
 [2] https://www.youtube.com/watch?v=sUVJoUp8gBc
 */
 
+import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 
 class App {
 	public static void main(String[] args) {
@@ -33,5 +35,38 @@ class App {
 			executorService2.execute(() -> { System.out.println("This pool has 10 threads. Using now thread: " + Thread.currentThread().getName()); });
 		}
 		executorService2.shutdown();
+
+		//Use ExecutorService to retrieve a Person object and then show its data with a prinln.
+		ExecutorService executorService3 = Executors.newSingleThreadExecutor();
+		Future<Person> future1 = executorService3.submit(() -> { return new Person("Lionel", "Messi"); });
+		try {
+			System.out.println("Is it Done?: " + future1.isDone());
+			Person resultPerson = future1.get();
+			System.out.println("The person retrieved is: " + resultPerson);
+			System.out.println("Is it Done?: " + future1.isDone());
+		} catch (ExecutionException e) {
+			e.printStackTrace();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		executorService3.shutdown();
+	}
+}
+
+class Person {
+	private String name;
+	private String lastname;
+
+	public Person(String name, String lastname) {
+		this.name = name;
+		this.lastname = lastname;
+	}
+
+	public String getName() { return name; }
+	public String getLastname() { return lastname; }
+
+	@Override
+	public String toString() {
+		return "[name=" + name + ", lastname=" + lastname + "]";
 	}
 }
