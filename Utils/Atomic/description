@@ -1,0 +1,17 @@
+Atomic values are provided by Java to work with thread-safe data types. Thay are found in the
+package java.util.concurrent.atomic. They were introduced in JDK 1.5 version.
+You have the next atomic types:
+- [1] AtomicInteger
+- [2] AtomicLong
+- [3] AtomicReference<Double> //There is not AtomicDouble, so you need to use AtomicReference<Double> instead.
+- [4] AtomicBoolean
+- [5] AtomicReference<T>
+- [6] and others...
+
+Resources:
+[1] https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicInteger.html
+[2] https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicLong.html
+[3] https://chat.openai.com/c/d77e13c2-40b0-42ff-8310-eb84fd399ba4 [search phrase: "package are designed to work with primitive types"]
+[4] https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicBoolean.html
+[5] https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicReference.html
+[6] https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/package-summary.html
