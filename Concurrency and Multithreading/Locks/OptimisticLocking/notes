@@ -1,0 +1,36 @@
+/*
+According to gpt[1], optimistic locking is:
+
+Optimistic lock is a concurrency control technique used in multi-threaded applications to manage
+access to shared resources in a way that minimizes the possibility of contention and allows for
+better performance in scenarios where conflicts are infrequent.
+
+In optimistic locking, instead of acquiring and holding locks on shared resources while performing
+operations, the thread first reads the resource's state and remembers it (usually in a version
+number or timestamp). Then, the thread performs its operation on the local copy of the resource
+without holding any locks. When the thread is ready to update the shared resource, it checks if
+the resource's state (e.g., version number) is still the same as when it was read. If the state
+has not changed (i.e., no other thread modified the resource in the meantime), the thread updates
+the resource and commits the changes. However, if the state has changed (i.e., another thread has
+modified the resource), the thread can decide to retry the operation, apply conflict resolution
+strategies, or take other appropriate actions.
+
+The main advantage of optimistic locking is that it reduces the need for thread synchronization
+and locking, which can improve concurrency and reduce contention. It allows multiple threads to
+read and operate on shared resources concurrently without blocking each other, and conflicts are
+resolved later when updating the resource.
+
+Optimistic locking is commonly used in scenarios where conflicts are relatively rare, and it can
+provide better scalability and performance compared to traditional locking mechanisms like
+pessimistic locking, where threads acquire and hold locks throughout the entire operation.
+
+Optimistic locking is often used in database systems, distributed systems, and concurrent
+programming frameworks where the overhead of acquiring and releasing locks for every operation
+can be significant. However, it requires careful implementation to handle conflicts and ensure
+data consistency, as well as proper conflict resolution strategies to handle scenarios where
+conflicts do occur.
+
+Resources:
+[1] https://chat.openai.com/c/d77e13c2-40b0-42ff-8310-eb84fd399ba4 [search phrase: "optimistic locking"]
+
+*/
