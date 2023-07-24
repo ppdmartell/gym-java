@@ -58,6 +58,7 @@ Java
 49- What is a static import of a method and what's used for? [Answer is in chatgpt Senior Java Lead chat]
 49- What is spliterator and what's its purpose? How can it be used, providing examples if possible?
 49- RunnableFuture, FutureTask, ForkJoinTask.
+49- What is the Fork/Join Framework?
 
 
 
