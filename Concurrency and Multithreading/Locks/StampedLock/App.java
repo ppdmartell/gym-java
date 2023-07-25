@@ -5,6 +5,12 @@ value. This stamp can be used to either release a lock or to check if the lock i
 Check that as well as with ReentrantReadWriteLock, the read tasks can't start until the write
 task has already released the lock on the object.
 
+Stamped locks don't implement reentrant characteristics, each call to the lock method returns
+a NEW stamp and blocks the thread if no lock is available, even if the same thread already
+holds a lock.
+
+Stamped locks provide the ability to convert read lock into a write lock by using the method
+tryConvertToWriteLock().
 
 Resources:
 [1] https://www.youtube.com/watch?v=ddUSe3A9MMg
