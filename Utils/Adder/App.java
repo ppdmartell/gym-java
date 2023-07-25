@@ -2,6 +2,12 @@
 Adders are alternatives to Atomic classess, when updates are contended across threads, the set
 of variables may grow dynamically to reduce contention. They can be used to consecutively add
 values to a number[1]. They are under the package "java.util.concurrent.atomic".
+Instead of summing up (for example, i++) a single result, this class maintains a set of variables
+internally to avoid threads "colliding" to each other.
+
+This class is preferred over Atomic numbers when updates from multiple threads are more common
+than reads. However, the drawback of LongAdder is higher consumption of memory because a set of
+variables is held in memory.
 
 Resources:
 [1] https://www.youtube.com/watch?v=MlW8nD4t2js
