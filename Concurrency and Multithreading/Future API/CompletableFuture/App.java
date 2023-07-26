@@ -79,5 +79,26 @@ class App {
 		String result = cFuture4.join(); //This can also be done with get() as in previous cFutures.
 		System.out.println(result);
 		System.out.println("------------------------------------------------------------------");
+
+		//Executing callback chain with thenAccept(takes in a Supplier and returns nothing) method at the end.
+		CompletableFuture.supplyAsync(() -> "Result of processing task 1 with supplyAsync")
+						 .thenApply(resultX -> resultX + "...processed with thenApply now")
+						 .thenAccept(resultY -> System.out.printf("%s...and now processed with thenAccept to finish execution.%n", resultY))
+						 .get();  //thenAccept() and thenRun() methods are usually used as the last callback in a callback chain since they do not return any result.
+		System.out.println("------------------------------------------------------------------");
+
+		//Executing thenRun(), doesn't even has access to that previous result and returns nothing. Simply takes a Runnable.
+		CompletableFuture.supplyAsync(() -> "Like and ")
+						 .thenApply(p -> p + "Subscribe")
+						 .thenRun(() -> System.out.println("Last callback of the chain"))
+						 .get();  //Interesting, only shows the thenRun() execution, and since it doesn't have access to that previous result, you can't use it. Look at it like a closure operation after persisting or modifying something.
+		System.out.println("------------------------------------------------------------------");
+
+		//BY DEFAULT (but that behavior can be changed or can vary) all callbacks attached to the same CompletableFuture are executed by the same thread
+		//without Async, if you use Async at the end of the method's name (e.g. thenAcceptAsync()), they will be executed by other threads (when they are available)
+		CompletableFuture.supplyAsync(() -> Thread.currentThread().getName())
+						 .thenApplyAsync(p -> p + " | " + Thread.currentThread().getName())
+						 .thenAcceptAsync(p -> System.out.println(p + " | " + Thread.currentThread().getName()))
+						 .get();
 	}
 }
