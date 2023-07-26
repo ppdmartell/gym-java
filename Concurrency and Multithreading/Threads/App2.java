@@ -1,8 +1,10 @@
 /*
-This exercise is about Threads and is based on the resource [1] video.
+This exercise is about Threads and is based on [1] video.
+By the way, a Thread has six possible states[2].
 
 Resources:
 [1] https://www.youtube.com/watch?v=7eV4nib3Cm8
+[2] https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.State.html
 */
 
 //import java.util.concurrent.atomic.AtomicInteger;
