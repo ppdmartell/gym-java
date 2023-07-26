@@ -1,4 +1,9 @@
 /*
+README: Maybe HashMap is not a data structure suitable for performing iterations since its
+strengths lie in other features, for example the containsKey() and get() methods which have O(1)
+constant average computational time complexity. Combined with AD (Addition and Deletion) operations
+which are also O(1) on average.
+
 A Map[1] is a key-value hash-based data structure so the elements are stored in buckets using a hash code,
 meaning they are not stored sequentially, so they are scattered usually. You can iterate (traverse) over
 a Map structure, say a HashMap, in several ways being using an Iterator, stream, enhanced for loop,
