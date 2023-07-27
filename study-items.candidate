@@ -60,6 +60,7 @@ Java
 49- RunnableFuture, FutureTask, ForkJoinTask.
 49- What is the Fork/Join Framework?
 49- Example of a reduce operation on a collection.
+49- Enums
 
 
 
