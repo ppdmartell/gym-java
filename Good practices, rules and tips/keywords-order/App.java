@@ -3,6 +3,7 @@ According to [1], the order of the keywords in fields declaration can vary, alth
 are rules to follow. For more info see [1]. The next program has two fields and they are both
 static and final,and yet the keywords doesn't follow the same order; but still this program
 will execute without any issues.
+However, it is recommended "private static final".
 
 Resources:
 [1] https://stackoverflow.com/a/11219598
