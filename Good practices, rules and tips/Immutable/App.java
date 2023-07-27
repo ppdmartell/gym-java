@@ -68,6 +68,8 @@ Resources:
 [4] https://chat.openai.com/c/d77e13c2-40b0-42ff-8310-eb84fd399ba4 [search phrase: "immutable builder pattern"]
 [5] http://www.javapractices.com/topic/TopicAction.do?Id=15
 [6] https://chat.openai.com/c/d77e13c2-40b0-42ff-8310-eb84fd399ba4 [search phrase: "as long as immutability is"]
+[7] https://docs.oracle.com/javase/tutorial/essential/concurrency/immutable.html
+[8] https://docs.oracle.com/javase/tutorial/essential/concurrency/imstrat.html
 */
 
 import java.util.ArrayList;
