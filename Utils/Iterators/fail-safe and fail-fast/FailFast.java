@@ -22,7 +22,7 @@ class FailFast {
 		List<String> list = new ArrayList<>();
 		list.add("Tomcat");
 		list.add("Apache");
-		Iterator<String> it = list.iterator();
+		Iterator<String> it = list.iterator();  //ArrayList data structure returns a fail-fast iterator.
 		System.out.println("--------------------------------------------------------------------------");
 		while(it.hasNext()) {
 			String element = it.next();
