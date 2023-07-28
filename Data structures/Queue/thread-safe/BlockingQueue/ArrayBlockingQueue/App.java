@@ -31,10 +31,13 @@ import java.util.concurrent.BlockingQueue;
 
 class App {
 	public static void main(String[] args) throws InterruptedException {
+		//IMPORTANT: This data structure is very suitable for multi-threading applications.
+
 		BlockingQueue<String> queue = new ArrayBlockingQueue<>(3);
-/*
+
 		//Example 1. This will block the execution because trying to put 4 elements in a row in a
-		//3-slots ArrayBlockingQueue. Comment this block to see next examples since this one will block.
+		//3-slots ArrayBlockingQueue.
+		//README: Comment this block to see next examples since this one will block.
 		queue.put("element1");
 		queue.put("element2");
 		queue.put("element3");
@@ -50,7 +53,7 @@ class App {
 		System.out.println("--------------------------------------");
 
 		//Example 2. This will block the execution because trying to take 3 when only 2 exist currently
-		//Comment this block to see next examples since this one will block.
+		//README: Comment this block to see next examples since this one will block.
 		queue.put("element5");
 		queue.put("element6");
 
@@ -61,7 +64,7 @@ class App {
 		System.out.println(element5);
 		System.out.println(element6);
 		System.out.println("--------------------------------------");
-*/
+
 		//Example 3. This will work. As long as there is capacity to insert and elements to take, and the
 		//amount of put-take is balanced, it should work without any issues. Always respecting the capacity
 		//Which in this case is three. You could just insert 3 or less elements without taking and it
