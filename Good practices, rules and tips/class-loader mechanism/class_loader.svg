@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1000mm"
+   height="1000mm"
+   viewBox="0 0 1000 1000"
+   version="1.1"
+   id="svg99140"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09, custom)"
+   sodipodi:docname="class_loader.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview99142"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.73940797"
+     inkscape:cx="1576.2611"
+     inkscape:cy="1042.0499"
+     inkscape:window-width="1920"
+     inkscape:window-height="970"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs99137" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1.11;stroke-linejoin:bevel;paint-order:markers stroke fill"
+       id="rect99281"
+       width="247.02559"
+       height="189.80769"
+       x="264.64197"
+       y="64.135361"
+       ry="8.0454397" />
+    <text
+       xml:space="preserve"
+       style="font-size:12.7px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:center;text-anchor:middle;fill:#803300;stroke:#000000;stroke-width:1;stroke-linejoin:bevel;paint-order:markers stroke fill"
+       x="327.10468"
+       y="57.78933"
+       id="text99285"><tspan
+         sodipodi:role="line"
+         id="tspan99283"
+         style="stroke-width:1;fill:#803300"
+         x="327.10468"
+         y="57.78933">JVM class loader</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12.7px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:center;text-anchor:middle;fill:#803300;stroke:#000000;stroke-width:1;stroke-linejoin:bevel;paint-order:markers stroke fill"
+       x="374.29306"
+       y="91.073563"
+       id="text99285-0"><tspan
+         sodipodi:role="line"
+         id="tspan99283-9"
+         style="fill:#803300;stroke-width:1"
+         x="374.29306"
+         y="91.073563">bootstrap</tspan><tspan
+         sodipodi:role="line"
+         style="fill:#803300;stroke-width:1"
+         x="374.29306"
+         y="106.94856"
+         id="tspan99388"> class</tspan><tspan
+         sodipodi:role="line"
+         style="fill:#803300;stroke-width:1"
+         x="374.29306"
+         y="122.82355"
+         id="tspan99390"> loader</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linejoin:bevel;paint-order:markers stroke fill"
+       id="rect99353"
+       width="86.326241"
+       height="73.549889"
+       x="332.30078"
+       y="74.015327"
+       ry="7.4348269" />
+    <text
+       xml:space="preserve"
+       style="font-size:12.7px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:center;text-anchor:middle;fill:#000000;stroke:#000000;stroke-width:1;stroke-linejoin:bevel;paint-order:markers stroke fill"
+       x="322.99905"
+       y="86.046211"
+       id="text99394"><tspan
+         sodipodi:role="line"
+         id="tspan99392"
+         style="fill:#000000;stroke-width:1"
+         x="322.99905"
+         y="86.046211">1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:7.76111px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:center;text-anchor:middle;fill:#000000;stroke:#000000;stroke-width:0;stroke-linejoin:bevel;stroke-dasharray:none;paint-order:markers stroke fill"
+       x="376.23132"
+       y="139.06909"
+       id="text99394-8"><tspan
+         sodipodi:role="line"
+         id="tspan99392-8"
+         style="font-size:7.76111px;fill:#000000;stroke-width:0;stroke-dasharray:none"
+         x="376.23132"
+         y="139.06909">All java programs</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12.7px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:center;text-anchor:middle;fill:#803300;stroke:#000000;stroke-width:1;stroke-linejoin:bevel;paint-order:markers stroke fill"
+       x="330.24158"
+       y="176.51584"
+       id="text99285-0-5"><tspan
+         sodipodi:role="line"
+         id="tspan99283-9-8"
+         style="fill:#803300;stroke-width:1"
+         x="330.24158"
+         y="176.51584">extension</tspan><tspan
+         sodipodi:role="line"
+         style="fill:#803300;stroke-width:1"
+         x="330.24158"
+         y="192.39084"
+         id="tspan99388-4"> class</tspan><tspan
+         sodipodi:role="line"
+         style="fill:#803300;stroke-width:1"
+         x="330.24158"
+         y="208.26584"
+         id="tspan99390-3"> loader</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linejoin:bevel;paint-order:markers stroke fill"
+       id="rect99353-7"
+       width="86.326241"
+       height="73.549889"
+       x="288.24911"
+       y="159.4576"
+       ry="7.4348269" />
+    <text
+       xml:space="preserve"
+       style="font-size:12.7px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:center;text-anchor:middle;fill:#000000;stroke:#000000;stroke-width:1;stroke-linejoin:bevel;paint-order:markers stroke fill"
+       x="278.94711"
+       y="171.48848"
+       id="text99394-1"><tspan
+         sodipodi:role="line"
+         id="tspan99392-3"
+         style="fill:#000000;stroke-width:1"
+         x="278.94711"
+         y="171.48848">2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:7.76111px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:center;text-anchor:middle;fill:#000000;stroke:#000000;stroke-width:0;stroke-linejoin:bevel;stroke-dasharray:none;paint-order:markers stroke fill"
+       x="332.17984"
+       y="224.51137"
+       id="text99394-8-8"><tspan
+         sodipodi:role="line"
+         id="tspan99392-8-0"
+         style="font-size:7.76111px;fill:#000000;stroke-width:0;stroke-dasharray:none"
+         x="332.17984"
+         y="224.51137">All java programs</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12.7px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:center;text-anchor:middle;fill:#803300;stroke:#000000;stroke-width:1;stroke-linejoin:bevel;paint-order:markers stroke fill"
+       x="445.55933"
+       y="176.55281"
+       id="text99285-0-9"><tspan
+         sodipodi:role="line"
+         id="tspan99283-9-7"
+         style="fill:#803300;stroke-width:1"
+         x="445.55933"
+         y="176.55281">application</tspan><tspan
+         sodipodi:role="line"
+         style="fill:#803300;stroke-width:1"
+         x="445.55933"
+         y="192.42781"
+         id="tspan99388-9"> class</tspan><tspan
+         sodipodi:role="line"
+         style="fill:#803300;stroke-width:1"
+         x="445.55933"
+         y="208.30281"
+         id="tspan99390-9"> loader</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linejoin:bevel;paint-order:markers stroke fill"
+       id="rect99353-3"
+       width="86.326241"
+       height="73.549889"
+       x="403.56705"
+       y="159.49458"
+       ry="7.4348269" />
+    <text
+       xml:space="preserve"
+       style="font-size:12.7px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:center;text-anchor:middle;fill:#000000;stroke:#000000;stroke-width:1;stroke-linejoin:bevel;paint-order:markers stroke fill"
+       x="394.26532"
+       y="171.52547"
+       id="text99394-2"><tspan
+         sodipodi:role="line"
+         id="tspan99392-4"
+         style="fill:#000000;stroke-width:1"
+         x="394.26532"
+         y="171.52547">3</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:7.76111px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:center;text-anchor:middle;fill:#000000;stroke:#000000;stroke-width:0;stroke-linejoin:bevel;stroke-dasharray:none;paint-order:markers stroke fill"
+       x="447.49759"
+       y="224.54834"
+       id="text99394-8-3"><tspan
+         sodipodi:role="line"
+         id="tspan99392-8-7"
+         style="font-size:7.76111px;fill:#000000;stroke-width:0;stroke-dasharray:none"
+         x="447.49759"
+         y="224.54834">All java programs</tspan></text>
+    <rect
+       style="fill:#008080;stroke:#000000;stroke-width:0.47788;stroke-linejoin:bevel;stroke-dasharray:none;paint-order:markers stroke fill"
+       id="rect99971"
+       width="20.622307"
+       height="28.980499"
+       x="426.2467"
+       y="280.86389"
+       ry="0" />
+    <rect
+       style="fill:#008080;stroke:#000000;stroke-width:0.47788;stroke-linejoin:bevel;stroke-dasharray:none;paint-order:markers stroke fill"
+       id="rect99971-1"
+       width="20.622307"
+       height="28.980499"
+       x="477.47787"
+       y="280.77206"
+       ry="0" />
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:center;text-anchor:middle;fill:#008080;stroke:#000000;stroke-width:0;stroke-linejoin:bevel;stroke-dasharray:none;paint-order:markers stroke fill"
+       x="419.59393"
+       y="318.28036"
+       id="text100158"><tspan
+         sodipodi:role="line"
+         id="tspan100156"
+         style="font-size:6.35px;text-align:start;text-anchor:start;fill:#000000;stroke-width:0;stroke-dasharray:none"
+         x="419.59393"
+         y="318.28036">Main.class</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:center;text-anchor:middle;fill:#008080;stroke:#000000;stroke-width:0;stroke-linejoin:bevel;stroke-dasharray:none;paint-order:markers stroke fill"
+       x="471.56717"
+       y="318.40292"
+       id="text100158-2"><tspan
+         sodipodi:role="line"
+         id="tspan100156-2"
+         style="font-size:6.35px;text-align:start;text-anchor:start;fill:#000000;stroke-width:0;stroke-dasharray:none"
+         x="471.56717"
+         y="318.40292">Dog.class</tspan></text>
+    <rect
+       style="fill:#999999;stroke:#000000;stroke-width:0.47788;stroke-linejoin:bevel;stroke-dasharray:none;paint-order:markers stroke fill"
+       id="rect99971-0"
+       width="20.622307"
+       height="28.980499"
+       x="427.61523"
+       y="356.77936"
+       ry="0" />
+    <rect
+       style="fill:#999999;stroke:#000000;stroke-width:0.47788;stroke-linejoin:bevel;stroke-dasharray:none;paint-order:markers stroke fill"
+       id="rect99971-1-2"
+       width="20.622307"
+       height="28.980499"
+       x="478.84641"
+       y="356.68753"
+       ry="0" />
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:center;text-anchor:middle;fill:#008080;stroke:#000000;stroke-width:0;stroke-linejoin:bevel;stroke-dasharray:none;paint-order:markers stroke fill"
+       x="420.96246"
+       y="394.19583"
+       id="text100158-1"><tspan
+         sodipodi:role="line"
+         id="tspan100156-7"
+         style="font-size:6.35px;text-align:start;text-anchor:start;fill:#000000;stroke-width:0;stroke-dasharray:none"
+         x="420.96246"
+         y="394.19583">Main.java</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';text-align:center;text-anchor:middle;fill:#008080;stroke:#000000;stroke-width:0;stroke-linejoin:bevel;stroke-dasharray:none;paint-order:markers stroke fill"
+       x="472.9357"
+       y="394.31839"
+       id="text100158-2-5"><tspan
+         sodipodi:role="line"
+         id="tspan100156-2-1"
+         style="font-size:6.35px;text-align:start;text-anchor:start;fill:#000000;stroke-width:0;stroke-dasharray:none"
+         x="472.9357"
+         y="394.31839">Dog.java</tspan></text>
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linejoin:bevel;stroke-dasharray:none;paint-order:markers stroke fill"
+       d="m 459.31137,275.89109 0.48813,-34.60051"
+       id="path100283" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linejoin:bevel;stroke-dasharray:none;paint-order:markers stroke fill"
+       d="m 459.59672,241.02872 -5.89203,7.69038"
+       id="path100285" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linejoin:bevel;stroke-dasharray:none;paint-order:markers stroke fill"
+       d="m 460.04479,241.69635 4.71501,6.16156"
+       id="path100287" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.747103;stroke-linejoin:bevel;stroke-dasharray:none;paint-order:markers stroke fill"
+       d="m 436.27007,344.81439 0.49883,-18.89818"
+       id="path100283-7" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linejoin:bevel;stroke-dasharray:none;paint-order:markers stroke fill"
+       d="m 436.56077,325.64562 -5.89203,7.69038"
+       id="path100285-4" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linejoin:bevel;stroke-dasharray:none;paint-order:markers stroke fill"
+       d="m 437.00884,326.31325 4.71501,6.16156"
+       id="path100287-1" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.747103;stroke-linejoin:bevel;stroke-dasharray:none;paint-order:markers stroke fill"
+       d="m 487.75232,344.80265 0.49883,-18.89818"
+       id="path100283-7-7" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linejoin:bevel;stroke-dasharray:none;paint-order:markers stroke fill"
+       d="m 488.04302,325.63388 -5.89203,7.69038"
+       id="path100285-4-1" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linejoin:bevel;stroke-dasharray:none;paint-order:markers stroke fill"
+       d="m 488.49109,326.30151 4.71501,6.16156"
+       id="path100287-1-1" />
+  </g>
+</svg>
