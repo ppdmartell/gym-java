@@ -9,6 +9,9 @@ In this Java file let's make some streams exercises.
 11- Dada una collection de enteros, multiplique cada valor impar por 20 e imprima cada elemento de la collection;
 12- Devuelva una lista de los elementos pares.
 13- Devuelva un set de los elementos impares.
+
+Resources:
+[1] https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html
 */
 
 import java.util.Arrays;
