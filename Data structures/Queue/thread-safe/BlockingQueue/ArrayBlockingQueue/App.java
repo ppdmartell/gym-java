@@ -24,6 +24,7 @@ Resources:
 [1] https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ArrayBlockingQueue.html
 [2] https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/BlockingQueue.html
 [3] https://chat.openai.com/c/86acd6d2-b3de-493c-8acb-065c9ac93f31 [search phrase: "insert elements into the queue"]
+[4] https://www.youtube.com/watch?v=d3xb1Nj88pw
 */
 
 import java.util.concurrent.ArrayBlockingQueue;
