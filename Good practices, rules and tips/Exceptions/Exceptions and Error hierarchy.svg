@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1165.6023mm"
+   height="906.46173mm"
+   viewBox="0 0 1165.6023 906.46173"
+   version="1.1"
+   id="svg22703"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   sodipodi:docname="Exceptions and Error hierarchy.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview22705"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="false"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.19325386"
+     inkscape:cx="2566.5723"
+     inkscape:cy="1542.0132"
+     inkscape:window-width="1366"
+     inkscape:window-height="700"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     fit-margin-top="100"
+     fit-margin-left="100"
+     fit-margin-bottom="100"
+     lock-margins="true"
+     fit-margin-right="100" />
+  <defs
+     id="defs22700">
+    <rect
+       x="572.11554"
+       y="245.90665"
+       width="263.79309"
+       height="107.14563"
+       id="rect52508" />
+    <rect
+       x="636.87482"
+       y="324.69904"
+       width="301.98056"
+       height="120.87395"
+       id="rect46815" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:inline"
+     transform="translate(-765.61744,-107.98754)">
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,-1.0583333,0)"
+       id="text46813"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect46815);fill:#000000;fill-opacity:1;stroke:none" />
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,-1.0583333,0)"
+       id="text52506"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect52508);fill:#000000;fill-opacity:1;stroke:none" />
+    <g
+       id="g26205"
+       transform="translate(154.12059,621.23894)">
+      <g
+         id="g39271"
+         transform="matrix(0.76091259,0,0,0.76091259,675.76222,225.20788)">
+        <ellipse
+           style="fill:#2b0000;stroke-width:0.264583"
+           id="path23917"
+           cx="82.094223"
+           cy="57.9254"
+           rx="9.8565855"
+           ry="9.651926" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:14.1111px;line-height:1.25;font-family:sans-serif;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+           x="77.897125"
+           y="61.933453"
+           id="text25431"><tspan
+             sodipodi:role="line"
+             id="tspan25429"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:14.1111px;font-family:FreeMono;-inkscape-font-specification:'FreeMono Bold';fill:#ffffff;stroke-width:0.264583"
+             x="77.897125"
+             y="61.933453">C</tspan></text>
+      </g>
+      <g
+         id="g57345"
+         transform="translate(634.24389,229.76907)">
+        <ellipse
+           style="fill:#2b0000;stroke-width:0.201325"
+           id="path23917-3"
+           cx="104.46265"
+           cy="56.096992"
+           rx="7.5"
+           ry="7.3442721" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:10.7373px;line-height:1.25;font-family:sans-serif;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.201325"
+           x="101.26903"
+           y="59.14677"
+           id="text25431-6"><tspan
+             sodipodi:role="line"
+             id="tspan25429-1"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.7373px;font-family:FreeMono;-inkscape-font-specification:'FreeMono Bold';fill:#ffffff;stroke-width:0.201325"
+             x="101.26903"
+             y="59.14677">A</tspan></text>
+      </g>
+      <g
+         id="g39276-8-0"
+         transform="matrix(0.76091259,0,0,0.76091259,642.91135,207.4446)">
+        <ellipse
+           style="fill:#2b0000;stroke-width:0.264583"
+           id="path23917-1-9-6"
+           cx="125.2733"
+           cy="58.240391"
+           rx="9.8565855"
+           ry="9.651926" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:14.1111px;line-height:1.25;font-family:sans-serif;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+           x="121.07621"
+           y="62.20425"
+           id="text25431-2-7-1"><tspan
+             sodipodi:role="line"
+             id="tspan25429-7-3-5"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:14.1111px;font-family:FreeMono;-inkscape-font-specification:'FreeMono Bold';fill:#ffffff;stroke-width:0.264583"
+             x="121.07621"
+             y="62.20425">I</tspan></text>
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:10.5836px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26459"
+         x="746.65753"
+         y="254.91719"
+         id="text12689"
+         transform="scale(0.999973,1.000027)"><tspan
+           sodipodi:role="line"
+           id="tspan12687"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:FreeMono;-inkscape-font-specification:FreeMono;stroke-width:0.26459"
+           x="746.65753"
+           y="254.91719"
+           dx="0"
+           dy="0"
+           rotate="0 0 0 0 0 0 0 0 0">nterface</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:10.5836px;line-height:1.25;font-family:sans-serif;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26459"
+         x="746.71106"
+         y="272.5574"
+         id="text12689-6"
+         transform="scale(0.999973,1.000027)"><tspan
+           sodipodi:role="line"
+           id="tspan12687-1"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:FreeMono;-inkscape-font-specification:FreeMono;stroke-width:0.26459"
+           x="746.71106"
+           y="272.5574"
+           rotate="0 0 0 0 0">lass</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:10.5836px;line-height:1.25;font-family:sans-serif;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26459"
+         x="747.7843"
+         y="288.89923"
+         id="text12689-2"
+         transform="scale(0.999973,1.000027)"><tspan
+           sodipodi:role="line"
+           id="tspan12687-9"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:FreeMono;-inkscape-font-specification:FreeMono;stroke-width:0.26459"
+           x="747.7843"
+           y="288.89923"
+           rotate="0 0 0 0 0 0 0 0">bstract</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:16.9333px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="1159.8483"
+       y="218.84802"
+       id="text27419"><tspan
+         sodipodi:role="line"
+         id="tspan27417"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16.9333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+         x="1159.8483"
+         y="218.84802">Exceptions and Error hierarchy</tspan></text>
+    <g
+       id="g3958-3"
+       transform="translate(1081.7182,-55.227168)"
+       style="display:inline">
+      <rect
+         style="fill:#008080;fill-opacity:1;stroke-width:0.264583"
+         id="rect22795-9-6-7-9-6"
+         width="127.485"
+         height="51.638317"
+         x="177.14528"
+         y="335.16837" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:8.46667px;line-height:1.25;font-family:sans-serif;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="242.09502"
+         y="364.22675"
+         id="text23693-2-3-5-2-7"><tspan
+           sodipodi:role="line"
+           style="font-size:8.46667px;text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+           x="242.09502"
+           y="364.22675"
+           id="tspan57503-5-0-5">Throwable</tspan></text>
+      <ellipse
+         style="fill:#2b0000;stroke-width:0.201325"
+         id="path23917-4-7-2-3"
+         cx="189.61526"
+         cy="345.54953"
+         rx="7.5"
+         ry="7.3442721" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:10.7373px;line-height:1.25;font-family:sans-serif;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.201325"
+         x="186.42163"
+         y="348.5993"
+         id="text25431-7-0-3-5"><tspan
+           sodipodi:role="line"
+           id="tspan25429-6-9-7-6"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.7373px;font-family:FreeMono;-inkscape-font-specification:'FreeMono Bold';fill:#ffffff;stroke-width:0.201325"
+           x="186.42163"
+           y="348.5993">C</tspan></text>
+    </g>
+    <g
+       id="g3958-3-2"
+       transform="translate(904.58384,37.821687)"
+       style="display:inline">
+      <rect
+         style="fill:#008080;fill-opacity:1;stroke-width:0.264583"
+         id="rect22795-9-6-7-9-6-9"
+         width="127.485"
+         height="51.638317"
+         x="177.14528"
+         y="335.16837" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:8.46667px;line-height:1.25;font-family:sans-serif;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="242.09502"
+         y="364.22675"
+         id="text23693-2-3-5-2-7-1"><tspan
+           sodipodi:role="line"
+           style="font-size:8.46667px;text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+           x="242.09502"
+           y="364.22675"
+           id="tspan57503-5-0-5-2">Error</tspan></text>
+      <ellipse
+         style="fill:#2b0000;stroke-width:0.201325"
+         id="path23917-4-7-2-3-7"
+         cx="189.61526"
+         cy="345.54953"
+         rx="7.5"
+         ry="7.3442721" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:10.7373px;line-height:1.25;font-family:sans-serif;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.201325"
+         x="186.42163"
+         y="348.5993"
+         id="text25431-7-0-3-5-0"><tspan
+           sodipodi:role="line"
+           id="tspan25429-6-9-7-6-9"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.7373px;font-family:FreeMono;-inkscape-font-specification:'FreeMono Bold';fill:#ffffff;stroke-width:0.201325"
+           x="186.42163"
+           y="348.5993">C</tspan></text>
+    </g>
+    <g
+       id="g69198"
+       transform="translate(322.98859,107.95613)">
+      <rect
+         style="fill:#008080;fill-opacity:1;stroke-width:0.516304"
+         id="rect22795-9-6-7-9-6-9-7"
+         width="343.44128"
+         height="72.990334"
+         x="542.62885"
+         y="404.80945" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:8.46667px;line-height:1.25;font-family:sans-serif;text-align:start;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="552.90704"
+         y="426.38022"
+         id="text23693-2-3-5-2-7-1-9"><tspan
+           sodipodi:role="line"
+           style="font-size:8.46667px;text-align:start;text-anchor:start;fill:#ffffff;stroke-width:0.264583"
+           x="552.90704"
+           y="426.38022"
+           id="tspan27192">AnnotationFormatError, AssertionError, AWTError, CoderMalfunctionError,</tspan><tspan
+           sodipodi:role="line"
+           style="font-size:8.46667px;text-align:start;text-anchor:start;fill:#ffffff;stroke-width:0.264583"
+           x="552.90704"
+           y="436.96356"
+           id="tspan51448">FactoryConfigurationError, FactoryConfigurationError, IOError, LinkageError,</tspan><tspan
+           sodipodi:role="line"
+           style="font-size:8.46667px;text-align:start;text-anchor:start;fill:#ffffff;stroke-width:0.264583"
+           x="552.90704"
+           y="447.54691"
+           id="tspan23098">SchemaFactoryConfigurationError, ServiceConfigurationError, ThreadDeath,</tspan><tspan
+           sodipodi:role="line"
+           style="font-size:8.46667px;text-align:start;text-anchor:start;fill:#ffffff;stroke-width:0.264583"
+           x="552.90704"
+           y="458.13022"
+           id="tspan61182">TransformerFactoryConfigurationError, VirtualMachineError</tspan></text>
+    </g>
+    <rect
+       style="fill:#008080;fill-opacity:1;stroke-width:1.09291"
+       id="rect22795-9-6-7-9-6-9-7-5"
+       width="386.91162"
+       height="290.31152"
+       x="1444.3081"
+       y="512.69855" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:8.46667px;line-height:1.25;font-family:sans-serif;text-align:start;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="1464.6406"
+       y="534.26935"
+       id="text23693-2-3-5-2-7-1-9-9"><tspan
+         sodipodi:role="line"
+         style="font-size:8.46667px;text-align:start;text-anchor:start;fill:#ffffff;stroke-width:0.264583"
+         x="1464.6406"
+         y="534.26935"
+         id="tspan61182-9">AclNotFoundException, ActivationException, AlreadyBoundException,</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:8.46667px;text-align:start;text-anchor:start;fill:#ffffff;stroke-width:0.264583"
+         x="1464.6406"
+         y="544.85266"
+         id="tspan74700">ApplicationException, AWTException, BackingStoreException,</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:8.46667px;text-align:start;text-anchor:start;fill:#ffffff;stroke-width:0.264583"
+         x="1464.6406"
+         y="555.43604"
+         id="tspan78314">BadAttributeValueExpException, BadBinaryOpValueExpException,</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:8.46667px;text-align:start;text-anchor:start;fill:#ffffff;stroke-width:0.264583"
+         x="1464.6406"
+         y="566.01935"
+         id="tspan79054">BadLocationException, BadStringOperationException, BrokenBarrierException,</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:8.46667px;text-align:start;text-anchor:start;fill:#ffffff;stroke-width:0.264583"
+         x="1464.6406"
+         y="576.60272"
+         id="tspan80166">CertificateException, CloneNotSupportedException, DataFormatException,</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:8.46667px;text-align:start;text-anchor:start;fill:#ffffff;stroke-width:0.264583"
+         x="1464.6406"
+         y="587.18604"
+         id="tspan82058">DatatypeConfigurationException, DestroyFailedException, ExecutionException,</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:8.46667px;text-align:start;text-anchor:start;fill:#ffffff;stroke-width:0.264583"
+         x="1464.6406"
+         y="597.76935"
+         id="tspan83632">ExpandVetoException, FontFormatException, GeneralSecurityException,</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:8.46667px;text-align:start;text-anchor:start;fill:#ffffff;stroke-width:0.264583"
+         x="1464.6406"
+         y="608.35272"
+         id="tspan85194">GSSException, IllegalClassFormatException, InterruptedException,</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:8.46667px;text-align:start;text-anchor:start;fill:#ffffff;stroke-width:0.264583"
+         x="1464.6406"
+         y="618.93604"
+         id="tspan87572">IntrospectionException, InvalidApplicationException, InvalidMidiDataException,</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:8.46667px;text-align:start;text-anchor:start;fill:#ffffff;stroke-width:0.264583"
+         x="1464.6406"
+         y="629.51941"
+         id="tspan89188">InvalidPreferencesFormatException, InvalidTargetObjectTypeException,</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:8.46667px;text-align:start;text-anchor:start;fill:#ffffff;stroke-width:0.264583"
+         x="1464.6406"
+         y="640.10272"
+         id="tspan91146">IOException, JAXBException, JMException, KeySelectorException,</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:8.46667px;text-align:start;text-anchor:start;fill:#ffffff;stroke-width:0.264583"
+         x="1464.6406"
+         y="650.68604"
+         id="tspan93788">LambdaConversionException, LastOwnerException, LineUnavailableException,</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:8.46667px;text-align:start;text-anchor:start;fill:#ffffff;stroke-width:0.264583"
+         x="1464.6406"
+         y="661.26941"
+         id="tspan94804">MarshalException, MidiUnavailableException, MimeTypeParseException,</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:8.46667px;text-align:start;text-anchor:start;fill:#ffffff;stroke-width:0.264583"
+         x="1464.6406"
+         y="671.85272"
+         id="tspan96066">MimeTypeParseException, NamingException, NoninvertibleTransformException,</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:8.46667px;text-align:start;text-anchor:start;fill:#ffffff;stroke-width:0.264583"
+         x="1464.6406"
+         y="682.4361"
+         id="tspan97400">NotBoundException, NotOwnerException, ParseException,</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:8.46667px;text-align:start;text-anchor:start;fill:#ffffff;stroke-width:0.264583"
+         x="1464.6406"
+         y="693.01941"
+         id="tspan100252">ParserConfigurationException, PrinterException, PrintException,</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:8.46667px;text-align:start;text-anchor:start;fill:#ffffff;stroke-width:0.264583"
+         x="1464.6406"
+         y="703.60272"
+         id="tspan101274">PrivilegedActionException, PropertyVetoException, ReflectiveOperationException,</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:8.46667px;text-align:start;text-anchor:start;fill:#ffffff;stroke-width:0.264583"
+         x="1464.6406"
+         y="714.1861"
+         id="tspan102746">RefreshFailedException, RemarshalException, RuntimeException, SAXException,</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:8.46667px;text-align:start;text-anchor:start;fill:#ffffff;stroke-width:0.264583"
+         x="1464.6406"
+         y="724.76941"
+         id="tspan103834">ScriptException, ServerNotActiveException, SOAPException, SQLException,</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:8.46667px;text-align:start;text-anchor:start;fill:#ffffff;stroke-width:0.264583"
+         x="1464.6406"
+         y="735.35278"
+         id="tspan105054">TimeoutException, TooManyListenersException, TransformerException,</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:8.46667px;text-align:start;text-anchor:start;fill:#ffffff;stroke-width:0.264583"
+         x="1464.6406"
+         y="745.9361"
+         id="tspan108944">TransformException, UnmodifiableClassException, UnsupportedAudioFileException,</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:8.46667px;text-align:start;text-anchor:start;fill:#ffffff;stroke-width:0.264583"
+         x="1464.6406"
+         y="756.51941"
+         id="tspan111316">UnsupportedCallbackException, UnsupportedFlavorException,</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:8.46667px;text-align:start;text-anchor:start;fill:#ffffff;stroke-width:0.264583"
+         x="1464.6406"
+         y="767.10278"
+         id="tspan113124">UnsupportedLookAndFeelException, URIReferenceException, URISyntaxException,</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:8.46667px;text-align:start;text-anchor:start;fill:#ffffff;stroke-width:0.264583"
+         x="1464.6406"
+         y="777.6861"
+         id="tspan115088">UserException, XAException, XMLParseException, XMLSignatureException,</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:8.46667px;text-align:start;text-anchor:start;fill:#ffffff;stroke-width:0.264583"
+         x="1464.6406"
+         y="788.26947"
+         id="tspan116878">XMLStreamException, XPathException</tspan></text>
+    <g
+       id="g3958-3-3"
+       transform="translate(1261.6575,36.57478)"
+       style="display:inline">
+      <rect
+         style="fill:#008080;fill-opacity:1;stroke-width:0.264583"
+         id="rect22795-9-6-7-9-6-6"
+         width="127.485"
+         height="51.638317"
+         x="177.14528"
+         y="335.16837" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:8.46667px;line-height:1.25;font-family:sans-serif;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="242.09502"
+         y="364.22675"
+         id="text23693-2-3-5-2-7-0"><tspan
+           sodipodi:role="line"
+           style="font-size:8.46667px;text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+           x="242.09502"
+           y="364.22675"
+           id="tspan57503-5-0-5-6">Exceotion</tspan></text>
+      <ellipse
+         style="fill:#2b0000;stroke-width:0.201325"
+         id="path23917-4-7-2-3-2"
+         cx="189.61526"
+         cy="345.54953"
+         rx="7.5"
+         ry="7.3442721" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:10.7373px;line-height:1.25;font-family:sans-serif;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.201325"
+         x="186.42163"
+         y="348.5993"
+         id="text25431-7-0-3-5-6"><tspan
+           sodipodi:role="line"
+           id="tspan25429-6-9-7-6-1"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.7373px;font-family:FreeMono;-inkscape-font-specification:'FreeMono Bold';fill:#ffffff;stroke-width:0.201325"
+           x="186.42163"
+           y="348.5993">C</tspan></text>
+    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 1148.7286,511.63295 0.4355,-86.49634"
+       id="path121622" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 1508.9606,424.74096 0.6438,87.92564"
+       id="path121657" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 1148.0094,372.17685 177.3114,-40.65606"
+       id="path121692" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 1506.3306,371.34111 1325.3208,331.52079"
+       id="path121727" />
+  </g>
+</svg>
