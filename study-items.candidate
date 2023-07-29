@@ -18,21 +18,21 @@ Java
 13- Difference between using Iterator on a HashSet and an ArrayList
 14- Learn about the Callable interface and use of futures, completable futures
 15- ScheduledExecutorService, ExecutorService and cronjobs (see docs.oracle link provided)
-!!!!!!!!!16- Multithreading see about join(), notify(), locks, deadlocks, starvation. Read about general concurrent programming. What are monitors, semaphores and locks. Notify and notifyAll methods. Synchronize and volatile. Fork/join latch barrier. Thread states. Sync and wait,deadlock, reentrant lock, Runnable
+16- Multithreading see about join(), notify(), locks, deadlocks, starvation. Read about general concurrent programming. What are monitors, semaphores and locks. Notify and notifyAll methods. Synchronize and volatile. Fork/join latch barrier. Thread states. Sync and wait,deadlock, reentrant lock, Runnable
 17- File manipulation reading and writing to buffers(Buffered streams [BufferedInputStream and BufferedOutputStream])
 18- Java module system (introduced in version 9)
 19- Fail-safe vs Fail-fast iterators (use Iterator's remove method instead of the collections's remove method)
 20- Difference between LinkedBlockingQueue and BlockingQueue (update: BlockingQueue is an interface, LinkedBlockingQueue and ArrayBlockingQueue are implementing classes)
 21- Intermediate operation Map, how many parameters can it take?
 22- Classpath and class loader in Java
-23- Java Exceptions. Exception hierarchies. Checked exception, un-checked exceptions and runtime exceptions
+!!!!!!!23- Java Exceptions. Exception hierarchies. Checked exception, un-checked exceptions, runtime exceptions and compile-time exceptions
 24- Connection pools (JDBC)
 25- Java class loading mechanism
 26- Static blocks of code!
 27- Various types of classes (immutable, anonymous, abstract, generic). Java inner classes. Use, declaration. How do they work and under what scenarios should we use them. What is a static class and what's used for?
 28- Composition and aggregation and association
 29- Java Persistence API
-30- Sort and ArrayList of addresses based on a customized Comparator (use a class attribute)
+30- Sort an ArrayList of addresses based on a customized Comparator (use a class attribute)
 32- Learn more about Serializable interface and serialization (is a memory representation of an object in bits)
 33- Create a small study-case/application that applies serialization and de-serialization
 34- Learn more about Generics, wildcards and supertypes. Different ways of using generics in classes, methods and types. Bounded and unbounded wildcards and supertypes. They are compile-time, once they are used it's runtime and they only know about the being-used type (String, Object, Integer, ...)
