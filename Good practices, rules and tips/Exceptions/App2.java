@@ -64,6 +64,8 @@ Resources:
 [1] https://docs.oracle.com/javase/8/docs/api/java/lang/AutoCloseable.html
 [2] https://docs.oracle.com/javase/8/docs/api/java/io/Closeable.html
 [3] https://chat.openai.com/c/16f99044-4b80-44a9-b2c5-05a1bd71a56a [search phrase: "try-with-resources statement"]
+[4] https://www.youtube.com/watch?v=GBtQW3XF3Lg
+[5] https://www.youtube.com/watch?v=V3X6uV4Xg34&list=PLsyeobzWxl7rS9B2K1l--VDpCn41gijnV&index=6
 */
 
 class App2 {
