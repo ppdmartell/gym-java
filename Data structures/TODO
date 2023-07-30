@@ -8,7 +8,7 @@ Resources:
 [2] https://www.youtube.com/watch?v=5dscMs2hnDI
 [3] https://chat.openai.com/c/594e7820-badd-4bad-a709-75ada1cc31c6 [search phrase: "is constant and does not depend on the size"]
 [4] https://www.youtube.com/watch?v=4gvPmzWEwsY
-
+[5] https://www.youtube.com/playlist?list=PLL8woMHwr36HmQfxqqqxns5GexTNmxFqK
 
 * There is an interesting entry about contiguous blocks for arrays[] and how they are abstracted away from the programmer
 by the JVM, opposite as what assembly language does (EAX).
