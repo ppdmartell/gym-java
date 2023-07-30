@@ -25,8 +25,8 @@ Java
 20- Difference between LinkedBlockingQueue and BlockingQueue (update: BlockingQueue is an interface, LinkedBlockingQueue and ArrayBlockingQueue are implementing classes)
 21- Intermediate operation Map, how many parameters can it take?
 22- Classpath and class loader in Java
-!!!!!!!23- Java Exceptions. Exception hierarchies. Checked exception, un-checked exceptions, runtime exceptions and compile-time exceptions
-24- Connection pools (JDBC)
+23- Java Exceptions. Exception hierarchies. Checked exception, un-checked exceptions, runtime exceptions and compile-time exceptions
+24- Connection pools (JDBC) (Apache Commons DBCP, HikariCP, C3PO)
 25- Java class loading mechanism
 26- Static blocks of code!
 27- Various types of classes (immutable, anonymous, abstract, generic). Java inner classes. Use, declaration. How do they work and under what scenarios should we use them. What is a static class and what's used for?
