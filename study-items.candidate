@@ -33,7 +33,7 @@ Java
 28- Composition and aggregation and association
 29- Java Persistence API
 30- Sort an ArrayList of addresses based on a customized Comparator (use a class attribute) (Maybe use a TreeSet or TreeMap instead)
-!!!!!!!32- Learn more about Serializable interface and serialization (is a memory representation of an object in bits)
+32- Learn more about Serializable interface and serialization (is a memory representation of an object in bits). And externalization (Externalizable)
 33- Create a small study-case/application that applies serialization and de-serialization
 34- Learn more about Generics, wildcards and supertypes. Different ways of using generics in classes, methods and types. Bounded and unbounded wildcards and supertypes. They are compile-time, once they are used it's runtime and they only know about the being-used type (String, Object, Integer, ...)
 35- Learn about how Java deals with Date and time (Date API)
