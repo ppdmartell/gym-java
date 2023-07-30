@@ -10,14 +10,22 @@ By implementing the Externalizable interface, you will have to override two meth
 - writeExternal(ObjectOutput)
 - readExternal(ObjectInput)
 
+Something to note is that with Serializable the serialization is controlled by the JVM, meanwhile
+with Externalizable the serialization is controller by the developer.
+
 VERY IMPORTANT:
 Externalizable interface requires a public no-args constructor in order to work properly, otherwise
 you will get an exception issue.
+
+SERIALIZATION vs EXTERNALIZATION (and serialization vulnerabilities) in [4].
+
+Serialization vulnerabilities in [4](7:30min) 
 
 Resources:
 [1] https://www.youtube.com/watch?v=nUFoDfGl1II
 [2] https://docs.oracle.com/javase/8/docs/api/java/io/Externalizable.html
 [3] https://docs.oracle.com/javase/8/docs/api/java/io/ObjectOutput.html
+[4] https://www.youtube.com/watch?v=Eo3mtkiB2-0
 */
 
 import java.io.File;
