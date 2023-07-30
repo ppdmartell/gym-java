@@ -46,6 +46,8 @@ Resources:
 [4] https://chat.openai.com/c/16f99044-4b80-44a9-b2c5-05a1bd71a56a [search phrase: "Annotations are a powerful feature"]
 [5] https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html
 [6] https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Method.html
+[7] https://www.youtube.com/watch?v=Vbc1YHVWFhg
+[8] https://www.youtube.com/watch?v=ja4is9oq37k
 */
 
 import java.util.Arrays;
