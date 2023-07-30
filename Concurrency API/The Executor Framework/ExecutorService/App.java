@@ -15,6 +15,8 @@ Resources:
 [1] https://chat.openai.com/c/d77e13c2-40b0-42ff-8310-eb84fd399ba4 [search phrase: "one-size-fits-all answer"]
 [2] https://www.youtube.com/watch?v=sUVJoUp8gBc
 [3] https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executors.html#newWorkStealingPool--
+[4] https://www.youtube.com/watch?v=Nb85yJ1fPXM
+[5] https://www.youtube.com/watch?v=MB_qCXBSgK0
 */
 
 import java.util.List;
