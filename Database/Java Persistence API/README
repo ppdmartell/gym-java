@@ -1,0 +1,70 @@
+-------------------------------------------------------------------------------------------------------
+Q: Assistant, what's the Java Persistence API? Is it built-in in the JDK?
+
+A: The Java Persistence API (JPA) is a Java specification that provides a standardized way to work
+with relational databases in Java applications. It is part of the Java Platform, Enterprise
+Edition (Java EE), now known as Jakarta EE. JPA simplifies the development of Java applications
+that need to interact with databases by abstracting the underlying database access and providing
+a high-level object-relational mapping (ORM) framework.
+
+JPA allows developers to define entity classes that represent database tables and their
+relationships. These entity classes are mapped to the corresponding database tables, and JPA
+handles the mapping between Java objects and the relational database, so developers can work with
+Java objects and let JPA handle the database operations.
+
+JPA provides a set of annotations (e.g., `@Entity`, `@Table`, `@Column`, `@Id`, etc.) that are used
+to annotate Java classes and their properties, specifying how they should be mapped to database
+tables and columns. It also defines a query language called Java Persistence Query Language (JPQL)
+that enables developers to write database queries using object-oriented syntax instead of native SQL.
+
+To use JPA in a Java application, you need to include a JPA implementation library in your project,
+as JPA itself is just a specification. Some popular JPA implementations include Hibernate,
+EclipseLink, and Apache OpenJPA.
+
+As of my knowledge cutoff in September 2021, JPA is not built-in in the JDK itself. However,
+Jakarta EE (formerly Java EE) specifications, including JPA, are usually provided by application
+servers or containers that implement the Jakarta EE platform. So, to use JPA, you typically include
+the appropriate JPA implementation library along with your application or deploy it to a Jakarta
+EE-compliant application server.
+
+--------------------------------------------------------------------------------------------------------
+Q: What does it mean it's a specification in this case?
+
+A: In the context of software development and technologies like the Java Persistence API (JPA), the
+term "specification" refers to a formal document that defines a set of rules, behaviors, and
+interfaces that must be followed and implemented by software developers and vendors. Specifications
+are usually created by standards organizations, industry consortiums, or technology experts to
+ensure interoperability and consistency among different implementations of a particular technology.
+
+Here's what it means for JPA to be a specification:
+
+1. Standardization: JPA provides a standardized way to work with relational databases in Java
+applications. By defining a set of rules and interfaces, JPA ensures that developers can write
+database access code in a consistent manner, regardless of the underlying database or the specific
+implementation they are using.
+
+2. Interface definition: The JPA specification defines a set of Java interfaces and annotations
+that developers must use to interact with databases. For example, the `javax.persistence.Entity`
+annotation is used to mark a Java class as an entity that corresponds to a database table.
+
+3. Multiple implementations: Since JPA is a specification, it does not include a concrete
+implementation itself. Instead, it serves as a blueprint or guideline for how database access
+should be handled. To use JPA in a project, developers need to choose and include a specific JPA
+implementation (e.g., Hibernate, EclipseLink) that adheres to the JPA specification.
+
+4. Interchangeability: Because JPA is a specification, it allows developers to switch between
+different JPA implementations without changing their application code. As long as the chosen JPA
+implementation is compliant with the JPA specification, the application's database access code
+will remain consistent and portable.
+
+5. Community-driven: Specifications like JPA are often developed through collaboration and
+consensus-building within the software development community. This ensures that best practices,
+common patterns, and potential issues are considered when defining the standard.
+
+Overall, the use of specifications in software development is crucial for creating interoperable
+and consistent technologies, encouraging competition among vendors, and providing developers with
+clear guidelines for implementing a particular technology.
+-----------------------------------------------------------------------------------------------------
+
+Resources:
+[1] https://chat.openai.com/c/16f99044-4b80-44a9-b2c5-05a1bd71a56a [search phrase: "specification that provides a standardized"]
