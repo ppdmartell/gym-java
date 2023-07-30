@@ -16,6 +16,10 @@ other module that would be used to deserialize the object. Otherwise you will ge
 3. Static fields belong to the class, so they won't be serialized.
 4. Transient fields indicate not to serialize the field marked as such.
 
+VERY IMPORTANT: If you want to serialize an object A that contains another object B (a composition
+relationship), this second object B must also implement Serializable and follow the same pre-
+conditions required for being able to serialize an object.
+
 An important thing to note is a serialized object is platform-independent, because if you think
 about it, a serialized object is the represetation in bytes of an object in memory. And every
 device can read bytes and understand what they are.
@@ -68,10 +72,11 @@ class App {
 }
 
 class Employee implements Serializable {
-	private static final long serialVersionUID = 23L;
+	private static final long serialVersionUID = 23L; //This class in the other module must have the same version 23L. Otherwise the deserialization will fail.
 	private final String name;
 	private final int age;
 	private transient final Double salary;   //As intended, when the object is deserialized, salary will have a null value, even when it has a value when the first Employee object was created.
+	private static final int CLAZZ = 1;
 
 	public Employee(String name, int age, Double salary) {
 		this.name = name;
@@ -82,9 +87,10 @@ class Employee implements Serializable {
 	public String getName() { return name; }
 	public int getAge() { return age; }
 	public Double getSalary() { return salary; }
+	public int getClazz() { return CLAZZ; }
 
 	@Override
 	public String toString() {
-		return "[name=" + name  + ",age=" + age  + ",salary=" + salary  + "]";
+		return "[name=" + name  + ",age=" + age  + ",salary=" + salary  + ",CLAZZ=" + CLAZZ  + "]";
 	}
 }
