@@ -1,0 +1,39 @@
+Test coverage is a metric used in software testing to measure the extent to which the source code
+of a software application is exercised by a set of test cases. It helps in assessing the
+effectiveness of the testing process by quantifying the proportion of code that is executed
+during testing. Test coverage is typically expressed as a percentage.
+
+The main purpose of test coverage analysis is to identify areas of code that have not been
+adequately tested. A high test coverage percentage indicates that a significant portion of the
+code has been tested, which can give confidence in the reliability and robustness of the software.
+On the other hand, a low test coverage percentage suggests that there are parts of the code that
+remain untested, posing potential risks of bugs and defects.
+
+Test coverage can be measured at various levels:
+
+1. **Statement Coverage**: Measures the percentage of individual code statements that are executed
+at least once during testing.
+
+2. **Branch Coverage**: Measures the percentage of decision points (such as if-else statements)
+where both true and false branches are exercised during testing.
+
+3. **Path Coverage**: Measures the percentage of all possible execution paths through the code
+that are exercised during testing.
+
+4. **Function/Method Coverage**: Measures the percentage of functions or methods that are invoked
+during testing.
+
+5. **Class/Module/Package Coverage**: Measures the percentage of classes, modules, or packages
+that are exercised during testing.
+
+It's important to note that high test coverage does not guarantee that the software is entirely
+bug-free or that all potential scenarios have been tested. It merely indicates that the specified
+set of test cases has exercised a certain proportion of the code. It is still essential to design
+comprehensive test cases that cover different scenarios, boundary cases, and use cases to achieve
+effective testing.
+
+Test coverage analysis is a valuable tool for guiding the testing process, identifying areas that
+need more testing, and providing insights into the overall code quality and testing completeness.
+
+Resources:
+[1] https://chat.openai.com/c/16f99044-4b80-44a9-b2c5-05a1bd71a56a [search phrase: "Test coverage is a metric used"]
