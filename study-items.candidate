@@ -42,7 +42,7 @@ Java
 38- Core Java features
 39- Standard and Advanced libraries
 40- Buffered streams
-41- Cloning (deep cloning vs shallow cloning)
+41- Cloning (deep cloning vs shallow cloning) (Copying and cloning??)
 42- JVM: Garbage collection,  heap structure etc., full/partial/parallel GC, class loading, JVN config
 43- JUnit and Mockito
 44- Test coverage. What is it? How can you implement one? [See linkedin learning for the testing part]
