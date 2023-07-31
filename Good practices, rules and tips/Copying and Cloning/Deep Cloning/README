@@ -1,0 +1,12 @@
+According to gpt [1], Deep cloning is when you serialize the object and copy it in a byte-by-byte
+basis. So in this case there would be two categories:
+
+- Copying
+- Cloning
+
+Although the division between terms are blurry on the internet, some sources even use the terms
+copying and cloning interchangeably. 
+
+Resources:
+[1] https://chat.openai.com/c/16f99044-4b80-44a9-b2c5-05a1bd71a56a [search phrase: "byte-by-byte basis"]
+[2] https://chat.openai.com/c/16f99044-4b80-44a9-b2c5-05a1bd71a56a [search phrase: "Deep copying and Deep cloning"]
