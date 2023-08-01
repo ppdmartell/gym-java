@@ -1,0 +1,7 @@
+1- Create Person class:															nano Person.java
+2- Compile Person:																javac Person.java
+3- Create the person.jar:														jar cvf person.jar Person.class
+4- Move Person.java and Person.class to a folder(to keep the example clean):	mkdir res && mv Person.* res/	
+5- Create the App.java file:													nano App.java
+6- Link the person.jar file to App.java via classpath:							javac -cp person.jar App.java
+7- Execute the App (you must see App.class due to step 5):						java -cp .:person.jar App
