@@ -52,12 +52,12 @@ Java
 48- What is a try with resource (things between parenthesis in a try statement)
 49- Transient Java keyword and what's used for?
 49- How to create a JAR and that way become your Java app portable
-49- !!!!!What is unboxing and auto-boxing? How can you upcast and downcast? Are those questions related?
+49- What is unboxing and auto-boxing? How can you upcast and downcast? Are those questions related?
 49- How can you convert a simple array into a streameable one. How can you convert and ArrayList into a streameable one?
 49- Difference between "private final int variable = 10" and "private final Integer variable = 10". [Answer is in chatgpt Senior Java Lead chat]
-49- What is a static import of a method and what's used for? [Answer is in chatgpt Senior Java Lead chat]
-49- !!!!!What is spliterator and what's its purpose? How can it be used, providing examples if possible?
-49- !!!!!RunnableFuture, FutureTask, ForkJoinTask.
+49- What is a static import of a method and what's used for? [Answer is in chatgpt Senior Java Lead chat (gym-java)]
+49- What is spliterator and what's its purpose? How can it be used, providing examples if possible?
+49- RunnableFuture, FutureTask, ForkJoinTask.
 49- What is the Fork/Join Framework?
 49- Example of a reduce operation on a collection.
 49- Enums
