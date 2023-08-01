@@ -1,0 +1,52 @@
+/*
+Assistant, in these days, is the JDBC used directly by developers? Or has the JDBC turned into a
+low-level layer used by frameworks and developers use these frameworks instead of the JDBC?
+
+As of my last knowledge update in September 2021, the use of JDBC (Java Database Connectivity)
+directly by developers is still quite common, especially in projects where developers need
+fine-grained control over database operations and performance. JDBC provides a straightforward
+and standard way to interact with databases in Java applications, making it a popular choice 
+for many developers.
+
+However, it's worth noting that the Java ecosystem has evolved significantly over the years, and
+many higher-level frameworks and libraries have emerged that build upon JDBC to provide more
+abstracted and convenient database access. These frameworks aim to simplify database operations
+and reduce boilerplate code, making development faster and more efficient.
+
+Some popular Java frameworks that utilize JDBC or provide abstractions over it include:
+
+1. **Spring Framework**: Spring offers the Spring JDBC module, which provides a higher-level
+abstraction for database operations. It simplifies JDBC usage by handling tasks like connection
+management, exception handling, and resource cleanup, allowing developers to focus more on business
+logic.
+
+2. **Hibernate**: Hibernate is an Object-Relational Mapping (ORM) framework that allows developers
+to map Java objects to database tables. It abstracts away SQL and JDBC details, making database
+interactions more object-oriented and developer-friendly.
+
+3. **JPA (Java Persistence API)**: JPA is a Java specification for ORM, and it is commonly used in
+combination with implementations like Hibernate. It provides a standard API for interacting with
+relational databases using object-oriented approaches.
+
+4. **MyBatis**: MyBatis is a SQL mapping framework that allows developers to write SQL statements
+and map the results to Java objects. It provides more control over the SQL queries while still
+abstracting away some JDBC details.
+
+The availability of these higher-level frameworks has reduced the need for developers to write raw
+JDBC code directly in many cases. Instead, developers can leverage the features and abstractions
+offered by these frameworks to work with databases more efficiently.
+
+Ultimately, the choice of whether to use raw JDBC or one of these higher-level frameworks depends
+on the specific requirements of the project and the developer's preference. Some projects may
+still benefit from using raw JDBC for precise control, while others may find higher-level
+frameworks more convenient for rapid development. As the Java ecosystem continues to evolve,
+new technologies and patterns may also influence the database access strategies used by developers.
+
+
+
+Resources:
+[1] https://docs.oracle.com/javase%2Ftutorial%2F/jdbc/overview/index.html
+[2] https://chat.openai.com/c/16f99044-4b80-44a9-b2c5-05a1bd71a56a [search phrase: "JDBC provides a straightforward and standard"]
+[3] https://www.youtube.com/playlist?list=PLmCsXDGbJHdhs1dWrgeT1ZoitLGp90I6D
+[4] https://www.youtube.com/playlist?list=PLsyeobzWxl7rU7Jz3zDRpqB-EODzBbHOI
+*/
