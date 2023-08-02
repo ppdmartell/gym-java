@@ -1,0 +1,10 @@
+- Bean
+- BeanFactory
+- Application Context (extends BeanFactory)
+- Spring IoC container
+
+
+
+
+Resources:
+[1] https://chat.openai.com/c/58d7bcbf-1c70-4649-b219-080160f7975c [search phrase: "two primary types of context containers"]
