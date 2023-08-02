@@ -1,0 +1,26 @@
+/*
+Spring is an ecosystem, and Spring Boot is part of it. Even when most developers initially think
+about Spring Boot vs Spring, actually the first belongs to the second one (the ecosystem). Now,
+there are certain things that make Spring Boot stand out:
+
+1. Convention over Configuration: Spring Boot follows this principle, providing defaults
+auto-configurations for various components. This makes getting started with Spring Boot easier and
+faster, opposite to Spring Framework, which often requires more explicit configuration.
+
+2. Embedded servers: Spring Boot includes embedded servers (like Tomcat, Jetty, or Undertow), that
+are automatically configured in the dependencies file (pom.xml).
+
+3. Simplified dependency management: Spring Boot's "starter" dependencies help manage dependencies
+for specific use cases, making it simple to add features like database access, security or
+messaging in a few lines of code.
+
+4. Microservices and Cloud-native support: Spring Boot is well suited for building microservices
+and cloud-native applications due to its lightweight nature, easy configuration, and support for
+cloud platforms like AWS, Azure and Google Cloud.
+
+5. Rapid development and prototyping: Thanks to its quick setup and simplified configuration,
+Spring Boot is an excellent choice for rapid application development and prototyping.
+
+Resources:
+[1] https://chat.openai.com/c/58d7bcbf-1c70-4649-b219-080160f7975c [search phrase: "Spring Boot stand out over the traditional"]
+*/
