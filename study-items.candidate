@@ -70,7 +70,7 @@ Microservices
 50- Microservices architectural patterns and Microservices design patterns
 51- Lean about Service Aggregator and Service Registry patterns (Microservices design architecture)
 52- DDD and its relationship to microservices and microservices architectures
-53- Event-Driven development
+53- Event-Driven development [9]
 54- Learn about Service Discovery and Eureka
 55- Learn about Vertical scaling and horizontal scaling
 
@@ -79,16 +79,18 @@ Spring
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 56- Aspect-Oriented Programming. Cross-cutting concerns (logging and others. They are horizontals). Spring AOP
 57- Create an example application with AOP programming
-58- Context container. What is it, what it does?
-59- Why was Spring originated? (hint: boiler-plated code)
-60- What is IoC (Inversion of Control) and DI (Dependency injection)
+58- ApplicationContext container. What is it, what it does? (Belongs to Spring IoC container, along BeanFactory) [2]
+59- Why was Spring originated? (hint: boiler-plated code) [1]
+60- What is IoC (Inversion of Control) and DI (Dependency injection) [1][2]
+60- What is the IoC container?
 61- What is the Hollywood principle?
-62- What is the application context in Spring?
-63- What is a Servlet and how it evolved?
-64- What is the Spring MVC flow?
+62- What is the ApplicationContext in Spring? [2]
+63- What is a Servlet and how it evolved to Spring Framework...in this practice's point of view? (See image in the reposityory)[3]
+64- What is the Spring MVC flow? [4]
+64- What are the Spring tiers? [4][8][7][5][6] (Tiers (MVC) are different than layers (Presentation, Business, Persistence, Data[base])!!!)
 65- What is DispatcherServlet?
-66- What is FrontController?
-66- What is the @Configuration annotation used for?
+66- What is a front controller? (Front controller is a design pattern commonly used in web dev. In Spring MVC, the front controller is the DispatcherServlet[10])
+66- What is the @Configuration annotation used for? (Is a stereotype although not inside that package, that handles contains beans definitions and app config.)
 67- Differences between Spring Core, Spring MVC and Spring Boot?
 68- How, in functionally terms, is @RestController different than @Controller?
 69- Learn about Spring exception-handling module (@ResponseStatus,@ExceptionHandler and @ControllerAdvice)
@@ -148,4 +150,14 @@ Algorithms
 
 
 
-
+Resources:
+[1] https://www.youtube.com/watch?v=gq4S-ovWVlM
+[2] https://www.youtube.com/watch?v=aS9SQITRocc
+[3] https://www.youtube.com/watch?v=b42CJ0r-1to&list=PLE0F6C1917A427E96
+[4] https://www.youtube.com/watch?v=xkDBaldNki4
+[5] https://www.geeksforgeeks.org/spring-boot-architecture/
+[6] https://www.javatpoint.com/spring-boot-architecture
+[7] https://chat.openai.com/c/58d7bcbf-1c70-4649-b219-080160f7975c [search phrase: "the controllers belong to the Presentation layer"]
+[8] https://www.javaguides.net/2020/07/spring-boot-project-architecture.html
+[9] https://www.youtube.com/watch?v=If2wD929-xA
+[10] https://chat.openai.com/c/5971add2-c40c-4fc2-84ef-dc234fa90400 [search phrase: "Front Controller in Spring is the"]
