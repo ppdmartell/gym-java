@@ -88,12 +88,13 @@ Spring
 63- What is a Servlet and how it evolved to Spring Framework...in this practice's point of view? (See image in the reposityory)[3]
 64- What is the Spring MVC flow? [4]
 64- What are the Spring tiers? [4][8][7][5][6] (Tiers (MVC) are different than layers (Presentation, Business, Persistence, Data[base])!!!)
-65- What is DispatcherServlet?
+65- What is DispatcherServlet? (The DispatcherServlet is the front controller)
 66- What is a front controller? (Front controller is a design pattern commonly used in web dev. In Spring MVC, the front controller is the DispatcherServlet[10])
 66- What is the @Configuration annotation used for? (Is a stereotype although not inside that package, that handles contains beans definitions and app config.)
-67- Differences between Spring Core, Spring MVC and Spring Boot?
-68- How, in functionally terms, is @RestController different than @Controller?
-69- Learn about Spring exception-handling module (@ResponseStatus,@ExceptionHandler and @ControllerAdvice)
+67- Differences between Spring Core, Spring MVC and Spring Boot? [12]
+68- How, in functionally terms, is @RestController different than @Controller? [11]
+69- Learn about Spring exception-handling module (@ControllerAdvice @ExceptionHandler and @ResponseStatus. @ErrorController (but only in SpringBoot))
+69- What is the @Value annotation used for?
 70- Learn about the scope of a bean.Where is it accessible from? And for how long?
 71- Scopes of a bean (Singleton, Prototype, Request, Session, Test, ...)
 72- Differences between Spring Core and Spring MVC
@@ -161,3 +162,5 @@ Resources:
 [8] https://www.javaguides.net/2020/07/spring-boot-project-architecture.html
 [9] https://www.youtube.com/watch?v=If2wD929-xA
 [10] https://chat.openai.com/c/5971add2-c40c-4fc2-84ef-dc234fa90400 [search phrase: "Front Controller in Spring is the"]
+[11] https://www.baeldung.com/spring-controller-vs-restcontroller
+[12] https://chat.openai.com/c/5971add2-c40c-4fc2-84ef-dc234fa90400 [search phrase: "they serve different purposes"]
