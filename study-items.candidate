@@ -94,9 +94,9 @@ Spring
 67- Differences between Spring Core, Spring MVC and Spring Boot? [12]
 68- How, in functionally terms, is @RestController different than @Controller? [11]
 69- Learn about Spring exception-handling module (@ControllerAdvice @ExceptionHandler and @ResponseStatus. @ErrorController (but only in SpringBoot))
-69- What is the @Value annotation used for?
+69- What is the @Value annotation used for? (Is used to inject values from properties files, environment variables and others.)
 70- Learn about the scope of a bean.Where is it accessible from? And for how long?
-71- Scopes of a bean (Singleton, Prototype, Request, Session, Test, ...)
+71- Scopes of a bean (Singleton, Prototype, Request, Session, Test, ...) [13][14]
 72- Differences between Spring Core and Spring MVC
 73- Different types of Spring frameworks (Data, Security, Messaging, ...)
 74- What is @Datasource bean?
@@ -109,7 +109,7 @@ Spring
 81- How to switch from Tomcat to Jetty. Create a small Spring boot application and do this
 82- ACID meaning
 83- Learn about how Spring manages auto-configuration
-83- How to create a JAR and that way become your Spring app portable
+83- How to create a JAR and that way become your Spring app portable (see the udemy course)
 83- DAO vs Repository pattern
 
 
@@ -164,3 +164,5 @@ Resources:
 [10] https://chat.openai.com/c/5971add2-c40c-4fc2-84ef-dc234fa90400 [search phrase: "Front Controller in Spring is the"]
 [11] https://www.baeldung.com/spring-controller-vs-restcontroller
 [12] https://chat.openai.com/c/5971add2-c40c-4fc2-84ef-dc234fa90400 [search phrase: "they serve different purposes"]
+[13] https://www.baeldung.com/spring-bean-scopes
+[14] https://docs.spring.io/spring-framework/docs/3.0.0.M3/reference/html/ch04s04.html
