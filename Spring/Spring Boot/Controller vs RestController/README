@@ -1,0 +1,20 @@
+/*
+In [1] you could find the differences between @Controller and @RestController.
+INFO: One thing that impressed me is that you can also return a JSON document (see code below) by using a
+@Controller class. I thought this was only possible with @RestController, since @Controller is
+usually used to return a view with Thymeleaf.
+
+@Controller
+@RequestMapping("books")
+public class SimpleBookController {
+
+    @GetMapping("/{id}", produces = "application/json")
+    public @ResponseBody Book getBook(@PathVariable int id) {
+        return findBookById(id);
+    }
+
+}
+
+Resources:
+[1] https://www.baeldung.com/spring-controller-vs-restcontroller
+*/
