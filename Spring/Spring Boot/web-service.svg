@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="713.39172mm"
+   height="426.93317mm"
+   viewBox="0 0 713.39172 426.93317"
+   version="1.1"
+   id="svg339513"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   sodipodi:docname="web-service.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview339515"
+     pagecolor="#ffffff"
+     bordercolor="#111111"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="false"
+     inkscape:document-units="mm"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:zoom="0.46146184"
+     inkscape:cx="1534.2547"
+     inkscape:cy="1059.6759"
+     inkscape:window-width="1366"
+     inkscape:window-height="700"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     lock-margins="true"
+     fit-margin-top="100"
+     fit-margin-left="100"
+     fit-margin-right="100"
+     fit-margin-bottom="100">
+    <sodipodi:guide
+       position="369.61694,199.17244"
+       orientation="0,-1"
+       id="guide363816" />
+    <sodipodi:guide
+       position="229.9241,32.824045"
+       orientation="0,-1"
+       id="guide367582" />
+  </sodipodi:namedview>
+  <defs
+     id="defs339510" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-11.093482,84.420934)">
+    <rect
+       style="fill:#008080;stroke:#000000;stroke-width:0"
+       id="rect367606-2"
+       width="72.706223"
+       height="18.738609"
+       x="158.8736"
+       y="222.39171"
+       ry="2.3831172" />
+    <rect
+       style="fill:#008000;stroke:#000000;stroke-width:0"
+       id="rect367606-2-8"
+       width="72.706223"
+       height="18.738609"
+       x="500.21582"
+       y="223.77362"
+       ry="2.3831172" />
+    <rect
+       style="fill:#800000;stroke:#000000;stroke-width:0"
+       id="rect367606-89"
+       width="184.08841"
+       height="47.44519"
+       x="440.39682"
+       y="109.61652"
+       ry="6.0339298" />
+    <rect
+       style="fill:#800000;stroke:#000000;stroke-width:0"
+       id="rect367606-8"
+       width="184.08841"
+       height="47.44519"
+       x="111.09348"
+       y="110.28201"
+       ry="6.0339298" />
+    <rect
+       style="fill:#800000;stroke:#000000;stroke-width:0"
+       id="rect367606"
+       width="184.08841"
+       height="47.44519"
+       x="270.08368"
+       y="15.579066"
+       ry="6.0339298" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="361.4516"
+       y="35.774155"
+       id="text340588"><tspan
+         sodipodi:role="line"
+         id="tspan340586"
+         style="text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="361.4516"
+         y="35.774155">SOA</tspan><tspan
+         sodipodi:role="line"
+         style="text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="361.4516"
+         y="49.003281"
+         id="tspan346580">(Service-oriented architecture)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;display:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="185.72652"
+       y="236.01897"
+       id="text342014"><tspan
+         sodipodi:role="line"
+         id="tspan342012"
+         style="fill:#ffffff;stroke-width:0.264583"
+         x="0"
+         y="0">XML</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="525.38489"
+       y="236.25475"
+       id="text343470"><tspan
+         sodipodi:role="line"
+         id="tspan343468"
+         style="fill:#ffffff;stroke-width:0.264583"
+         x="525.38489"
+         y="236.25475">JSON</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="185.23959"
+       y="235.82449"
+       id="text343470-3"><tspan
+         sodipodi:role="line"
+         id="tspan343468-6"
+         style="fill:#ffffff;stroke-width:0.264583"
+         x="185.23959"
+         y="235.82449">XML</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="202.9426"
+       y="129.79599"
+       id="text350886"><tspan
+         sodipodi:role="line"
+         id="tspan350884"
+         style="text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="202.9426"
+         y="129.79599">SOAP Web Services</tspan><tspan
+         sodipodi:role="line"
+         style="text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="202.9426"
+         y="143.02512"
+         id="tspan353084">(Simple Object Access Protocol)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="532.0033"
+       y="129.41525"
+       id="text356214"><tspan
+         sodipodi:role="line"
+         id="tspan356212"
+         style="text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="532.0033"
+         y="129.41525">RESTful Web Services</tspan><tspan
+         sodipodi:role="line"
+         style="text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+         x="532.0033"
+         y="142.64438"
+         id="tspan359144">(Representational State Transfer)</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 195.23891,109.94491 363.38076,63.832242 537.29404,109.49711"
+       id="path368058" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 199.4211,157.70487 -0.31321,64.85122"
+       id="path368126" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 535.65686,157.02688 0.29287,66.18531"
+       id="path368161" />
+  </g>
+</svg>
