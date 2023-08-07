@@ -100,10 +100,10 @@ Spring
 72- Differences between Spring Core and Spring MVC
 73- Different types of Spring Framework's projects (Data, Security, Messaging, ...)
 74- What is Datasource @Bean? (It's used to programatically configure a database connnection (instead of relying only on application.properties externalized file)) [15]
-75- How can you create a JDBC template bean?
+75- How can you create a JDBC template bean? [16]
 76- Spring JPA, Spring JDBC and Spring JDBC template, Spring Data
 77- DAO objects
-78- Differences between Spring Data JPA and Spring Data JDBC
+78- Differences between Spring Data JPA and Spring Data JDBC [17]
 79- What is JPA?
 80- What's the difference between Java JPA and Spring JPA?
 81- How to switch from Tomcat to Jetty. Create a small Spring boot application and do this
@@ -167,3 +167,5 @@ Resources:
 [13] https://www.baeldung.com/spring-bean-scopes
 [14] https://docs.spring.io/spring-framework/docs/3.0.0.M3/reference/html/ch04s04.html
 [15] https://www.baeldung.com/spring-boot-configure-data-source-programmatic
+[16] https://www.digitalocean.com/community/tutorials/spring-jdbctemplate-example
+[17] https://chat.openai.com/c/5971add2-c40c-4fc2-84ef-dc234fa90400 [search phrase: "differences between Spring Data JPA and Spring Data JDBC"]
