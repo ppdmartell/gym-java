@@ -98,8 +98,8 @@ Spring
 70- Learn about the scope of a bean.Where is it accessible from? And for how long?
 71- Scopes of a bean (Singleton, Prototype, Request, Session, Test, ...) [13][14]
 72- Differences between Spring Core and Spring MVC
-73- Different types of Spring frameworks (Data, Security, Messaging, ...)
-74- What is @Datasource bean?
+73- Different types of Spring Framework's projects (Data, Security, Messaging, ...)
+74- What is Datasource @Bean? (It's used to programatically configure a database connnection (instead of relying only on application.properties externalized file)) [15]
 75- How can you create a JDBC template bean?
 76- Spring JPA, Spring JDBC and Spring JDBC template, Spring Data
 77- DAO objects
@@ -166,3 +166,4 @@ Resources:
 [12] https://chat.openai.com/c/5971add2-c40c-4fc2-84ef-dc234fa90400 [search phrase: "they serve different purposes"]
 [13] https://www.baeldung.com/spring-bean-scopes
 [14] https://docs.spring.io/spring-framework/docs/3.0.0.M3/reference/html/ch04s04.html
+[15] https://www.baeldung.com/spring-boot-configure-data-source-programmatic
