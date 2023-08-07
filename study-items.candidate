@@ -106,7 +106,7 @@ Spring
 78- Differences between Spring Data JPA and Spring Data JDBC [17]
 79- What is JPA?
 80- What's the difference between Java JPA and Spring JPA?
-81- How to switch from Tomcat to Jetty. Create a small Spring boot application and do this
+81- How to switch from Tomcat to Jetty. Create a small Spring boot application and do this (See the github example [18] for this)
 82- ACID meaning
 83- Learn about how Spring manages auto-configuration
 83- How to create a JAR and that way become your Spring app portable (see the udemy course)
@@ -169,3 +169,4 @@ Resources:
 [15] https://www.baeldung.com/spring-boot-configure-data-source-programmatic
 [16] https://www.digitalocean.com/community/tutorials/spring-jdbctemplate-example
 [17] https://chat.openai.com/c/5971add2-c40c-4fc2-84ef-dc234fa90400 [search phrase: "differences between Spring Data JPA and Spring Data JDBC"]
+[18] https://github.com/ppdmartell/gym-java/tree/master/Spring/Spring%20Boot/Jetty%20over%20Tomcat
