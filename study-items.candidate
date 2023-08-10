@@ -110,12 +110,12 @@ Spring
 82- ACID meaning
 83- Learn about how Spring manages auto-configuration
 83- How to create a JAR and that way become your Spring app portable (see the udemy course) ("./mvnw clean package"...and then "java -jar generatedjar.jar")
-83- DAO vs Repository pattern
+83- DAO vs Repository pattern [19]
 
 
 SQL and NoSQL
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-84- What is a relational database
+84- What is a relational database [20][21]
 85- Learn about NoSQL (Cassandra, MongoDB, GraphQL)
 86- CAP theorem in NoSQL RDBMS
 87- Splunk and logging
@@ -170,3 +170,6 @@ Resources:
 [16] https://www.digitalocean.com/community/tutorials/spring-jdbctemplate-example
 [17] https://chat.openai.com/c/5971add2-c40c-4fc2-84ef-dc234fa90400 [search phrase: "differences between Spring Data JPA and Spring Data JDBC"]
 [18] https://github.com/ppdmartell/gym-java/tree/master/Spring/Spring%20Boot/Jetty%20over%20Tomcat
+[19] https://chat.openai.com/c/5971add2-c40c-4fc2-84ef-dc234fa90400 [search phrase: "Assistant what's the difference between DAO pattern and Repository pattern?"]
+[20] https://www.youtube.com/watch?v=OqjJjpjDRLc
+[21] https://www.youtube.com/watch?v=E9AgJnsEvG4
