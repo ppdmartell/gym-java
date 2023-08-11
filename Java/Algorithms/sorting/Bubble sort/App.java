@@ -6,8 +6,19 @@ and the other way around with if descending.
 Generics is not used here because I would prefer to keep it simple, although using generics as in
 [1] is a very powerful technique for comparing arrays of different data types. Let's go ascending.
 
+
+	Time complexity:									Space complexity:
+	-------------------------------------				---------------------
+	|  Best	|	Average		|	Worst	|				|		Worst		|
+	-------------------------------------				---------------------
+	|  Ω(n)	|	Θ(n^2)		|	O(n^2)	|				|		O(n)		|
+	-------------------------------------				---------------------
+
+
+
 Resources:
 [1] https://www.youtube.com/watch?v=F9F9TXq9Fh4&list=PLlsmxlJgn1HLCmaF51i5xAbgv1f49CsoP
+[2] https://www.bigocheatsheet.com/
 */
 
 import java.util.Arrays;
