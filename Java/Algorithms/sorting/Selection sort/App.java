@@ -8,9 +8,9 @@ seems as if you were using two arrays somehow. Let's go descending this time.
 
 	Time complexity:                                    Space complexity:
 	-------------------------------------               ---------------------
-	|  Best |   Average     |   Worst   |               |       Worst       |
+	|  Best   |   Average     |  Worst  |               |       Worst       |
 	-------------------------------------               ---------------------
-	|  Ω(n) |   Θ(n^2)      |   O(n^2)  |               |       O(n)        |
+	|  Ω(n^2) |   Θ(n^2)      |  O(n^2) |               |       O(n)        |
 	-------------------------------------               ---------------------
 
 
