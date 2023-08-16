@@ -23,7 +23,7 @@ import java.util.Arrays;
 
 class App {
 
-	private static final int[] arr = {10, 8, 1, 17, -2, 4};
+	private static final int[] arr = { 10, 8, 1, 17, -2, 4 };
 
 	public static void main(String[] args) {
 		System.out.printf("Initial array: %s%n", Arrays.toString(arr));
