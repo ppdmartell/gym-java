@@ -1,5 +1,5 @@
 /*
-The bubble sort algorithm compares adjacent elements of an array and use an auxiliar variable
+The Bubble sort algorithm compares adjacent elements of an array and use an auxiliar variable
 to hold one of the elements meanwhile the swapping is being done. The name "bubble" comes because
 when sorting the elements, if ascending all the small elements "bubble up" to the back of the array
 and the other way around with if descending.
@@ -11,7 +11,7 @@ Generics is not used here because I would prefer to keep it simple, although usi
 	-------------------------------------				---------------------
 	|  Best	|	Average		|	Worst	|				|		Worst		|
 	-------------------------------------				---------------------
-	|  Ω(n)	|	Θ(n^2)		|	O(n^2)	|				|		O(n)		|
+	|  Ω(n)	|	Θ(n^2)		|	O(n^2)	|				|		O(1)		|
 	-------------------------------------				---------------------
 
 
