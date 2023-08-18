@@ -13,22 +13,22 @@ Resources:
 
 class Selflocking {
 
-	public void perform() {
-		synchronized (this) {
-			System.out.println("Lock acquired by thread: " + Thread.currentThread().getName());
-			try {
-				wait();
-			} catch(InterruptedException e) {
-				e.printStackTrace();
-			}
-		}
-	}
+    public void perform() {
+        synchronized (this) {
+            System.out.println("Lock acquired by thread: " + Thread.currentThread().getName());
+            try {
+                wait();
+            } catch(InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 
-	public static void main(String[] args) {
-		Selflocking sdl = new Selflocking();
-		Thread t1;
+    public static void main(String[] args) {
+        Selflocking sdl = new Selflocking();
+        Thread t1;
 
-		t1 = new Thread(() -> { sdl.perform(); } );
-		t1.start();
-	}
+        t1 = new Thread(() -> { sdl.perform(); } );
+        t1.start();
+    }
 }

@@ -15,12 +15,12 @@ public class FalseSelfDeadlocking {
         // Single thread scenario
         synchronized (resource1) {
             // Acquiring resource1 lock
-			System.out.printf("Acquiring lock on resource1 by %s with id %d\n", Thread.currentThread().getName(), Thread.currentThread().getId());
+            System.out.printf("Acquiring lock on resource1 by %s with id %d\n", Thread.currentThread().getName(), Thread.currentThread().getId());
 
             // Now, let's try to acquire resource2 lock, but it's not available
             synchronized (resource2) {
                 // This block will never be executed because resource2 is locked by another thread
-				System.out.printf("Acquiring lock on resource2 by %s with id %d\n", Thread.currentThread().getName(), Thread.currentThread().getId());
+                System.out.printf("Acquiring lock on resource2 by %s with id %d\n", Thread.currentThread().getName(), Thread.currentThread().getId());
             }
         }
     }

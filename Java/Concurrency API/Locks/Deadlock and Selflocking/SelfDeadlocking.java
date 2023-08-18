@@ -11,9 +11,9 @@ Resources:
 */
 
 class SelfDeadlocking {
-	public static void main(String[] args) throws InterruptedException {
-		System.out.println("BEGIN");
-		Thread.currentThread().join();
-		System.out.println("END");
-	}
+    public static void main(String[] args) throws InterruptedException {
+        System.out.println("BEGIN");
+        Thread.currentThread().join();
+        System.out.println("END");
+    }
 }

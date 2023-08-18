@@ -14,33 +14,33 @@ Resources:
 */
 
 class Deadlock {
-	Object res1 = new Object();		//A lock is basically an access to an object. Object class has methods for concurrency and multi-threading by default such as wait(), notify() and notifyAll().
-	Object res2 = new Object();
+    Object res1 = new Object();		//A lock is basically an access to an object. Object class has methods for concurrency and multi-threading by default such as wait(), notify() and notifyAll().
+    Object res2 = new Object();
 
-	public void methodA() {
-		synchronized (res1) {
-			System.out.println("Executing method A by thread: " + Thread.currentThread().getName());
-			methodB();
-		}
-	}
+    public void methodA() {
+        synchronized (res1) {
+            System.out.println("Executing method A by thread: " + Thread.currentThread().getName());
+            methodB();
+        }
+    }
 
-	public synchronized void methodB() {
-		synchronized (res2) {
-			System.out.println("Executing method B by thread: " + Thread.currentThread().getName());
-			methodC();
-		}
-	}
+    public synchronized void methodB() {
+        synchronized (res2) {
+            System.out.println("Executing method B by thread: " + Thread.currentThread().getName());
+            methodC();
+        }
+    }
 
-	public synchronized void methodC() {
-		synchronized (res1) {
-			System.out.println("Executing method C by thread: " + Thread.currentThread().getName());
-			methodA();
-		}
-	}
+    public synchronized void methodC() {
+        synchronized (res1) {
+            System.out.println("Executing method C by thread: " + Thread.currentThread().getName());
+            methodA();
+        }
+    }
 
-	public static void main(String[] args) {
-		Deadlock deadlock = new Deadlock();
-		new Thread(() -> { deadlock.methodA(); }).start();
-		new Thread(() -> { deadlock.methodB(); }).start();
-	}
+    public static void main(String[] args) {
+        Deadlock deadlock = new Deadlock();
+        new Thread(() -> { deadlock.methodA(); }).start();
+        new Thread(() -> { deadlock.methodB(); }).start();
+    }
 }
