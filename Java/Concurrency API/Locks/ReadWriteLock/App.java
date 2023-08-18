@@ -21,36 +21,36 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
 import java.util.List;
 
 class App {
-	public static void main(String[] args) throws InterruptedException {
-		List<String> list = new ArrayList<>();
-		ReadWriteLock lock = new ReentrantReadWriteLock(true);
-		ExecutorService executorService = Executors.newFixedThreadPool(2);  //With two threads, writing task will be executed by one and read task by second, then thread one will do the remaining read task.
+    public static void main(String[] args) throws InterruptedException {
+        List<String> list = new ArrayList<>();
+        ReadWriteLock lock = new ReentrantReadWriteLock(true);
+        ExecutorService executorService = Executors.newFixedThreadPool(2);  //With two threads, writing task will be executed by one and read task by second, then thread one will do the remaining read task.
 
-		Runnable writeTask = () -> {
-			lock.writeLock().lock();
-			try {
-				list.add("FC Barcelona");
-				System.out.printf("[%s] Waiting two seconds.\n", Thread.currentThread().getName());
-				Thread.sleep(2_000);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			} finally {
-				lock.writeLock().unlock();
-			}
-		};
+        Runnable writeTask = () -> {
+            lock.writeLock().lock();
+            try {
+                list.add("FC Barcelona");
+                System.out.printf("[%s] Waiting two seconds.\n", Thread.currentThread().getName());
+                Thread.sleep(2_000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            } finally {
+                lock.writeLock().unlock();
+            }
+        };
 
-		Runnable readTask = () -> {
-			lock.readLock().lock();
-			try {
-				System.out.printf("[%s] First element of the list is: %s\n", Thread.currentThread().getName(), list.get(0));
-			} finally {
-				lock.readLock().unlock();
-			}
-		};
+        Runnable readTask = () -> {
+            lock.readLock().lock();
+            try {
+                System.out.printf("[%s] First element of the list is: %s\n", Thread.currentThread().getName(), list.get(0));
+            } finally {
+                lock.readLock().unlock();
+            }
+        };
 
-		executorService.submit(writeTask);
-		executorService.submit(readTask);
-		executorService.submit(readTask);
-		executorService.shutdown();
-	}
+        executorService.submit(writeTask);
+        executorService.submit(readTask);
+        executorService.submit(readTask);
+        executorService.shutdown();
+    }
 }

@@ -18,24 +18,24 @@ import java.util.stream.IntStream;
 
 class LockEnhancedApproach {
 
-	private static int count;
-	private static Lock lock = new ReentrantLock(true); //True allows fairness (the longest time waiting thread will be selected [2])
+    private static int count;
+    private static Lock lock = new ReentrantLock(true); //True allows fairness (the longest time waiting thread will be selected [2])
 
 
-	public static void main(String[] args) throws InterruptedException {
-		ExecutorService executorService = Executors.newFixedThreadPool(4);
-		IntStream.range(0, 1000).forEach(i -> executorService.submit(LockEnhancedApproach::increment));
-		Thread.sleep(1500);
-		executorService.shutdown();
-		System.out.println(count);
-	}
+    public static void main(String[] args) throws InterruptedException {
+        ExecutorService executorService = Executors.newFixedThreadPool(4);
+        IntStream.range(0, 1000).forEach(i -> executorService.submit(LockEnhancedApproach::increment));
+        Thread.sleep(1500);
+        executorService.shutdown();
+        System.out.println(count);
+    }
 
-	private static void increment() {
-		lock.lock();
-		try {
-			count++;
-		} finally {
-			lock.unlock();
-		}
-	}
+    private static void increment() {
+        lock.lock();
+        try {
+            count++;
+        } finally {
+            lock.unlock();
+        }
+    }
 }

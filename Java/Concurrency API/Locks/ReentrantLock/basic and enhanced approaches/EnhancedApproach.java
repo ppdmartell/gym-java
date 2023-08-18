@@ -13,22 +13,22 @@ import java.util.stream.IntStream;
 
 class EnhancedApproach {
 
-	//private static int count; //This will work fine, although is recommended to use Atomic types in multi-threaded programs.
-	private static AtomicInteger count;
+    //private static int count; //This will work fine, although is recommended to use Atomic types in multi-threaded programs.
+    private static AtomicInteger count;
 
-	static {
-		count = new AtomicInteger(0);
-	}
+    static {
+        count = new AtomicInteger(0);
+    }
 
-	public static void main(String[] args) throws InterruptedException {
-		ExecutorService executorService = Executors.newFixedThreadPool(4);
-		IntStream.range(0, 1000).forEach(i -> executorService.submit(EnhancedApproach::increment));
-		Thread.sleep(1000);
-		executorService.shutdown();
-		System.out.println(count);
-	}
+    public static void main(String[] args) throws InterruptedException {
+        ExecutorService executorService = Executors.newFixedThreadPool(4);
+        IntStream.range(0, 1000).forEach(i -> executorService.submit(EnhancedApproach::increment));
+        Thread.sleep(1000);
+        executorService.shutdown();
+        System.out.println(count);
+    }
 
-	private static synchronized void increment() {
-		System.out.println(Thread.currentThread().getId() + ": " + count.incrementAndGet());
-	}
+    private static synchronized void increment() {
+        System.out.println(Thread.currentThread().getId() + ": " + count.incrementAndGet());
+    }
 }

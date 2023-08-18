@@ -23,84 +23,84 @@ import java.util.stream.IntStream;
 
 class App2 {
 
-	private static int takenSeats;
-	private static Map<Integer, Booking> bookings;
-	private static Lock lock;
+    private static int takenSeats;
+    private static Map<Integer, Booking> bookings;
+    private static Lock lock;
 
-	static {
-		bookings = new HashMap<>();
-		lock = new ReentrantLock();
-		IntStream.range(1, 101).forEach(i -> bookings.put(i, null));
-		bookings.entrySet().forEach(System.out::println);
-	}
+    static {
+        bookings = new HashMap<>();
+        lock = new ReentrantLock();
+        IntStream.range(1, 101).forEach(i -> bookings.put(i, null));
+        bookings.entrySet().forEach(System.out::println);
+    }
 
-	public static void main(String[] args) {
-		ExecutorService executorService = Executors.newFixedThreadPool(4);
-		int requests = 1;
-		for(;;) {
-			int seatRequest = onlineSeatRequest();
-			System.out.println("----------------------------------------------------------");
-			System.out.printf("[%d] Booking request for seat number: %d\n", requests, seatRequest);
-			requests++;
-			executorService.submit(() -> { check(seatRequest, "ppdmartell"); });  //The username is hard-coded here, but in principle should be obtained from the logged user.
-			if(takenSeats == 100) break;
-		}
-		executorService.shutdown();
-		sanityCheck();
-		System.out.printf("SOLD OUT! All %d seats were booked.\n", takenSeats);
-	}
+    public static void main(String[] args) {
+        ExecutorService executorService = Executors.newFixedThreadPool(4);
+        int requests = 1;
+        for(;;) {
+            int seatRequest = onlineSeatRequest();
+            System.out.println("----------------------------------------------------------");
+            System.out.printf("[%d] Booking request for seat number: %d\n", requests, seatRequest);
+            requests++;
+            executorService.submit(() -> { check(seatRequest, "ppdmartell"); });  //The username is hard-coded here, but in principle should be obtained from the logged user.
+            if(takenSeats == 100) break;
+        }
+        executorService.shutdown();
+        sanityCheck();
+        System.out.printf("SOLD OUT! All %d seats were booked.\n", takenSeats);
+    }
 
-	private static void check(int seat, String user) {
-		lock.lock();       //In this case is very important to lock for read and write! It performed glitchy when only writing was locked.
-		try {
-			if(bookings.get(seat) != null) System.out.printf("'---> [NOT POSSIBLE] Seat number %d is already booked.\n");
-			else book(seat, user);
-		} finally {
-			lock.unlock();
-		}
-	}
+    private static void check(int seat, String user) {
+        lock.lock();       //In this case is very important to lock for read and write! It performed glitchy when only writing was locked.
+        try {
+            if(bookings.get(seat) != null) System.out.printf("'---> [NOT POSSIBLE] Seat number %d is already booked.\n");
+            else book(seat, user);
+        } finally {
+            lock.unlock();
+        }
+    }
 
-	private static int onlineSeatRequest() {
-		return new Random().nextInt(100) + 1;
-	}
+    private static int onlineSeatRequest() {
+        return new Random().nextInt(100) + 1;
+    }
 
-	private static void book(int seat, String user) {
-		Booking booking = new Booking();
-		booking.setSeat(seat);
-		booking.setUser(user);
-		booking.generateToken();
-		bookings.put(seat, booking);
-		takenSeats++;
-		System.out.printf("'---> [DONE] Seat number %d has been booked, with token number %d\n", seat, booking.getGeneratedToken());
-	}
+    private static void book(int seat, String user) {
+        Booking booking = new Booking();
+        booking.setSeat(seat);
+        booking.setUser(user);
+        booking.generateToken();
+        bookings.put(seat, booking);
+        takenSeats++;
+        System.out.printf("'---> [DONE] Seat number %d has been booked, with token number %d\n", seat, booking.getGeneratedToken());
+    }
 
-	private static void notifyUnavailability(int seat) {
-		System.out.printf("'---> [NOT POSSIBLE] Notifying, seat %d is already taken.\n", seat);
-	}
+    private static void notifyUnavailability(int seat) {
+        System.out.printf("'---> [NOT POSSIBLE] Notifying, seat %d is already taken.\n", seat);
+    }
 
-	private static void sanityCheck() {
-		Set<Long> tokens = new HashSet<>();
-		System.out.printf("Amount of bookings: [%d][%d]\n", bookings.keySet().size(), bookings.values().size());
-		bookings.values().stream().forEach(p -> tokens.add(p.getGeneratedToken()));
-		System.out.printf("The amount of unique tokens is: %d\n", tokens.size());
-	}
+    private static void sanityCheck() {
+        Set<Long> tokens = new HashSet<>();
+        System.out.printf("Amount of bookings: [%d][%d]\n", bookings.keySet().size(), bookings.values().size());
+        bookings.values().stream().forEach(p -> tokens.add(p.getGeneratedToken()));
+        System.out.printf("The amount of unique tokens is: %d\n", tokens.size());
+    }
 }
 
 class Booking {
-	private int seat;
-	private String user;
-	private long generatedToken;
+    private int seat;
+    private String user;
+    private long generatedToken;
 
-	public int getSeat() { return seat; }
-	public void setSeat(int seat) { this.seat = seat;}
+    public int getSeat() { return seat; }
+    public void setSeat(int seat) { this.seat = seat;}
 
-	public String getUser() { return user; }
-	public void setUser(String user) { this.user = user; }
+    public String getUser() { return user; }
+    public void setUser(String user) { this.user = user; }
 
-	public void generateToken() {
-		if(seat == 0) System.out.println("Unable to generate a token for an empty seat.");
-		else generatedToken = new Random().nextLong(); //Imagine this is a hash or some unique key obtained with a function.
-	}
+    public void generateToken() {
+        if(seat == 0) System.out.println("Unable to generate a token for an empty seat.");
+        else generatedToken = new Random().nextLong(); //Imagine this is a hash or some unique key obtained with a function.
+    }
 
-	public long getGeneratedToken() { return generatedToken; }
+    public long getGeneratedToken() { return generatedToken; }
 }

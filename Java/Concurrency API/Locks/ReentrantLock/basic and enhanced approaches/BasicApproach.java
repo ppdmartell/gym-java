@@ -16,15 +16,15 @@ import java.util.stream.IntStream;
 
 class BasicApproach {
 
-	private static int count;
+    private static int count;
 
-	public static void main(String[] args) throws InterruptedException {
-		ExecutorService executorService = Executors.newFixedThreadPool(4);
-		IntStream.range(0, 1000).forEach(i -> executorService.submit(BasicApproach::increment));
-		Thread.sleep(3000);
-		executorService.shutdown();
-		System.out.println(count);
-	}
+    public static void main(String[] args) throws InterruptedException {
+        ExecutorService executorService = Executors.newFixedThreadPool(4);
+        IntStream.range(0, 1000).forEach(i -> executorService.submit(BasicApproach::increment));
+        Thread.sleep(3000);
+        executorService.shutdown();
+        System.out.println(count);
+    }
 
-	public static void increment() { count++; }
+    public static void increment() { count++; }
 }
