@@ -18,50 +18,50 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 
 class App2 {
-	public static void main(String[] args) throws InterruptedException, ExecutionException {
+    public static void main(String[] args) throws InterruptedException, ExecutionException {
 
-		//Example about how to get a CompletableFuture of a CompletableFuture (nested). But this is kinda annoying. Method thenCompose might help to simplify things a bit.
-		CompletableFuture<CompletableFuture<Double>> cFuture1 = getBankAccount("randomId")
-																	.thenApply(acc -> getAccountBalance(acc));
-		System.out.printf("The current balance is: %.3f.%n", cFuture1.get().get());
-		System.out.println("-------------------------------------------------------------------------------");
+        //Example about how to get a CompletableFuture of a CompletableFuture (nested). But this is kinda annoying. Method thenCompose might help to simplify things a bit.
+        CompletableFuture<CompletableFuture<Double>> cFuture1 = getBankAccount("randomId")
+                                                                    .thenApply(acc -> getAccountBalance(acc));
+        System.out.printf("The current balance is: %.3f.%n", cFuture1.get().get());
+        System.out.println("-------------------------------------------------------------------------------");
 
-		//Using thenCompose() to get a top-level CompletableFuture (not nested, ergo less annoying to deal with).
-		CompletableFuture<Double> cFuture2 = getBankAccount("randomId").thenCompose(acc -> getAccountBalance(acc));
-		System.out.printf("The current balance is: %.3f.%n", cFuture2.get());   //Less code and less troublesome as well.
-	}
+        //Using thenCompose() to get a top-level CompletableFuture (not nested, ergo less annoying to deal with).
+        CompletableFuture<Double> cFuture2 = getBankAccount("randomId").thenCompose(acc -> getAccountBalance(acc));
+        System.out.printf("The current balance is: %.3f.%n", cFuture2.get());   //Less code and less troublesome as well.
+    }
 
-	public static CompletableFuture<BankAccount> getBankAccount(String id) {
-		return CompletableFuture.supplyAsync(() -> AccountsService.getBankAccount(id));
-	}
+    public static CompletableFuture<BankAccount> getBankAccount(String id) {
+        return CompletableFuture.supplyAsync(() -> AccountsService.getBankAccount(id));
+    }
 
-	public static CompletableFuture<Double> getAccountBalance(BankAccount account) {
-		return CompletableFuture.supplyAsync(() -> AccountsService.getAccountBalance(account));
-	}
+    public static CompletableFuture<Double> getAccountBalance(BankAccount account) {
+        return CompletableFuture.supplyAsync(() -> AccountsService.getAccountBalance(account));
+    }
 }
 
 interface BankAccount {
-	double checkAmount();
+    double checkAmount();
 }
 
 class RegularBankAccount implements BankAccount {
 
-	private final double amount;
+    private final double amount;
 
-	public RegularBankAccount(double amount) {
-		this.amount = amount;
-	}
+    public RegularBankAccount(double amount) {
+        this.amount = amount;
+    }
 
-	@Override
-	public double checkAmount() { return amount; }
+    @Override
+    public double checkAmount() { return amount; }
 }
 
 class AccountsService {
-	public static BankAccount getBankAccount(String id) {  //This is a mock method, just to comply-ish to the video example.
-		return new RegularBankAccount(123.424);
-	}
+    public static BankAccount getBankAccount(String id) {  //This is a mock method, just to comply-ish to the video example.
+        return new RegularBankAccount(123.424);
+    }
 
-	public static Double getAccountBalance(BankAccount bankAccount) {
-		return bankAccount.checkAmount();
-	}
+    public static Double getAccountBalance(BankAccount bankAccount) {
+        return bankAccount.checkAmount();
+    }
 }

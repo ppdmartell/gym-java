@@ -21,22 +21,22 @@ import java.util.Arrays;
 
 class App {
 
-	private static final int[] arr = { 3, 22, 7, -1, 25, 10, 15 };
+    private static final int[] arr = { 3, 22, 7, -1, 25, 10, 15 };
 
-	public static void main(String[] args) {
-		System.out.printf("Initial array: %s%n", Arrays.toString(arr));
-		sort();
-	}
+    public static void main(String[] args) {
+        System.out.printf("Initial array: %s%n", Arrays.toString(arr));
+        sort();
+    }
 
-	private static void sort() {
-		int aux = 0;
-		for (int i = 1; i < arr.length; i++) {
-			for (int j = i; j > 0 && arr[j - 1] > arr[j]; j--) {
-					aux = arr[j];
-					arr[j] = arr[j - 1];
-					arr[j - 1] = aux;
-			}
-		}
-		System.out.printf("Ordered array: %s%n", Arrays.toString(arr));
-	}
+    private static void sort() {
+        int aux = 0;
+        for (int i = 1; i < arr.length; i++) {
+            for (int j = i; j > 0 && arr[j - 1] > arr[j]; j--) {
+                    aux = arr[j];
+                    arr[j] = arr[j - 1];
+                    arr[j - 1] = aux;
+            }
+        }
+        System.out.printf("Ordered array: %s%n", Arrays.toString(arr));
+    }
 }

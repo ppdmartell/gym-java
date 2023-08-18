@@ -17,28 +17,28 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Future;
 
 class App {
-	public static void main(String[] args) {
-		ExecutorService executor = Executors.newSingleThreadExecutor();
+    public static void main(String[] args) {
+        ExecutorService executor = Executors.newSingleThreadExecutor();
 
-		//Anonymous class way.
-		Callable<String> callable1 = new Callable<>() {
-			@Override
-			public String call() {
-				//You can perform some tasks here and return the value (in this case a String)
-				return "JKDF90WIOS3740GY203970G";
-			}
-		};
+        //Anonymous class way.
+        Callable<String> callable1 = new Callable<>() {
+            @Override
+            public String call() {
+                //You can perform some tasks here and return the value (in this case a String)
+                return "JKDF90WIOS3740GY203970G";
+            }
+        };
 
-		Future<String> future1 = executor.submit(callable1);
-		try {
-			//Always try to assign the future get to a corresponding value before, then reuse the variable, just in case..
-			//String result = future1.get();
-			System.out.println("The decoded serial number is: " + future1.get());
-		} catch (ExecutionException e) {
-			e.printStackTrace();
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		executor.shutdown();
-	}
+        Future<String> future1 = executor.submit(callable1);
+        try {
+            //Always try to assign the future get to a corresponding value before, then reuse the variable, just in case..
+            //String result = future1.get();
+            System.out.println("The decoded serial number is: " + future1.get());
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        executor.shutdown();
+    }
 }

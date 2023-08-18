@@ -12,12 +12,12 @@ each step until reaching an ordered array of 8 elements.
 It's a "divide and conquer" algorithm, being the conquer part the comparing process at each step.
 
 
-    Time complexity:                                	  	 	 Space complexity:
-    -----------------------------------------------------        ---------------------
-    |  Best   		|   Average   		 |  Worst 		|        |       Worst       |
-    -----------------------------------------------------        ---------------------
-    |  Ω(n log(n))  |   Θ(n log(n))      |  O(n log(n)) |        |       O(n)        |
-    -----------------------------------------------------        ---------------------
+    Time complexity:                                                Space complexity:
+    -----------------------------------------------------           ---------------------
+    |  Best         |   Average          |  Worst       |           |       Worst       |
+    -----------------------------------------------------           ---------------------
+    |  Ω(n log(n))  |   Θ(n log(n))      |  O(n log(n)) |           |       O(n)        |
+    -----------------------------------------------------           ---------------------
 
 
 Resources:
@@ -31,16 +31,16 @@ import java.util.Arrays;
 
 class App {
 
-	private static final int[] arr = { 14, 4, 17, 12, -6, 3, 8, 2 };
+    private static final int[] arr = { 14, 4, 17, 12, -6, 3, 8, 2 };
 
-	public static void main(String[] args) {
-		System.out.printf("Initial array: %s%n", Arrays.toString(arr));
-		sort(arr, arr.length);
-		System.out.printf("Ordered array: %s%n", Arrays.toString(arr));
-	}
+    public static void main(String[] args) {
+        System.out.printf("Initial array: %s%n", Arrays.toString(arr));
+        sort(arr, arr.length);
+        System.out.printf("Ordered array: %s%n", Arrays.toString(arr));
+    }
 
-	private static void sort(int[] a, int n) {
-		if (n < 2)
+    private static void sort(int[] a, int n) {
+        if (n < 2)
             return;
         int mid = n / 2;
         int[] l = new int[mid];
@@ -57,10 +57,10 @@ class App {
         sort(r, n - mid);
 
         merge(a, l, r, mid, n - mid);
-	}
+    }
 
-	private static void merge(int[] a, int[] l, int[] r, int left, int right) {
-		int i = 0, j = 0, k = 0;
+    private static void merge(int[] a, int[] l, int[] r, int left, int right) {
+        int i = 0, j = 0, k = 0;
 
         while (i < left && j < right) {
             if (l[i] <= r[j])
@@ -74,5 +74,5 @@ class App {
 
         while (j < right)
             a[k++] = r[j++];
-	}
+    }
 }

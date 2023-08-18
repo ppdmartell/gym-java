@@ -9,9 +9,9 @@ import java.util.concurrent.ExecutionException;
 
 
 class App4 {
-	public static void main(String[] args) {
-		try{
-        	CompletableFuture.runAsync(() -> System.out.println("First executed."))
+    public static void main(String[] args) {
+        try{
+            CompletableFuture.runAsync(() -> System.out.println("First executed."))
                          .thenRunAsync(() -> System.out.println("Second executed")).get();
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -19,6 +19,6 @@ class App4 {
             e.printStackTrace();
         }
 
-		System.out.println("END OF EXECUTION.");
-	}
+        System.out.println("END OF EXECUTION.");
+    }
 }
