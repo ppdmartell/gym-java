@@ -8,34 +8,34 @@ Resources:
 */
 
 class App {
-	public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) throws InterruptedException {
 
-		//Way 1
-		Runnable r1 = () -> {
-			System.out.println("Executing a println from inside the run method via lambda expression. (Runnable 1)");
-		};
+        //Way 1
+        Runnable r1 = () -> {
+            System.out.println("Executing a println from inside the run method via lambda expression. (Runnable 1)");
+        };
 
-		Thread t1 = new Thread(r1);
-		t1.start();
+        Thread t1 = new Thread(r1);
+        t1.start();
 
-		//Way 2
-		Runnable r2 = new Runnable() {
-			@Override
-			public void run() {
-				System.out.println("Executing a println from inside the run method via an anonymous class's overriding run method. (Runnable 2)");
-			}
-		};
+        //Way 2
+        Runnable r2 = new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("Executing a println from inside the run method via an anonymous class's overriding run method. (Runnable 2)");
+            }
+        };
 
-		//Way 3
-		new Thread(() -> { System.out.println("Executing a println with anonymous thread and lambda expression. (Runnable 3)"); }).start();
+        //Way 3
+        new Thread(() -> { System.out.println("Executing a println with anonymous thread and lambda expression. (Runnable 3)"); }).start();
 
-		Thread t2 = new Thread(r2);
-		t2.start();
+        Thread t2 = new Thread(r2);
+        t2.start();
 
-		t1.join();
-		t2.join();
+        t1.join();
+        t2.join();
 
-		System.out.println("END OF EXECUTION");
-		return;
-	}
+        System.out.println("END OF EXECUTION");
+        return;
+    }
 }

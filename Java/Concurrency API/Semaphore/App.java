@@ -16,33 +16,33 @@ import java.util.concurrent.TimeUnit;
 import java.util.stream.IntStream;
 
 class App {
-	public static void main(String[] args) throws InterruptedException {
-		Semaphore semaphore = new Semaphore(5);
-		ExecutorService executorService = Executors.newFixedThreadPool(10);
+    public static void main(String[] args) throws InterruptedException {
+        Semaphore semaphore = new Semaphore(5);
+        ExecutorService executorService = Executors.newFixedThreadPool(10);
 
-		Runnable task = () -> {
-			boolean permit = false;
-			try {
-				permit = semaphore.tryAcquire(1, TimeUnit.SECONDS);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
-			try {
-				if(permit) {
-					System.out.printf("[%s] Semaphore acquired.%n", Thread.currentThread().getName());
-					Thread.sleep(5_000);
-				} else {
-					System.out.printf("[%s] Could not acquire semaphore.%n", Thread.currentThread().getName());
-				}
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
-			finally {
-				if(permit) semaphore.release();
-			}
-		};
+        Runnable task = () -> {
+            boolean permit = false;
+            try {
+                permit = semaphore.tryAcquire(1, TimeUnit.SECONDS);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            try {
+                if(permit) {
+                    System.out.printf("[%s] Semaphore acquired.%n", Thread.currentThread().getName());
+                    Thread.sleep(5_000);
+                } else {
+                    System.out.printf("[%s] Could not acquire semaphore.%n", Thread.currentThread().getName());
+                }
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            finally {
+                if(permit) semaphore.release();
+            }
+        };
 
-		IntStream.range(1, 11).forEach(i -> executorService.submit(task));
-		executorService.shutdown();
-	}
+        IntStream.range(1, 11).forEach(i -> executorService.submit(task));
+        executorService.shutdown();
+    }
 }

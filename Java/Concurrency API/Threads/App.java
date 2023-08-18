@@ -57,75 +57,75 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ExecutorService;
 
 class App {
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-			//Way 1 by extendind Thread class
-			System.out.println("---------------WAY ONE----------------");
-			for(int i = 0; i < 10; i++) {
-				WayOne obj = new WayOne();
-				obj.start();  //Different behavior if you call obj.run() instead.
-			}
+            //Way 1 by extendind Thread class
+            System.out.println("---------------WAY ONE----------------");
+            for(int i = 0; i < 10; i++) {
+                WayOne obj = new WayOne();
+                obj.start();  //Different behavior if you call obj.run() instead.
+            }
 
-			//Way 2 by implementing interface Runnable
-			System.out.println("\n---------------WAY TWO----------------");
-			for(int i = 0; i < 10; i++) {
-				Thread t = new Thread(new WayTwo());
-				t.start();
-			}
+            //Way 2 by implementing interface Runnable
+            System.out.println("\n---------------WAY TWO----------------");
+            for(int i = 0; i < 10; i++) {
+                Thread t = new Thread(new WayTwo());
+                t.start();
+            }
 
-			//Way 3 by using a lambda expression in the Thread class constructor
-			System.out.println("\n---------------WAY THREE----------------");
-			for(int i = 0; i < 10; i++) {
-				new Thread(() -> {
-					String way = "[WAY 3] ";
-					try {
-    					System.out.println(way + " Thread id running: " + Thread.currentThread().getId());
-					} catch(Exception e) {
-    					System.out.println("[ERROR] There was an unknown problem with the thread execution.");
-					}
-				}).start();
-				//new Thread(System.out::println).start();   <----- Method reference, but there is nothing to print.
+            //Way 3 by using a lambda expression in the Thread class constructor
+            System.out.println("\n---------------WAY THREE----------------");
+            for(int i = 0; i < 10; i++) {
+                new Thread(() -> {
+                    String way = "[WAY 3] ";
+                    try {
+                        System.out.println(way + " Thread id running: " + Thread.currentThread().getId());
+                    } catch(Exception e) {
+                        System.out.println("[ERROR] There was an unknown problem with the thread execution.");
+                    }
+                }).start();
+                //new Thread(System.out::println).start();   <----- Method reference, but there is nothing to print.
 
-			//Way 4 by ExecutorService framework.
-			ExecutorService executorS = Executors.newSingleThreadExecutor();
-			for(int j = 0; j < 10; j++) {
-				executorS.execute(() -> {
-					String way = "[WAY 4]";
-					try {
-						System.out.println(way + " Thread id running: " + Thread.currentThread().getId());
-					} catch(Exception e) {
-						System.out.println("[ERROR] There was an unknown problem with the execution.");
-					}
-				});
-			}
-			executorS.shutdownNow(); // No idea why, but shutdownNow() actually makes the execution 10 times as intended.
-									 // with shutdown() the are like 100 executions.
-		}
-	}
+            //Way 4 by ExecutorService framework.
+            ExecutorService executorS = Executors.newSingleThreadExecutor();
+            for(int j = 0; j < 10; j++) {
+                executorS.execute(() -> {
+                    String way = "[WAY 4]";
+                    try {
+                        System.out.println(way + " Thread id running: " + Thread.currentThread().getId());
+                    } catch(Exception e) {
+                        System.out.println("[ERROR] There was an unknown problem with the execution.");
+                    }
+                });
+            }
+            executorS.shutdownNow(); // No idea why, but shutdownNow() actually makes the execution 10 times as intended.
+                                     // with shutdown() the are like 100 executions.
+        }
+    }
 }
 
 //Way one is by extending the Thread class.
 class WayOne extends Thread {
-	@Override
-	public void run() {
-		String way = "[WAY 1]";
-		try {
-			System.out.println(way + " Thread id running: " + Thread.currentThread().getId());
-		} catch(Exception e) {
-			System.out.println("[ERROR] There was an unknown problem with the thread execution.");
-		}
-	}
+    @Override
+    public void run() {
+        String way = "[WAY 1]";
+        try {
+            System.out.println(way + " Thread id running: " + Thread.currentThread().getId());
+        } catch(Exception e) {
+            System.out.println("[ERROR] There was an unknown problem with the thread execution.");
+        }
+    }
 }
 
 //Way two is by implementing the Runnable interface
 class WayTwo implements Runnable {
-	@Override
-	public void run() {
-		String way = "[WAY 2]";
-		try {
-   			System.out.println(way + " Thread id running: " + Thread.currentThread().getId());
-		} catch(Exception e) {
-    		System.out.println("[ERROR] There was an unknown problem with the thread execution.");
-		}
-	}
+    @Override
+    public void run() {
+        String way = "[WAY 2]";
+        try {
+            System.out.println(way + " Thread id running: " + Thread.currentThread().getId());
+        } catch(Exception e) {
+            System.out.println("[ERROR] There was an unknown problem with the thread execution.");
+        }
+    }
 }

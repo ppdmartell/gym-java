@@ -21,19 +21,19 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 
 class App {
-	public static void main(String[] args) throws InterruptedException, ExecutionException {
-		ScheduledExecutorService ses = Executors.newSingleThreadScheduledExecutor();
-		ScheduledFuture<Integer> future = ses.schedule(new Callable<>() {
-			@Override
-			public Integer call() {
-				//Perform hypothetical actions...
-				return 10 + 7;
-			}
-		}, 5, TimeUnit.SECONDS);
-		Thread.sleep(1_500);
-		long remainingTimeToExecution = future.getDelay(TimeUnit.MILLISECONDS);
-		System.out.printf("The scheduled task will be executed in: %d miliseconds.\n", remainingTimeToExecution);
-		System.out.printf("The computation value for the complex algorithm is: %d\n", future.get());
-		ses.shutdown();
-	}
+    public static void main(String[] args) throws InterruptedException, ExecutionException {
+        ScheduledExecutorService ses = Executors.newSingleThreadScheduledExecutor();
+        ScheduledFuture<Integer> future = ses.schedule(new Callable<>() {
+            @Override
+            public Integer call() {
+                //Perform hypothetical actions...
+                return 10 + 7;
+            }
+        }, 5, TimeUnit.SECONDS);
+        Thread.sleep(1_500);
+        long remainingTimeToExecution = future.getDelay(TimeUnit.MILLISECONDS);
+        System.out.printf("The scheduled task will be executed in: %d miliseconds.\n", remainingTimeToExecution);
+        System.out.printf("The computation value for the complex algorithm is: %d\n", future.get());
+        ses.shutdown();
+    }
 }
