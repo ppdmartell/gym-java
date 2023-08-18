@@ -9,9 +9,9 @@ Generics is not used here because I would prefer to keep it simple, although usi
 
     Time complexity:                                    Space complexity:
     -------------------------------------               ---------------------
-   	|  Best	|   Average	    |   Worst   |               |       Worst       |
+   	|  Best |   Average     |   Worst   |               |       Worst       |
     -------------------------------------               ---------------------
-    |  Ω(n)	|   Θ(n^2)      |   O(n^2)  |               |       O(1)        |
+    |  Ω(n) |   Θ(n^2)      |   O(n^2)  |               |       O(1)        |
     -------------------------------------               ---------------------
 
 
