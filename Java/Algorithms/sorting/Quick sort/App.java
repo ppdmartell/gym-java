@@ -6,12 +6,12 @@ algorithm, meaning you don't need extra space to allocate elements from the init
 so you can iterate and order at the same time using the original data-structure.
 The first step is selecting a "pivot" element, the one which the categorizing will be based upon.
 
-    Time complexity:                                             Space complexity:
-    -----------------------------------------------------        ---------------------
-    |  Best         |   Average          |  Worst       |        |       Worst       |
-    -----------------------------------------------------        ---------------------
-    |  Ω(n log(n))  |   Θ(n log(n))      |  O(n^2)		|        |       O(log(n))   |
-    -----------------------------------------------------        ---------------------
+    Time complexity:                                             	Space complexity:
+    -----------------------------------------------------        	---------------------
+    |  Best         |   Average          |  Worst       |        	|       Worst       |
+    -----------------------------------------------------        	---------------------
+    |  Ω(n log(n))  |   Θ(n log(n))      |  O(n^2)      |           |       O(log(n))   |
+    -----------------------------------------------------        	---------------------
 
 
 Resources:
