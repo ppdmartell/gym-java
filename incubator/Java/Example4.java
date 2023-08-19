@@ -1,13 +1,13 @@
 public class ThreadTest {
 
-	public static void main(String[] args)
-		throws InterruptedException
-	{
+    public static void main(String[] args)
+        throws InterruptedException
+    {
 
-		System.out.println("Begin - Thread");
+        System.out.println("Begin - Thread");
 
-		Thread.currentThread().join();
+        Thread.currentThread().join();
 
-		System.out.println("End - Thread");
-	}
+        System.out.println("End - Thread");
+    }
 }
