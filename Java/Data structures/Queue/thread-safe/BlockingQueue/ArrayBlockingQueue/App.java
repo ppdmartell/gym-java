@@ -31,62 +31,62 @@ import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
 class App {
-	public static void main(String[] args) throws InterruptedException {
-		//IMPORTANT: This data structure is very suitable for multi-threading applications.
+    public static void main(String[] args) throws InterruptedException {
+        //IMPORTANT: This data structure is very suitable for multi-threading applications.
 
-		BlockingQueue<String> queue = new ArrayBlockingQueue<>(3);
+        BlockingQueue<String> queue = new ArrayBlockingQueue<>(3);
 
-		//Example 1. This will block the execution because trying to put 4 elements in a row in a
-		//3-slots ArrayBlockingQueue.
-		//README: Comment this block to see next examples since this one will block.
-		queue.put("element1");
-		queue.put("element2");
-		queue.put("element3");
-		queue.put("element4");
+        //Example 1. This will block the execution because trying to put 4 elements in a row in a
+        //3-slots ArrayBlockingQueue.
+        //README: Comment this block to see next examples since this one will block.
+        queue.put("element1");
+        queue.put("element2");
+        queue.put("element3");
+        queue.put("element4");
 
-		String element1 = queue.take();
-		String element2 = queue.take();
-		String element3 = queue.take();
-		String element4 = queue.take();
+        String element1 = queue.take();
+        String element2 = queue.take();
+        String element3 = queue.take();
+        String element4 = queue.take();
 
-		System.out.println(element1);
-		System.out.println(element2);
-		System.out.println("--------------------------------------");
+        System.out.println(element1);
+        System.out.println(element2);
+        System.out.println("--------------------------------------");
 
-		//Example 2. This will block the execution because trying to take 3 when only 2 exist currently
-		//README: Comment this block to see next examples since this one will block.
-		queue.put("element5");
-		queue.put("element6");
+        //Example 2. This will block the execution because trying to take 3 when only 2 exist currently
+        //README: Comment this block to see next examples since this one will block.
+        queue.put("element5");
+        queue.put("element6");
 
-		String element5 = queue.take();
-		String element6 = queue.take();
-		String element7 = queue.take();
+        String element5 = queue.take();
+        String element6 = queue.take();
+        String element7 = queue.take();
 
-		System.out.println(element5);
-		System.out.println(element6);
-		System.out.println("--------------------------------------");
+        System.out.println(element5);
+        System.out.println(element6);
+        System.out.println("--------------------------------------");
 
-		//Example 3. This will work. As long as there is capacity to insert and elements to take, and the
-		//amount of put-take is balanced, it should work without any issues. Always respecting the capacity
-		//Which in this case is three. You could just insert 3 or less elements without taking and it
-		//shouldn't block.
-		queue.put("element8");
-		queue.put("element9");
+        //Example 3. This will work. As long as there is capacity to insert and elements to take, and the
+        //amount of put-take is balanced, it should work without any issues. Always respecting the capacity
+        //Which in this case is three. You could just insert 3 or less elements without taking and it
+        //shouldn't block.
+        queue.put("element8");
+        queue.put("element9");
 
-		String element8 = queue.take();
-		String element9 = queue.take();
+        String element8 = queue.take();
+        String element9 = queue.take();
 
-		queue.put("element10");
-		queue.put("element11");
+        queue.put("element10");
+        queue.put("element11");
 
-		String element10 = queue.take();
-		String element11 = queue.take();
+        String element10 = queue.take();
+        String element11 = queue.take();
 
 
-		System.out.println(element8);
-		System.out.println(element9);
-		System.out.println(element10);
-		System.out.println(element11);
-		System.out.println("--------------------------------------");
-	}
+        System.out.println(element8);
+        System.out.println(element9);
+        System.out.println(element10);
+        System.out.println(element11);
+        System.out.println("--------------------------------------");
+    }
 }

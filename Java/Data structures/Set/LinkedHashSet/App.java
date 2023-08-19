@@ -13,10 +13,10 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 
 class App {
-	public static void main(String[] args) {
-		Set<Integer> set = new LinkedHashSet<>();
-		set.addAll(Arrays.asList(6, 2, 3, -99, 4, 5, 5, 1));
-		set.stream().forEach(System.out::println);
-		System.out.println("Does the LinkedHashSet contain the number -99?: " + set.contains(-99));
-	}
+    public static void main(String[] args) {
+        Set<Integer> set = new LinkedHashSet<>();
+        set.addAll(Arrays.asList(6, 2, 3, -99, 4, 5, 5, 1));
+        set.stream().forEach(System.out::println);
+        System.out.println("Does the LinkedHashSet contain the number -99?: " + set.contains(-99));
+    }
 }

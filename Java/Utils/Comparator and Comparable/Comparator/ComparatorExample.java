@@ -20,57 +20,57 @@ import java.util.TreeMap;
 import java.util.Comparator;
 
 class ComparatorExample {
-	public static void main(String[] args) {
-		Map<Integer, Person> treeMap = new TreeMap<>(new Comparator<Integer>() {
-			@Override
-			public int compare(Integer a, Integer b) {
-				return Integer.compare(a, b);
-			}
-		});
-		Person person1 = new Person("Albert", 50);
-		Person person2 = new Person("Messi", 36);
-		Person person3 = new Person("Jules", 44);
+    public static void main(String[] args) {
+        Map<Integer, Person> treeMap = new TreeMap<>(new Comparator<Integer>() {
+            @Override
+            public int compare(Integer a, Integer b) {
+                return Integer.compare(a, b);
+            }
+        });
+        Person person1 = new Person("Albert", 50);
+        Person person2 = new Person("Messi", 36);
+        Person person3 = new Person("Jules", 44);
 
-		treeMap.put(person1.getAge(), person1);
-		treeMap.put(person2.getAge(), person2);
-		treeMap.put(person3.getAge(), person3);
-		treeMap.entrySet().stream().forEach(System.out::println);
+        treeMap.put(person1.getAge(), person1);
+        treeMap.put(person2.getAge(), person2);
+        treeMap.put(person3.getAge(), person3);
+        treeMap.entrySet().stream().forEach(System.out::println);
 
 
-		//Using a lambda expression for TreeMap's constructor
-		Map<Integer, Person> treeMap2 = new TreeMap<>(Integer::compare);
+        //Using a lambda expression for TreeMap's constructor
+        Map<Integer, Person> treeMap2 = new TreeMap<>(Integer::compare);
 
-		Person person4 = new Person("Elon", 50);
-		Person person5 = new Person("Jeff", 36);
-		Person person6 = new Person("Mark", 70);
+        Person person4 = new Person("Elon", 50);
+        Person person5 = new Person("Jeff", 36);
+        Person person6 = new Person("Mark", 70);
 
-		treeMap2.put(person4.getAge(), person4);
-		treeMap2.put(person5.getAge(), person5);
-		treeMap2.put(person6.getAge(), person6);
+        treeMap2.put(person4.getAge(), person4);
+        treeMap2.put(person5.getAge(), person5);
+        treeMap2.put(person6.getAge(), person6);
 
-		treeMap2.entrySet().stream().forEach(System.out::println);
+        treeMap2.entrySet().stream().forEach(System.out::println);
 
-	}
+    }
 }
 
 class Person {
-	private String name;
-	private int age;
+    private String name;
+    private int age;
 
-	public Person() {}
-	public Person(String name, int age) {
-		this.name = name;
-		this.age = age;
-	}
+    public Person() {}
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
 
-	public String getName() { return this.name; }
-	public void setName(String name) { this.name = name; }
+    public String getName() { return this.name; }
+    public void setName(String name) { this.name = name; }
 
-	public int getAge() { return this.age; }
-	public void setAge(int age) { this.age = age; }
+    public int getAge() { return this.age; }
+    public void setAge(int age) { this.age = age; }
 
-	@Override
-	public String toString() {
-		return "[name: " + name + ", age: " + age + "]";
-	}
+    @Override
+    public String toString() {
+        return "[name: " + name + ", age: " + age + "]";
+    }
 }

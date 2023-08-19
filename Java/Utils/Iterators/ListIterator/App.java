@@ -12,22 +12,22 @@ import java.util.List;
 import java.util.ListIterator;
 
 class App {
-	public static void main(String[] args) {
-		List<String> list = new ArrayList<>();
-		list.add("element1");
-		list.add("element2");
-		list.add("element3");
-		list.add("element4");
+    public static void main(String[] args) {
+        List<String> list = new ArrayList<>();
+        list.add("element1");
+        list.add("element2");
+        list.add("element3");
+        list.add("element4");
 
-		ListIterator<String> listIterator = list.listIterator();
-		System.out.println("---------FORWARDS----------");
-		while (listIterator.hasNext()) {
-			System.out.println(listIterator.next());
-		}
+        ListIterator<String> listIterator = list.listIterator();
+        System.out.println("---------FORWARDS----------");
+        while (listIterator.hasNext()) {
+            System.out.println(listIterator.next());
+        }
 
-		System.out.println("---------BACKWARDS---------");
-		while (listIterator.hasPrevious()) {
-			System.out.println(listIterator.previous());
-		}
-	}
+        System.out.println("---------BACKWARDS---------");
+        while (listIterator.hasPrevious()) {
+            System.out.println(listIterator.previous());
+        }
+    }
 }

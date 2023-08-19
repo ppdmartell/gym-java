@@ -14,40 +14,40 @@ public class App {
 
 class Shelter {
 
-	public Animal saveAnimal(String request) {
-		SimpleAnimalFactory animalFactory = new SimpleAnimalFactory();
-		Animal animal = animalFactory.createAnimal(request);
-		//Actions here to get ready the animal to deliver to the new owner
-		return animal;
-	}
+    public Animal saveAnimal(String request) {
+        SimpleAnimalFactory animalFactory = new SimpleAnimalFactory();
+        Animal animal = animalFactory.createAnimal(request);
+        //Actions here to get ready the animal to deliver to the new owner
+        return animal;
+    }
 
 }
 
 class SimpleAnimalFactory {
 
-	public Animal createAnimal(String request) {
-		Animal animal = null;
-		if(request.equals("cat")) animal = new Cat();
-		if(request.equals("dog")) animal = new Dog();
-		return animal;
-	}
+    public Animal createAnimal(String request) {
+        Animal animal = null;
+        if(request.equals("cat")) animal = new Cat();
+        if(request.equals("dog")) animal = new Dog();
+        return animal;
+    }
 
 }
 
 interface Animal {
-	void makeSound();
+    void makeSound();
 }
 
 class Cat implements Animal {
 
-	@Override
-	public void makeSound() { System.out.println("Meow meow"); }
+    @Override
+    public void makeSound() { System.out.println("Meow meow"); }
 
 }
 
 class Dog implements Animal {
 
-	@Override
-	public void makeSound() { System.out.println("Woof woof"); }
+    @Override
+    public void makeSound() { System.out.println("Woof woof"); }
 
 }

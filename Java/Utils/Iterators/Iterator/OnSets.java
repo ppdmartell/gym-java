@@ -16,30 +16,30 @@ import java.util.Iterator;
 import java.util.Set;
 
 class OnMaps {
-	public static void main(String[] args) {
-		Set<String> set = new HashSet<>();
-		set.add("Sasha");
-		set.add("Natasha");
-		set.add("Ekaterina");
-		set.add("Nastya");
-		set.add("Irina");
+    public static void main(String[] args) {
+        Set<String> set = new HashSet<>();
+        set.add("Sasha");
+        set.add("Natasha");
+        set.add("Ekaterina");
+        set.add("Nastya");
+        set.add("Irina");
 
-		//Iterating using stream can be used directly. Here is used parallelStream() for parallel access.
-		set.parallelStream().forEach(System.out::println);
-		System.out.println("---------------------");
+        //Iterating using stream can be used directly. Here is used parallelStream() for parallel access.
+        set.parallelStream().forEach(System.out::println);
+        System.out.println("---------------------");
 
-		//Iterating using an enhanced for loop.
-		for(String element : set) {
-			System.out.println(element);
-		}
-		System.out.println("---------------------");
+        //Iterating using an enhanced for loop.
+        for(String element : set) {
+            System.out.println(element);
+        }
+        System.out.println("---------------------");
 
-		//Iterating using Iterator capbilities.
-		Iterator<String> it = set.iterator();
-		while(it.hasNext()) {
-			String value = it.next();
-			System.out.println(value);
-		}
-		System.out.println("---------------------");
-	}
+        //Iterating using Iterator capbilities.
+        Iterator<String> it = set.iterator();
+        while(it.hasNext()) {
+            String value = it.next();
+            System.out.println(value);
+        }
+        System.out.println("---------------------");
+    }
 }

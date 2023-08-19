@@ -10,25 +10,25 @@ be able to call it (compiling-time error) while list2 would.
 */
 
 class InterfaceOrDirectCreation {
-	public static void main(String[] args) {
-		Device tv1 = new TvDevice();
-		TvDevice tv2 = new TvDevice();
+    public static void main(String[] args) {
+        Device tv1 = new TvDevice();
+        TvDevice tv2 = new TvDevice();
 
-		tv1.turnOn();
-		tv2.turnOn();
+        tv1.turnOn();
+        tv2.turnOn();
 
-		tv1.readInstructions();  //This line will give a compiling-time error.
-		tv2.readInstructions();
-	}
+        tv1.readInstructions();  //This line will give a compiling-time error.
+        tv2.readInstructions();
+    }
 }
 
 interface Device {
-	void turnOn();
+    void turnOn();
 }
 
 class TvDevice implements Device {
-	@Override
-	public void turnOn() { System.out.println("Turning on the device."); }
+    @Override
+    public void turnOn() { System.out.println("Turning on the device."); }
 
-	public static void readInstructions() { System.out.println("Reading instructions of the TV."); }
+    public static void readInstructions() { System.out.println("Reading instructions of the TV."); }
 }

@@ -18,34 +18,34 @@ import java.util.List;
 import java.util.Set;
 
 class App {
-	public static void main(String[] args) {
-		List<String> list = new ArrayList<>();
-		//Set<String> list = new HashSet<>();  //Thanks to the upcasting, you can uncomment this line and comment the above one with the List, and the code will run without any issue.
-		list.add("element1");
-		list.add("element2");
-		list.add("element3");
+    public static void main(String[] args) {
+        List<String> list = new ArrayList<>();
+        //Set<String> list = new HashSet<>();  //Thanks to the upcasting, you can uncomment this line and comment the above one with the List, and the code will run without any issue.
+        list.add("element1");
+        list.add("element2");
+        list.add("element3");
 
-		Collection<String> collection = list;
-		Iterable<String> iterable = collection;
-		/*The author of [1] took the above steps to depict the up-casting and the relationship between
-		  the interfaces Iterable > Collection > List*/
+        Collection<String> collection = list;
+        Iterable<String> iterable = collection;
+        /*The author of [1] took the above steps to depict the up-casting and the relationship between
+          the interfaces Iterable > Collection > List*/
 
-		//WAY 1
-		for (String element : iterable) {
-			System.out.println(element);
-		}
-		System.out.println("---------------------");
+        //WAY 1
+        for (String element : iterable) {
+            System.out.println(element);
+        }
+        System.out.println("---------------------");
 
-		//WAY 2
-		Iterator<String> it = iterable.iterator();   //This is what is meant with "Iterable is a source of an Iterator"
-		while (it.hasNext()) {
-			it.forEachRemaining(System.out::println); //This literally says: do this same to the rest of the elements. Method forEachRemaining takes a Consumer functional interface (or a lambda to make it more neat).
-		}
-		System.out.println("---------------------");
+        //WAY 2
+        Iterator<String> it = iterable.iterator();   //This is what is meant with "Iterable is a source of an Iterator"
+        while (it.hasNext()) {
+            it.forEachRemaining(System.out::println); //This literally says: do this same to the rest of the elements. Method forEachRemaining takes a Consumer functional interface (or a lambda to make it more neat).
+        }
+        System.out.println("---------------------");
 
-		//WAY 3
-		iterable.forEach(System.out::println);   //Iterable interface has a forEach() method that also takes a Consumer functional interface.
+        //WAY 3
+        iterable.forEach(System.out::println);   //Iterable interface has a forEach() method that also takes a Consumer functional interface.
 
-		//Interesting but even when Collection interface has a stream() method, Iterable has not!
-	}
+        //Interesting but even when Collection interface has a stream() method, Iterable has not!
+    }
 }

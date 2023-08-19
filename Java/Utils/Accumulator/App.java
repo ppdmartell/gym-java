@@ -17,13 +17,13 @@ import java.util.function.LongBinaryOperator;
 import java.util.stream.IntStream;
 
 class App {
-	public static void main(String[] args) throws InterruptedException {
-		LongBinaryOperator op = (x, y) -> x * y * 2;
-		LongAccumulator accumulator = new LongAccumulator(op, 1L);
-		ExecutorService executor = Executors.newFixedThreadPool(4);
-		IntStream.range(1, 11).forEach(i -> executor.submit(() -> accumulator.accumulate(i)));
-		Thread.sleep(2_000);
-		executor.shutdown();
-		System.out.printf("The total accumulation is %d.%n", accumulator.getThenReset());
-	}
+    public static void main(String[] args) throws InterruptedException {
+        LongBinaryOperator op = (x, y) -> x * y * 2;
+        LongAccumulator accumulator = new LongAccumulator(op, 1L);
+        ExecutorService executor = Executors.newFixedThreadPool(4);
+        IntStream.range(1, 11).forEach(i -> executor.submit(() -> accumulator.accumulate(i)));
+        Thread.sleep(2_000);
+        executor.shutdown();
+        System.out.printf("The total accumulation is %d.%n", accumulator.getThenReset());
+    }
 }

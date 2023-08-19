@@ -6,27 +6,27 @@ Resources:
 */
 
 class App3 {
-	public static void main(String[] args) {
-		try {
-			calculate(4);
-		} catch (MinorThanTenException e) {
-			System.out.println(e);
-		}
-	}
+    public static void main(String[] args) {
+        try {
+            calculate(4);
+        } catch (MinorThanTenException e) {
+            System.out.println(e);
+        }
+    }
 
-	private static int calculate(int value) throws MinorThanTenException {
-		if (value >= 10) return 99;
-		else throw new MinorThanTenException("The value can't be minor than 10.");
-	}
+    private static int calculate(int value) throws MinorThanTenException {
+        if (value >= 10) return 99;
+        else throw new MinorThanTenException("The value can't be minor than 10.");
+    }
 }
 
 
 //Here is where the custom exception is created.
 class MinorThanTenException extends Exception {
 
-	public MinorThanTenException() {}
+    public MinorThanTenException() {}
 
-	public MinorThanTenException(String msg) {
-		super(msg);
-	}
+    public MinorThanTenException(String msg) {
+        super(msg);
+    }
 }

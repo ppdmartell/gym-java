@@ -69,22 +69,22 @@ Resources:
 */
 
 class App2 {
-	public static void main(String[] args) {
-		try (ExampleResource resource = new ExampleResource()) {
-			resource.calculate(77, 0);
-		} catch (ArithmeticException e) {
-			System.out.println("Division by zero is undefined.");
-		}
-	}
+    public static void main(String[] args) {
+        try (ExampleResource resource = new ExampleResource()) {
+            resource.calculate(77, 0);
+        } catch (ArithmeticException e) {
+            System.out.println("Division by zero is undefined.");
+        }
+    }
 }
 
 class ExampleResource implements AutoCloseable { //You can also implement Closeable interface (Java 5), although AutoCloseable was introduced in Java 7.
-	@Override
-	public void close() {
-		System.out.println("This will be executed because this ExampleResource class implements AutoCloseable interface.");
-	}
+    @Override
+    public void close() {
+        System.out.println("This will be executed because this ExampleResource class implements AutoCloseable interface.");
+    }
 
-	public int calculate(int a, int b) throws ArithmeticException {
-		return a / b;
-	}
+    public int calculate(int a, int b) throws ArithmeticException {
+        return a / b;
+    }
 }

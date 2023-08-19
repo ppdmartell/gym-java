@@ -12,32 +12,32 @@ Resources:
 import java.util.Arrays;
 
 class App {
-	public static void main(String[] args) {
-		Days day = Days.FRIDAY;
-		if(day == Days.FRIDAY) System.out.println("It's friday already!");
-		else System.out.println("Not friday yet.");
+    public static void main(String[] args) {
+        Days day = Days.FRIDAY;
+        if(day == Days.FRIDAY) System.out.println("It's friday already!");
+        else System.out.println("Not friday yet.");
 
-		System.out.printf("My level of stress on Fridays is %d.%n", Days.FRIDAY.stressLevel);
-		System.out.printf("Time for Tuesday is %.1f.%n", Days.TUESDAY.time);
+        System.out.printf("My level of stress on Fridays is %d.%n", Days.FRIDAY.stressLevel);
+        System.out.printf("Time for Tuesday is %.1f.%n", Days.TUESDAY.time);
 
-		Arrays.stream(Days.values()).forEach(System.out::println);
-	}
+        Arrays.stream(Days.values()).forEach(System.out::println);
+    }
 }
 
 enum Days {
-	SUNDAY(0, 1d),
-	MONDAY(1, 2d),
-	TUESDAY(2, 3d),
-	WEDNESDAY(3, 4d),
-	THURSDAY(4, 5d),
-	FRIDAY(5, 6d),
-	SATURDAY(6, 7d);
+    SUNDAY(0, 1d),
+    MONDAY(1, 2d),
+    TUESDAY(2, 3d),
+    WEDNESDAY(3, 4d),
+    THURSDAY(4, 5d),
+    FRIDAY(5, 6d),
+    SATURDAY(6, 7d);
 
-	final int stressLevel;
-	final double time;
+    final int stressLevel;
+    final double time;
 
-	Days(int stressLevel, double time) {
-		this.stressLevel = stressLevel;
-		this.time = time;
-	}
+    Days(int stressLevel, double time) {
+        this.stressLevel = stressLevel;
+        this.time = time;
+    }
 }

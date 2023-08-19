@@ -78,39 +78,39 @@ import java.util.Collections;
 import java.util.List;
 
 class App {
-	public static void main(String[] args) {
-		List<String> hobbies = new ArrayList<>(Arrays.asList("fishing", "soccer", "movies"));
-		Person person = new Person("Dan", "Timor", hobbies);
+    public static void main(String[] args) {
+        List<String> hobbies = new ArrayList<>(Arrays.asList("fishing", "soccer", "movies"));
+        Person person = new Person("Dan", "Timor", hobbies);
 
-		List<String> list = person.getHobbies();
-		try {
-			list.add("golf");
-		} catch (UnsupportedOperationException e) {
-			System.out.printf("Remember, that method returns an immutable list. Trying to modify that list leads to: %s%n", e.getClass().getSimpleName());
-		}
-	}
+        List<String> list = person.getHobbies();
+        try {
+            list.add("golf");
+        } catch (UnsupportedOperationException e) {
+            System.out.printf("Remember, that method returns an immutable list. Trying to modify that list leads to: %s%n", e.getClass().getSimpleName());
+        }
+    }
 }
 
 final class Person {
 
-	private final String name;
-	private final String lastname;
-	private final List<String> hobbies;
+    private final String name;
+    private final String lastname;
+    private final List<String> hobbies;
 
-	public Person (String name, String lastname, List<String> hobbies) {
-		this.name = name;
-		this.lastname = lastname;
-		this.hobbies = new ArrayList<>(hobbies);   //Defensive copy to ensure the new list is immutable because only the class "knows" the location in memory, and returns a new one whose location in memory can be altered without altering the "real" hobbies list.
-												   //Don't use Collections.unmodifiableList(hobbies) here!!! Because changes to the existing hobbies (parameter) will be reflected on the class's hobbies.
-	}
+    public Person (String name, String lastname, List<String> hobbies) {
+        this.name = name;
+        this.lastname = lastname;
+        this.hobbies = new ArrayList<>(hobbies);   //Defensive copy to ensure the new list is immutable because only the class "knows" the location in memory, and returns a new one whose location in memory can be altered without altering the "real" hobbies list.
+                                                   //Don't use Collections.unmodifiableList(hobbies) here!!! Because changes to the existing hobbies (parameter) will be reflected on the class's hobbies.
+    }
 
-	public String getName() { return name; }
+    public String getName() { return name; }
 
-	public String getLastname() { return lastname; }
+    public String getLastname() { return lastname; }
 
-	public List<String> getHobbies() {
-		//return new ArrayList<>(hobbies);  //This achieves only partial immutability the correct and fully-immutable way[6] is the next line.
-		return Collections.unmodifiableList(hobbies);
-	}
+    public List<String> getHobbies() {
+        //return new ArrayList<>(hobbies);  //This achieves only partial immutability the correct and fully-immutable way[6] is the next line.
+        return Collections.unmodifiableList(hobbies);
+    }
 
 }

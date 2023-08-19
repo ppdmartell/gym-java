@@ -59,78 +59,78 @@ import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 
 class App {
-	public static void main(String[] args) {
-		Animal dog = new Dog("Firulais", 7, "Rikimbili");
-		Animal cat = new Cat("Tom", 3);
-		System.out.println("-----------------------------------------------------------");
-		System.out.println(dog.getClass().getSimpleName());
-		System.out.println(cat.getClass().getSimpleName());
-		System.out.println("-----------------------------------------------------------");
+    public static void main(String[] args) {
+        Animal dog = new Dog("Firulais", 7, "Rikimbili");
+        Animal cat = new Cat("Tom", 3);
+        System.out.println("-----------------------------------------------------------");
+        System.out.println(dog.getClass().getSimpleName());
+        System.out.println(cat.getClass().getSimpleName());
+        System.out.println("-----------------------------------------------------------");
 
-		if (dog.getClass().isAnnotationPresent(Bark.class)) {
-			System.out.println("Object dog, from class Dog, is annotated with @Bark"); //IMPORTANT, in this case annotations is about the class, not the object.
-		}
-		System.out.println("-----------------------------------------------------------");
+        if (dog.getClass().isAnnotationPresent(Bark.class)) {
+            System.out.println("Object dog, from class Dog, is annotated with @Bark"); //IMPORTANT, in this case annotations is about the class, not the object.
+        }
+        System.out.println("-----------------------------------------------------------");
 
-		Arrays.stream(cat.getClass().getDeclaredMethods())
-						 .filter(p -> p.isAnnotationPresent(RunImmediately.class))
-						 .filter(p -> p.isAnnotationPresent(Times.class)) 
-						 .forEach(p -> {
-							try {
-								Times annotation = p.getAnnotation(Times.class);
-								for (int i = 0; i < annotation.times(); i++) p.invoke(cat);
-							} catch (IllegalAccessException | InvocationTargetException e) {
-								e.printStackTrace();
-							}
-		});
-		System.out.println("-----------------------------------------------------------");
+        Arrays.stream(cat.getClass().getDeclaredMethods())
+                         .filter(p -> p.isAnnotationPresent(RunImmediately.class))
+                         .filter(p -> p.isAnnotationPresent(Times.class)) 
+                         .forEach(p -> {
+                            try {
+                                Times annotation = p.getAnnotation(Times.class);
+                                for (int i = 0; i < annotation.times(); i++) p.invoke(cat);
+                            } catch (IllegalAccessException | InvocationTargetException e) {
+                                e.printStackTrace();
+                            }
+        });
+        System.out.println("-----------------------------------------------------------");
 
-		for (Field field : dog.getClass().getDeclaredFields()) {
-			if (field.isAnnotationPresent(ImportantString.class)) {
-				try {
-					Object objectValue = field.get(dog);
-					if (objectValue instanceof String) System.out.printf("The value of that important field is %s.%n", field.get(dog));
-				} catch (IllegalAccessException e) {
-					e.printStackTrace();
-				}
-			}
-		}
-	}
+        for (Field field : dog.getClass().getDeclaredFields()) {
+            if (field.isAnnotationPresent(ImportantString.class)) {
+                try {
+                    Object objectValue = field.get(dog);
+                    if (objectValue instanceof String) System.out.printf("The value of that important field is %s.%n", field.get(dog));
+                } catch (IllegalAccessException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
 }
 
 @Bark
 class Dog extends Animal {
 
-	@ImportantString
-	String nickname; //This field is not declared as private to not having to deal with the reflection access using the annotation. Otherwise, exception thing.
+    @ImportantString
+    String nickname; //This field is not declared as private to not having to deal with the reflection access using the annotation. Otherwise, exception thing.
 
-	public Dog(String name, int age, String nickname) {
-		super(name, age);
-		this.nickname = nickname;
-	}
+    public Dog(String name, int age, String nickname) {
+        super(name, age);
+        this.nickname = nickname;
+    }
 }
 
 class Cat extends Animal {
-	public Cat(String name, int age) {
-		super(name, age);
-	}
+    public Cat(String name, int age) {
+        super(name, age);
+    }
 
-	@RunImmediately
-	//@Times(times = 10)
-	@Times //Will get the default value which is 5 (instead of 10).
-	public void meow() {
-		System.out.println("Meowwwww!");
-	}
+    @RunImmediately
+    //@Times(times = 10)
+    @Times //Will get the default value which is 5 (instead of 10).
+    public void meow() {
+        System.out.println("Meowwwww!");
+    }
 }
 
 abstract class Animal {
-	private final String name;
-	private final int age;
+    private final String name;
+    private final int age;
 
-	public Animal(String name, int age) {
-		this.name = name;
-		this.age = age;
-	}
+    public Animal(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
 }
 
 @Target(ElementType.TYPE) //This means this annotation can only be used on classes (ElementType.METHOD is for methods only)
@@ -144,8 +144,8 @@ abstract class Animal {
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
 @interface Times {
-	int times() default 5; //The method can be of a primitive type (int in this case), a class type, a String, or an array of any of those.
-						   //If you don't specify a value, it will take 5 as default.
+    int times() default 5; //The method can be of a primitive type (int in this case), a class type, a String, or an array of any of those.
+                           //If you don't specify a value, it will take 5 as default.
 }
 
 @Target(ElementType.FIELD)  //FIELD indicates it's only for member variables (fields of a class)

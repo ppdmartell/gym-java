@@ -20,12 +20,12 @@ import java.util.concurrent.ExecutorService;
 import java.util.stream.IntStream;
 
 class App {
-	public static void main(String[] args) throws InterruptedException {
-		LongAdder adder = new LongAdder();
-		ExecutorService executor = Executors.newFixedThreadPool(4);
-		IntStream.range(0, 100).forEach(i -> executor.submit(adder::increment));
-		Thread.sleep(2_000);
-		System.out.printf("The total incremental sum is %d.%n", adder.sumThenReset());
-		executor.shutdown();
-	}
+    public static void main(String[] args) throws InterruptedException {
+        LongAdder adder = new LongAdder();
+        ExecutorService executor = Executors.newFixedThreadPool(4);
+        IntStream.range(0, 100).forEach(i -> executor.submit(adder::increment));
+        Thread.sleep(2_000);
+        System.out.printf("The total incremental sum is %d.%n", adder.sumThenReset());
+        executor.shutdown();
+    }
 }

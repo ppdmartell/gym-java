@@ -20,31 +20,31 @@ import java.util.Iterator;
 import java.util.Map;
 
 class OnMaps {
-	public static void main(String[] args) {
-		Map<Integer, String> map = new HashMap<>();
-		map.put(1, "Sasha");
-		map.put(2, "Natasha");
-		map.put(3, "Ekaterina");
-		map.put(4, "Nastya");
-		map.put(5, "Irina");
+    public static void main(String[] args) {
+        Map<Integer, String> map = new HashMap<>();
+        map.put(1, "Sasha");
+        map.put(2, "Natasha");
+        map.put(3, "Ekaterina");
+        map.put(4, "Nastya");
+        map.put(5, "Irina");
 
-		//Iterating using stream (see the entrySet() method call). Here is used parallelStream() for parallel access.
-		map.entrySet().parallelStream().forEach(System.out::println);
-		System.out.println("---------------------");
+        //Iterating using stream (see the entrySet() method call). Here is used parallelStream() for parallel access.
+        map.entrySet().parallelStream().forEach(System.out::println);
+        System.out.println("---------------------");
 
-		//Iterating using an enhanced for loop.
-		for(Map.Entry<Integer, String> element : map.entrySet()) {
-			System.out.println(element);
-		}
-		System.out.println("---------------------");
+        //Iterating using an enhanced for loop.
+        for(Map.Entry<Integer, String> element : map.entrySet()) {
+            System.out.println(element);
+        }
+        System.out.println("---------------------");
 
-		//Iterating using Iterator capbilities.
-		Iterator<Map.Entry<Integer, String>> it = map.entrySet().iterator();
-		while(it.hasNext()) {
-			Map.Entry<Integer, String> entry = it.next();
-			Integer key = entry.getKey();
-			String value = entry.getValue();
-			System.out.println(entry);
-		}
-	}
+        //Iterating using Iterator capbilities.
+        Iterator<Map.Entry<Integer, String>> it = map.entrySet().iterator();
+        while(it.hasNext()) {
+            Map.Entry<Integer, String> entry = it.next();
+            Integer key = entry.getKey();
+            String value = entry.getValue();
+            System.out.println(entry);
+        }
+    }
 }

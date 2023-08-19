@@ -14,30 +14,30 @@ public class App {
 
 class Shelter {
 
-	public Animal createAnimal(String request) {
-		Animal animal = null;
-		if(request.equals("cat")) animal = new Cat();
-		if(request.equals("dog")) animal = new Dog();
-		//prepare for delivery to the new owner actions
-		return animal;
-	}
+    public Animal createAnimal(String request) {
+        Animal animal = null;
+        if(request.equals("cat")) animal = new Cat();
+        if(request.equals("dog")) animal = new Dog();
+        //prepare for delivery to the new owner actions
+        return animal;
+    }
 
 }
 
 interface Animal {
-	void makeSound();
+    void makeSound();
 }
 
 class Cat implements Animal {
 
-	@Override
-	public void makeSound() { System.out.println("Meow meow"); }
+    @Override
+    public void makeSound() { System.out.println("Meow meow"); }
 
 }
 
 class Dog implements Animal {
 
-	@Override
-	public void makeSound() { System.out.println("Woof woof"); }
+    @Override
+    public void makeSound() { System.out.println("Woof woof"); }
 
 }

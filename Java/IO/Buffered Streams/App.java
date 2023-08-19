@@ -32,37 +32,37 @@ import java.time.LocalDateTime; //.now() [this is not used, ignore]
 
 class App {
 
-	private static final String filename = "text";
-	private static final File file;
+    private static final String filename = "text";
+    private static final File file;
 
-	static {
-		file = new File(filename);
-	}
+    static {
+        file = new File(filename);
+    }
 
-	public static void main(String[] args) {
-		ExecutorService executor = Executors.newFixedThreadPool(2);
-		executor.submit(() -> read(false));
-		executor.submit(() -> read(true));
-		executor.shutdown();
-	}
+    public static void main(String[] args) {
+        ExecutorService executor = Executors.newFixedThreadPool(2);
+        executor.submit(() -> read(false));
+        executor.submit(() -> read(true));
+        executor.shutdown();
+    }
 
-	/*
-	If the param variable optimized is true, a BufferedInputStream would be used, otherwise it won't.
-	*/
-	public static void read(boolean optimized) {
-		long start = System.currentTimeMillis();
-		InputStream is = null;
-		try {
-			if(optimized) is = new BufferedInputStream(new FileInputStream(file));
-			else is = new FileInputStream(file);
-			int[] fileArr = new int[(int) file.length()];
-			for(int i = 0, temp = 0; (temp = is.read()) != -1; i++) {
-				fileArr[i] = temp;
-			}
-		long end = System.currentTimeMillis();
-			System.out.printf("File was read with optimized[%b] in %d milliseconds.%n", optimized, end - start);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
+    /*
+    If the param variable optimized is true, a BufferedInputStream would be used, otherwise it won't.
+    */
+    public static void read(boolean optimized) {
+        long start = System.currentTimeMillis();
+        InputStream is = null;
+        try {
+            if(optimized) is = new BufferedInputStream(new FileInputStream(file));
+            else is = new FileInputStream(file);
+            int[] fileArr = new int[(int) file.length()];
+            for(int i = 0, temp = 0; (temp = is.read()) != -1; i++) {
+                fileArr[i] = temp;
+            }
+        long end = System.currentTimeMillis();
+            System.out.printf("File was read with optimized[%b] in %d milliseconds.%n", optimized, end - start);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

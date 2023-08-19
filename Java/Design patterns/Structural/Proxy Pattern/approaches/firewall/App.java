@@ -11,41 +11,41 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class App {
-	public static void main(String[] args) {
-		Internet regular = new RegularInternet();
-		regular.connectTo("www.onlyfans.com");
-		Internet proxy = new ProxyInternet();
-		proxy.connectTo("www.onlyfans.com");
-		proxy.connectTo("www.google.com");
-	}
+    public static void main(String[] args) {
+        Internet regular = new RegularInternet();
+        regular.connectTo("www.onlyfans.com");
+        Internet proxy = new ProxyInternet();
+        proxy.connectTo("www.onlyfans.com");
+        proxy.connectTo("www.google.com");
+    }
 }
 
 class RegularInternet implements Internet {
-	@Override
-	public void connectTo(String server) { System.out.println("CONNECTED to server: " + server); }
+    @Override
+    public void connectTo(String server) { System.out.println("CONNECTED to server: " + server); }
 }
 
 interface Internet {
-	void connectTo(String server);
+    void connectTo(String server);
 }
 
 class ProxyInternet implements Internet {
-	private static final Set<String> restrictedSites;
-	private final Internet internet = new RegularInternet();
+    private static final Set<String> restrictedSites;
+    private final Internet internet = new RegularInternet();
 
-	static {
-		restrictedSites = new HashSet<>();
-		restrictedSites.add("www.onlyfans.com");
-	}
+    static {
+        restrictedSites = new HashSet<>();
+        restrictedSites.add("www.onlyfans.com");
+    }
 
-	@Override
-	public void connectTo(String server) {
-		if(restrictedSites.contains(server)) {
-			System.out.println("ACCESS DENIED to server: " + server);
-			return;
-		}
-		System.out.println("CONNECTED to server: " + server);
-	}
+    @Override
+    public void connectTo(String server) {
+        if(restrictedSites.contains(server)) {
+            System.out.println("ACCESS DENIED to server: " + server);
+            return;
+        }
+        System.out.println("CONNECTED to server: " + server);
+    }
 }
 
 

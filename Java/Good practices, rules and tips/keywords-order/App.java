@@ -11,10 +11,10 @@ Resources:
 
 class App {
 
-	private static final int field1 = 1;
-	private final static int field2 = 1;
+    private static final int field1 = 1;
+    private final static int field2 = 1;
 
-	public static void main(String[] args) {
-		System.out.println("All good here!");
-	}
+    public static void main(String[] args) {
+        System.out.println("All good here!");
+    }
 }

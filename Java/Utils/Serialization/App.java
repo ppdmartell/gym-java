@@ -41,56 +41,56 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
 class App {
-	public static void main(String[] args) {
-		/*This example will try to serialize an object of class Employee into a file
-		and then deserialize it pretending to be the endpoint module receiving
-		the object as a file. In principle, salary shouldn't be serialized since it's transient.*/
-		Employee employee = new Employee("Marshall", 45, 324.343);
+    public static void main(String[] args) {
+        /*This example will try to serialize an object of class Employee into a file
+        and then deserialize it pretending to be the endpoint module receiving
+        the object as a file. In principle, salary shouldn't be serialized since it's transient.*/
+        Employee employee = new Employee("Marshall", 45, 324.343);
 
-		//Serializing the Employee object.
-		File file = new File("employee.serial");
-		try (FileOutputStream fos = new FileOutputStream(file);
-			ObjectOutputStream oos = new ObjectOutputStream(fos);) {
-			oos.writeObject(employee);
-		} catch (FileNotFoundException e) {
-			System.out.printf("The file path can't be found: %s.%n", file.getAbsolutePath());
-		} catch (IOException e) {
-			System.out.printf("An I/O exception of some sort has occurred: %s.%n", e.getMessage());
-		}
+        //Serializing the Employee object.
+        File file = new File("employee.serial");
+        try (FileOutputStream fos = new FileOutputStream(file);
+            ObjectOutputStream oos = new ObjectOutputStream(fos);) {
+            oos.writeObject(employee);
+        } catch (FileNotFoundException e) {
+            System.out.printf("The file path can't be found: %s.%n", file.getAbsolutePath());
+        } catch (IOException e) {
+            System.out.printf("An I/O exception of some sort has occurred: %s.%n", e.getMessage());
+        }
 
-		//Deserializing the object from file "employee.serial" and printing its values.
-		try (FileInputStream fis = new FileInputStream(file); //The same object file is being used, but it wouldn't exist in the other module, would have to be created. Here it's used to avoid creating another File object.
-			ObjectInputStream ois = new ObjectInputStream(fis);) {
-			Employee employee2 = (Employee) ois.readObject();
-			System.out.printf("The deserialized object is: %s.%n", employee2);
-		} catch (ClassNotFoundException e) {
-			System.out.printf("Class of a serialized object cannot be found: %s.%n", employee.getClass().getCanonicalName());
-		} catch (IOException e) {
-			System.out.printf("An I/O exception of some sort has occurred: %s.%n", e.getMessage());
-		}
-	}
+        //Deserializing the object from file "employee.serial" and printing its values.
+        try (FileInputStream fis = new FileInputStream(file); //The same object file is being used, but it wouldn't exist in the other module, would have to be created. Here it's used to avoid creating another File object.
+            ObjectInputStream ois = new ObjectInputStream(fis);) {
+            Employee employee2 = (Employee) ois.readObject();
+            System.out.printf("The deserialized object is: %s.%n", employee2);
+        } catch (ClassNotFoundException e) {
+            System.out.printf("Class of a serialized object cannot be found: %s.%n", employee.getClass().getCanonicalName());
+        } catch (IOException e) {
+            System.out.printf("An I/O exception of some sort has occurred: %s.%n", e.getMessage());
+        }
+    }
 }
 
 class Employee implements Serializable {
-	private static final long serialVersionUID = 23L; //This class in the other module must have the same version 23L. Otherwise the deserialization will fail.
-	private final String name;
-	private final int age;
-	private transient final Double salary;   //As intended, when the object is deserialized, salary will have a null value, even when it has a value when the first Employee object was created.
-	private static final int CLAZZ = 1;
+    private static final long serialVersionUID = 23L; //This class in the other module must have the same version 23L. Otherwise the deserialization will fail.
+    private final String name;
+    private final int age;
+    private transient final Double salary;   //As intended, when the object is deserialized, salary will have a null value, even when it has a value when the first Employee object was created.
+    private static final int CLAZZ = 1;
 
-	public Employee(String name, int age, Double salary) {
-		this.name = name;
-		this.age = age;
-		this.salary = salary;
-	}
+    public Employee(String name, int age, Double salary) {
+        this.name = name;
+        this.age = age;
+        this.salary = salary;
+    }
 
-	public String getName() { return name; }
-	public int getAge() { return age; }
-	public Double getSalary() { return salary; }
-	public int getClazz() { return CLAZZ; }
+    public String getName() { return name; }
+    public int getAge() { return age; }
+    public Double getSalary() { return salary; }
+    public int getClazz() { return CLAZZ; }
 
-	@Override
-	public String toString() {
-		return "[name=" + name  + ",age=" + age  + ",salary=" + salary  + ",CLAZZ=" + CLAZZ  + "]";
-	}
+    @Override
+    public String toString() {
+        return "[name=" + name  + ",age=" + age  + ",salary=" + salary  + ",CLAZZ=" + CLAZZ  + "]";
+    }
 }

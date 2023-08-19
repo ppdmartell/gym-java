@@ -4,82 +4,82 @@
 */
 
 public class App {
-	public static void main(String[] args) {
-		Store york = new YorkStore();
-		Bike mountainBike = york.prepare();
-		Quad fuelQuad = york.assemble();
+    public static void main(String[] args) {
+        Store york = new YorkStore();
+        Bike mountainBike = york.prepare();
+        Quad fuelQuad = york.assemble();
 
-		Store montevideo = new MontevideoStore();
-		Bike cityBike = montevideo.prepare();
-		Quad electricQuad = montevideo.assemble();
+        Store montevideo = new MontevideoStore();
+        Bike cityBike = montevideo.prepare();
+        Quad electricQuad = montevideo.assemble();
 
-		System.out.println("----------------------------------------------------------");
-		mountainBike.ride();
-		fuelQuad.move();
-		System.out.println("----------------------------------------------------------");
-		cityBike.ride();
-		electricQuad.move();
-		System.out.println("----------------------------------------------------------");
-	}
+        System.out.println("----------------------------------------------------------");
+        mountainBike.ride();
+        fuelQuad.move();
+        System.out.println("----------------------------------------------------------");
+        cityBike.ride();
+        electricQuad.move();
+        System.out.println("----------------------------------------------------------");
+    }
 }
 
 interface Bike {
-	void ride();
+    void ride();
 }
 
 class MountainBike implements Bike {
-	@Override
-	public void ride() { System.out.println("Mountain bike is riding."); }
+    @Override
+    public void ride() { System.out.println("Mountain bike is riding."); }
 }
 
 class CityBike implements Bike {
-	@Override
-	public void ride() { System.out.println("City bike is riding."); }
+    @Override
+    public void ride() { System.out.println("City bike is riding."); }
 }
 
 interface Quad {
-	void move();
+    void move();
 }
 
 class FuelQuad implements Quad {
-	@Override
-	public void move() { System.out.println("Fuel quad is rolling!"); }
+    @Override
+    public void move() { System.out.println("Fuel quad is rolling!"); }
 }
 
 class ElectricQuad implements Quad {
-	@Override
-	public void move() { System.out.println("Electric quad is rolling!"); }
+    @Override
+    public void move() { System.out.println("Electric quad is rolling!"); }
 }
 
 abstract class Store {
-	//Business logic goes here
+    //Business logic goes here
 
-	abstract Bike prepare();
-	abstract Quad assemble();
+    abstract Bike prepare();
+    abstract Quad assemble();
 }
 
 //York store sells Mountain bikes and Fuel quads
 class YorkStore extends Store {
-	@Override
-	public Bike prepare() {
-		return new MountainBike();
-	}
+    @Override
+    public Bike prepare() {
+        return new MountainBike();
+    }
 
-	@Override
-	public Quad assemble() {
-		return new FuelQuad();
-	}
+    @Override
+    public Quad assemble() {
+        return new FuelQuad();
+    }
 }
 
 //Montevideo store sells City bikes and Electric quads
 class MontevideoStore extends Store {
-	@Override
-	public Bike prepare() {
-		return new CityBike();
-	}
+    @Override
+    public Bike prepare() {
+        return new CityBike();
+    }
 
-	@Override
-	public Quad assemble() {
-		return new  ElectricQuad();
-	}
+    @Override
+    public Quad assemble() {
+        return new  ElectricQuad();
+    }
 }

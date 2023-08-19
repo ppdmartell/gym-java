@@ -18,19 +18,19 @@ import java.util.Iterator;
 import java.util.List;
 
 class FailFast {
-	public static void main(String[] args) {
-		List<String> list = new ArrayList<>();
-		list.add("Tomcat");
-		list.add("Apache");
-		Iterator<String> it = list.iterator();  //ArrayList data structure returns a fail-fast iterator.
-		System.out.println("--------------------------------------------------------------------------");
-		while(it.hasNext()) {
-			String element = it.next();
-			System.out.println(element);
-			//it.add("Jetty");  //java.util.ConcurrentModificationException is thrown here.
-			if(element.equals("Tomcat")) it.remove(); //[2]
-		}
-		System.out.println("--------------------------------------------------------------------------");
-		list.stream().forEach(System.out::println);
-	}
+    public static void main(String[] args) {
+        List<String> list = new ArrayList<>();
+        list.add("Tomcat");
+        list.add("Apache");
+        Iterator<String> it = list.iterator();  //ArrayList data structure returns a fail-fast iterator.
+        System.out.println("--------------------------------------------------------------------------");
+        while(it.hasNext()) {
+            String element = it.next();
+            System.out.println(element);
+            //it.add("Jetty");  //java.util.ConcurrentModificationException is thrown here.
+            if(element.equals("Tomcat")) it.remove(); //[2]
+        }
+        System.out.println("--------------------------------------------------------------------------");
+        list.stream().forEach(System.out::println);
+    }
 }

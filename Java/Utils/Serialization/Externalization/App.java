@@ -40,73 +40,73 @@ import java.io.ObjectOutputStream;
 import java.io.Externalizable;
 
 class App {
-	public static void main(String[] args) {
-		/*This example will try to serialize an object of class Employee into a file
-		and then deserialize it pretending to be the endpoint module receiving
-		the object as a file. In principle, salary shouldn't be serialized since it's transient.*/
-		Employee employee = new Employee("Fermine", 45, 724.177);
+    public static void main(String[] args) {
+        /*This example will try to serialize an object of class Employee into a file
+        and then deserialize it pretending to be the endpoint module receiving
+        the object as a file. In principle, salary shouldn't be serialized since it's transient.*/
+        Employee employee = new Employee("Fermine", 45, 724.177);
 
-		//Serializing the Employee object.
-		File file = new File("employee.serial");
-		try (FileOutputStream fos = new FileOutputStream(file);
-			ObjectOutputStream oos = new ObjectOutputStream(fos);) {
-			oos.writeObject(employee);
-		} catch (FileNotFoundException e) {
-			System.out.printf("The file path can't be found: %s.%n", file.getAbsolutePath());
-		} catch (IOException e) {
-			System.out.printf("An I/O exception of some sort has occurred: %s.%n", e.getMessage());
-		}
+        //Serializing the Employee object.
+        File file = new File("employee.serial");
+        try (FileOutputStream fos = new FileOutputStream(file);
+            ObjectOutputStream oos = new ObjectOutputStream(fos);) {
+            oos.writeObject(employee);
+        } catch (FileNotFoundException e) {
+            System.out.printf("The file path can't be found: %s.%n", file.getAbsolutePath());
+        } catch (IOException e) {
+            System.out.printf("An I/O exception of some sort has occurred: %s.%n", e.getMessage());
+        }
 
-		//Deserializing the object from file "employee.serial" and printing its values.
-		try (FileInputStream fis = new FileInputStream(file); //The same object file is being used, but it wouldn't exist in the other module, would have to be created. Here it's used to avoid creating another File object.
-			ObjectInputStream ois = new ObjectInputStream(fis);) {
-			Employee employee2 = (Employee) ois.readObject();
-			System.out.printf("The deserialized object is: %s.%n", employee2);
-		} catch (ClassNotFoundException e) {
-			System.out.printf("Class of a serialized object cannot be found: %s.%n", employee.getClass().getCanonicalName());
-		} catch (IOException e) {
-			System.out.printf("An I/O exception of some sort has occurred: %s.%n", e.getMessage());
-		}
-	}
+        //Deserializing the object from file "employee.serial" and printing its values.
+        try (FileInputStream fis = new FileInputStream(file); //The same object file is being used, but it wouldn't exist in the other module, would have to be created. Here it's used to avoid creating another File object.
+            ObjectInputStream ois = new ObjectInputStream(fis);) {
+            Employee employee2 = (Employee) ois.readObject();
+            System.out.printf("The deserialized object is: %s.%n", employee2);
+        } catch (ClassNotFoundException e) {
+            System.out.printf("Class of a serialized object cannot be found: %s.%n", employee.getClass().getCanonicalName());
+        } catch (IOException e) {
+            System.out.printf("An I/O exception of some sort has occurred: %s.%n", e.getMessage());
+        }
+    }
 }
 
 class Employee implements Externalizable {
-	private static final long serialVersionUID = 24L; //This class in the other module must have the same version. Add +1 every time you make a change and replicate the class in the other module.
-	private String name; //Let's remove the final from name so we can assign the deserialized value.
-	private final int age;
-	private final Double salary;   //Let's remove the transient keyword here and still not serializing the salary by using Externalizable capabilities.
-	private static final int CLAZZ = 1;
+    private static final long serialVersionUID = 24L; //This class in the other module must have the same version. Add +1 every time you make a change and replicate the class in the other module.
+    private String name; //Let's remove the final from name so we can assign the deserialized value.
+    private final int age;
+    private final Double salary;   //Let's remove the transient keyword here and still not serializing the salary by using Externalizable capabilities.
+    private static final int CLAZZ = 1;
 
-	public Employee(String name, int age, Double salary) {
-		this.name = name;
-		this.age = age;
-		this.salary = salary;
-	}
+    public Employee(String name, int age, Double salary) {
+        this.name = name;
+        this.age = age;
+        this.salary = salary;
+    }
 
-	//The no-args constructor is required and also to initialize the final variables.
-	public Employee() {
-		this.age = 0;
-		this.salary = 0d;
-	}
+    //The no-args constructor is required and also to initialize the final variables.
+    public Employee() {
+        this.age = 0;
+        this.salary = 0d;
+    }
 
 
-	public String getName() { return name; }
-	public int getAge() { return age; }
-	public Double getSalary() { return salary; }
-	public int getClazz() { return CLAZZ; }
+    public String getName() { return name; }
+    public int getAge() { return age; }
+    public Double getSalary() { return salary; }
+    public int getClazz() { return CLAZZ; }
 
-	@Override
-	public String toString() {
-		return "[name=" + name  + ",age=" + age  + ",salary=" + salary  + ",CLAZZ=" + CLAZZ  + "]";
-	}
+    @Override
+    public String toString() {
+        return "[name=" + name  + ",age=" + age  + ",salary=" + salary  + ",CLAZZ=" + CLAZZ  + "]";
+    }
 
-	@Override
-	public void writeExternal(ObjectOutput out) throws IOException {
-		out.writeUTF(name); //Let's serialize only the name. writeUTF() is the method for String inherited from DataOutput. See [3].
-	}
+    @Override
+    public void writeExternal(ObjectOutput out) throws IOException {
+        out.writeUTF(name); //Let's serialize only the name. writeUTF() is the method for String inherited from DataOutput. See [3].
+    }
 
-	@Override
-	public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException {
-		this.name = in.readUTF();
-	}
+    @Override
+    public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException {
+        this.name = in.readUTF();
+    }
 }

@@ -10,34 +10,34 @@ import java.util.Comparator;
 import java.util.List;
 
 class ComparatorExample2 {
-	public static void main(String[] args) {
-		List<Person> list = new ArrayList<>(Arrays.asList(
-									new Person("Lionel", 45),
-									new Person("John", 33),
-									new Person("Aurelien", 78),
-									new Person("Ali", 1)));
-		Collections.sort(list, Comparator.comparingInt(Person::getAge));
-		list.stream().forEach(System.out::println);
-		System.out.println("---------------------------------------------------");
-		Collections.sort(list, Comparator.comparingInt(Person::getAge).reversed());
-		list.stream().forEach(System.out::println);
+    public static void main(String[] args) {
+        List<Person> list = new ArrayList<>(Arrays.asList(
+                                    new Person("Lionel", 45),
+                                    new Person("John", 33),
+                                    new Person("Aurelien", 78),
+                                    new Person("Ali", 1)));
+        Collections.sort(list, Comparator.comparingInt(Person::getAge));
+        list.stream().forEach(System.out::println);
+        System.out.println("---------------------------------------------------");
+        Collections.sort(list, Comparator.comparingInt(Person::getAge).reversed());
+        list.stream().forEach(System.out::println);
 
-	}
+    }
 }
 
 final class Person {
-	private final String name;
-	private final int age;
+    private final String name;
+    private final int age;
 
-	public Person(String name, int age) {
-		this.name = name;
-		this.age = age;
-	}
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
 
-	public int getAge() { return age; }
+    public int getAge() { return age; }
 
-	@Override
-	public String toString() {
-		return "[name=" + name  + ",age=" + age  + "]";
-	}
+    @Override
+    public String toString() {
+        return "[name=" + name  + ",age=" + age  + "]";
+    }
 }

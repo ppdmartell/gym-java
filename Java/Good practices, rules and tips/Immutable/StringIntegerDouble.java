@@ -14,26 +14,26 @@ Resources:
 */
 
 class StringIntegerDouble {
-	public static void main(String[] args) {
-		String a = "example";
-		String b = new String("example");
-		System.out.println(a.equals(b)); //value equality
-		System.out.println(a == b);      //reference equality
+    public static void main(String[] args) {
+        String a = "example";
+        String b = new String("example");
+        System.out.println(a.equals(b)); //value equality
+        System.out.println(a == b);      //reference equality
 
-		System.out.println("----------------");
-		Integer c = 100;
-		Integer d = 100;
-		System.out.println(c == d);  //true because both c and d references the same memory space (pool reference)
-		Integer e = 200;
-		Integer f = 200;
-		System.out.println(e == f);  //false because 200 doesn't fall in [-128,127] range, ergo they reference two difference spaces in memory
+        System.out.println("----------------");
+        Integer c = 100;
+        Integer d = 100;
+        System.out.println(c == d);  //true because both c and d references the same memory space (pool reference)
+        Integer e = 200;
+        Integer f = 200;
+        System.out.println(e == f);  //false because 200 doesn't fall in [-128,127] range, ergo they reference two difference spaces in memory
 
-		System.out.println("----------------");
-		Double g = 1d;
-		Double h = 1d;
-		System.out.println(g == h);
-		Double x = 177d;
-		Double y = 177d;
-		System.out.println(x == y);  //!!!!!!!Something is wrong here, should be true and false.
-	}
+        System.out.println("----------------");
+        Double g = 1d;
+        Double h = 1d;
+        System.out.println(g == h);
+        Double x = 177d;
+        Double y = 177d;
+        System.out.println(x == y);  //!!!!!!!Something is wrong here, should be true and false.
+    }
 }

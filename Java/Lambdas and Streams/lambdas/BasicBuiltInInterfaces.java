@@ -17,33 +17,33 @@ import java.util.function.Supplier;
 import java.util.function.BiPredicate;
 
 class BasicBuiltInInterfaces {
-	public static void main(String[] args) {
-		BiConsumer<String, Double> biConsumer = (a, b) -> System.out.println("String: " + a + ", Double: " + b);
-		biConsumer.accept("This is a text", 45.9);
+    public static void main(String[] args) {
+        BiConsumer<String, Double> biConsumer = (a, b) -> System.out.println("String: " + a + ", Double: " + b);
+        biConsumer.accept("This is a text", 45.9);
 
-		DoubleToIntFunction doubleToInt = a -> ((Double)a).intValue();
-		System.out.println("The double value 487.23423 to Integer is: " + doubleToInt.applyAsInt(487.23423));
+        DoubleToIntFunction doubleToInt = a -> ((Double)a).intValue();
+        System.out.println("The double value 487.23423 to Integer is: " + doubleToInt.applyAsInt(487.23423));
 
-		Predicate<Integer> intPredicate = a -> a % 2 == 0;
-		System.out.println("Is the number 5 even?: " + intPredicate.test(5));
+        Predicate<Integer> intPredicate = a -> a % 2 == 0;
+        System.out.println("Is the number 5 even?: " + intPredicate.test(5));
 
-		Function<String, Integer> function = String::length;
-		String text = "The amount of characters of this text is: ";
-		System.out.println(text + function.apply(text));
+        Function<String, Integer> function = String::length;
+        String text = "The amount of characters of this text is: ";
+        System.out.println(text + function.apply(text));
 
-		Supplier<Long> supplier = () -> 4664L;
-		System.out.println("An example of a Supplier<T> that returns a Long (T): " + supplier.get());
+        Supplier<Long> supplier = () -> 4664L;
+        System.out.println("An example of a Supplier<T> that returns a Long (T): " + supplier.get());
 
-		//This is an excercise of the study-items file for the entering interview. Now I realize I didn't grasp the use of BiPredicate.
-		BiPredicate<Integer,Integer> biPredicate = (a, b) -> {
-			if(a % 2 == 0) {
-				System.out.println("The sum of a[" + a + "] and b[" + b + "] is: " + (a + b));
-				return true;
-			}
-			return false;
-		};
-		System.out.println("Is number 10 even?: " + biPredicate.test(10, 12));
-	}
+        //This is an excercise of the study-items file for the entering interview. Now I realize I didn't grasp the use of BiPredicate.
+        BiPredicate<Integer,Integer> biPredicate = (a, b) -> {
+            if(a % 2 == 0) {
+                System.out.println("The sum of a[" + a + "] and b[" + b + "] is: " + (a + b));
+                return true;
+            }
+            return false;
+        };
+        System.out.println("Is number 10 even?: " + biPredicate.test(10, 12));
+    }
 }
 
 

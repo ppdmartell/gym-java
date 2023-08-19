@@ -18,20 +18,20 @@ import java.util.Iterator;
 import java.util.List;
 
 class FailSafe {
-	public static void main(String[] args) {
-		String[] servers = {"Tomcat", "Undertow", "Apache", "WebSphere", "JBoss"};
-		List<String> list = new CopyOnWriteArrayList<>(servers); //[2]
-		Iterator<String> it = list.iterator(); //CopyOnWriteArrayList's iterator() method returns a fail-safe iterator.
-		while (it.hasNext()) {
-			String element = it.next();
-			System.out.println(element);
-			if (element.equals("Tomcat")) {
-				list.add("Jetty");           //It's interesting that even when we add the element "Jetty", this one is not shown at the end of the list
-											 //and this happens, according to [2], because we are working on a copy of the list and not the actual one.
-											 //But still we are being able to add an element to the list while iterating through it (fail-safe).
-			}
-		}
-		System.out.println("------------------------------------------------------");
-		list.parallelStream().forEach(System.out::println);
-	}
+    public static void main(String[] args) {
+        String[] servers = {"Tomcat", "Undertow", "Apache", "WebSphere", "JBoss"};
+        List<String> list = new CopyOnWriteArrayList<>(servers); //[2]
+        Iterator<String> it = list.iterator(); //CopyOnWriteArrayList's iterator() method returns a fail-safe iterator.
+        while (it.hasNext()) {
+            String element = it.next();
+            System.out.println(element);
+            if (element.equals("Tomcat")) {
+                list.add("Jetty");           //It's interesting that even when we add the element "Jetty", this one is not shown at the end of the list
+                                             //and this happens, according to [2], because we are working on a copy of the list and not the actual one.
+                                             //But still we are being able to add an element to the list while iterating through it (fail-safe).
+            }
+        }
+        System.out.println("------------------------------------------------------");
+        list.parallelStream().forEach(System.out::println);
+    }
 }

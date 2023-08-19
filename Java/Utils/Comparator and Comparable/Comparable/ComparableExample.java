@@ -12,40 +12,40 @@ import java.util.List;
 import java.util.Collections;
 
 class ComparableExample {
-	public static void main(String[] args) {
-		List<Person> list = new ArrayList<>();
-		list.add(new Person("Jack", 20));
-		list.add(new Person("Niarmadine", 77));
-		list.add(new Person("Alimonde", 11));
+    public static void main(String[] args) {
+        List<Person> list = new ArrayList<>();
+        list.add(new Person("Jack", 20));
+        list.add(new Person("Niarmadine", 77));
+        list.add(new Person("Alimonde", 11));
 
-		Collections.sort(list);
-		System.out.println(list);
-	}
+        Collections.sort(list);
+        System.out.println(list);
+    }
 }
 
 class Person implements Comparable<Person> {
-	private String name;
-	private int age;
+    private String name;
+    private int age;
 
-	public Person() {}
-	public Person(String name, int age) {
-		this.name = name;
-		this.age = age;
-	}
+    public Person() {}
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
 
-	public String getName() { return this.name; }
-	public void setName(String name) { this.name = name; }
+    public String getName() { return this.name; }
+    public void setName(String name) { this.name = name; }
 
-	public int getAge() { return this.age; }
-	public void setAge(int age) { this.age = age; }
+    public int getAge() { return this.age; }
+    public void setAge(int age) { this.age = age; }
 
-	@Override
-	public String toString() {
-		return "[name: " + name + ", age: " + age + "]";
-	}
+    @Override
+    public String toString() {
+        return "[name: " + name + ", age: " + age + "]";
+    }
 
-	@Override
-	public int compareTo(Person other) {
-		return age - other.getAge();
-	}
+    @Override
+    public int compareTo(Person other) {
+        return age - other.getAge();
+    }
 }

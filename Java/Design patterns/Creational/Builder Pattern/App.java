@@ -26,146 +26,146 @@ Resources:
 
 
 public class App {
-	public static void main(String[] args) {
-		Car car = new Car.CarBuilder()
+    public static void main(String[] args) {
+        Car car = new Car.CarBuilder()
                      .brand("Ferrari")
                      .model("Jupiter")
                      .build();
-		System.out.println(car);
+        System.out.println(car);
 
-		/*
-			It is important to note how this pattern forces us to use the Builder Pattern
-			to create the Car object and to be immutable.Now the "car" object is created
-			we are unable to use setters (just doesn't have them) to modify its state.
-			And since the Car class's constructor is private, we can't instantiate it directly.
-		*/
+        /*
+            It is important to note how this pattern forces us to use the Builder Pattern
+            to create the Car object and to be immutable.Now the "car" object is created
+            we are unable to use setters (just doesn't have them) to modify its state.
+            And since the Car class's constructor is private, we can't instantiate it directly.
+        */
 
 
-		//Use of Director next
-		Car.CarBuilder ferrariBuilder = new Car.CarBuilder();
-		Car.CarBuilder lamboBuilder = new Car.CarBuilder();
+        //Use of Director next
+        Car.CarBuilder ferrariBuilder = new Car.CarBuilder();
+        Car.CarBuilder lamboBuilder = new Car.CarBuilder();
 
-		Car.CarDirector director = new Car.CarDirector();
-		director.buildFerrari(ferrariBuilder);
-		director.buildLambo(lamboBuilder);
+        Car.CarDirector director = new Car.CarDirector();
+        director.buildFerrari(ferrariBuilder);
+        director.buildLambo(lamboBuilder);
 
-		Car ferrari = ferrariBuilder.build();
-		Car lambo = lamboBuilder.build();
+        Car ferrari = ferrariBuilder.build();
+        Car lambo = lamboBuilder.build();
 
-		System.out.println(ferrari);
-		System.out.println(lambo);
-	}
+        System.out.println(ferrari);
+        System.out.println(lambo);
+    }
 }
 
 class Car {
-	private final long id;
-	private final String brand;
-	private final String model;
-	private final String color;
-	private final int fuelCapacity;
-	private final int powerHorses;
-	private final int year;
-	private final double price;
+    private final long id;
+    private final String brand;
+    private final String model;
+    private final String color;
+    private final int fuelCapacity;
+    private final int powerHorses;
+    private final int year;
+    private final double price;
 
-	private Car(CarBuilder builder) {
-		this.id = builder.id;
-		this.brand = builder.brand;
-		this.model = builder.model;
-		this.color = builder.color;
-		this.fuelCapacity = builder.fuelCapacity;
-		this.powerHorses = builder.powerHorses;
-		this.year = builder.year;
-		this.price = builder.price;
-	}
+    private Car(CarBuilder builder) {
+        this.id = builder.id;
+        this.brand = builder.brand;
+        this.model = builder.model;
+        this.color = builder.color;
+        this.fuelCapacity = builder.fuelCapacity;
+        this.powerHorses = builder.powerHorses;
+        this.year = builder.year;
+        this.price = builder.price;
+    }
 
-	@Override
-	public String toString() {
-		return "[id=" + id + ", brand=" + brand + ", model=" + model + ", color=" + color
+    @Override
+    public String toString() {
+        return "[id=" + id + ", brand=" + brand + ", model=" + model + ", color=" + color
              + ", fuelCapacity=" + fuelCapacity + ", powerHorses=" + powerHorses
              + ", year=" + year + ", price=" + price + "]";
-	}
+    }
 
-	//Getters and setters for class Car
+    //Getters and setters for class Car
 
-	public static class CarBuilder {
-		private long id;
-		private String brand;
-		private String model;
-		private String color;
-		private int fuelCapacity;
-		private int powerHorses;
-		private int year;
-		private double price;
+    public static class CarBuilder {
+        private long id;
+        private String brand;
+        private String model;
+        private String color;
+        private int fuelCapacity;
+        private int powerHorses;
+        private int year;
+        private double price;
 
-		public CarBuilder id(long id) {
-			this.id = id;
-			return this;
-		}
+        public CarBuilder id(long id) {
+            this.id = id;
+            return this;
+        }
 
-		public CarBuilder brand(String brand) {
-			this.brand = brand;
-			return this;
-		}
+        public CarBuilder brand(String brand) {
+            this.brand = brand;
+            return this;
+        }
 
-		public CarBuilder model(String model) {
-			this.model = model;
-			return this;
-		}
+        public CarBuilder model(String model) {
+            this.model = model;
+            return this;
+        }
 
-		public CarBuilder color(String color) {
-			this.color = color;
-			return this;
-		}
+        public CarBuilder color(String color) {
+            this.color = color;
+            return this;
+        }
 
-		public CarBuilder fuelCapacity(int fuelCapacity) {
-			this.fuelCapacity = fuelCapacity;
-			return this;
-		}
+        public CarBuilder fuelCapacity(int fuelCapacity) {
+            this.fuelCapacity = fuelCapacity;
+            return this;
+        }
 
-		public CarBuilder powerHorses(int powerHorses) {
-			this.powerHorses = powerHorses;
-			return this;
-		}
+        public CarBuilder powerHorses(int powerHorses) {
+            this.powerHorses = powerHorses;
+            return this;
+        }
 
-		public CarBuilder year(int year) {
-			this.year = year;
-			return this;
-		}
+        public CarBuilder year(int year) {
+            this.year = year;
+            return this;
+        }
 
-		public CarBuilder price(double price) {
-			this.price = price;
-			return this;
-		}
+        public CarBuilder price(double price) {
+            this.price = price;
+            return this;
+        }
 
-		public Car build() {
-			Car car = new Car(this);
-			return car;
-		}
-	}
+        public Car build() {
+            Car car = new Car(this);
+            return car;
+        }
+    }
 
-	/*
-	Director classes are used in the Builder Pattern for constructing objects that are alike somehow (they
-	always have the same attribute values when being created).
-	*/
+    /*
+    Director classes are used in the Builder Pattern for constructing objects that are alike somehow (they
+    always have the same attribute values when being created).
+    */
 
-	public static class CarDirector {
+    public static class CarDirector {
 
-		/*
-		  Imagine all the Ferraris with year 2000 being built have the same values for some attributes, the Director will
-		  help you to save some time and lines of code.
-		*/
-		public void buildFerrari(CarBuilder builder) {
-			builder.brand("Ferrari")
-   	            .fuelCapacity(1000)
-   	            .year(2000);
-		}
+        /*
+          Imagine all the Ferraris with year 2000 being built have the same values for some attributes, the Director will
+          help you to save some time and lines of code.
+        */
+        public void buildFerrari(CarBuilder builder) {
+            builder.brand("Ferrari")
+               .fuelCapacity(1000)
+               .year(2000);
+        }
 
-		//Idem for the Lamborghinis in this case.
-		public void buildLambo(CarBuilder builder) {
-			builder.brand("Lamborghini")
-   	            .fuelCapacity(1100)
-   	            .year(2005);
-		}
+        //Idem for the Lamborghinis in this case.
+        public void buildLambo(CarBuilder builder) {
+            builder.brand("Lamborghini")
+                .fuelCapacity(1100)
+                .year(2005);
+    }
 
 }
 

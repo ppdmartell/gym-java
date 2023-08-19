@@ -9,35 +9,35 @@ Resources:
 */
 
 class App2 {
-	public static void main(String[] args) {
-		C2 c2 = new C2();
-		c2.value = 100;
-		C1 c1 = new C1(99, c2);
-		System.out.println(c1);  //Should print c2.value = 100
-		c2.value = 999;			 //Changing c2.value to 999
-		System.out.println(c1);  //Prints 999 (as expected) while seems like it would print c1.c2.value as 100 
-	}
+    public static void main(String[] args) {
+        C2 c2 = new C2();
+        c2.value = 100;
+        C1 c1 = new C1(99, c2);
+        System.out.println(c1);  //Should print c2.value = 100
+        c2.value = 999;             //Changing c2.value to 999
+        System.out.println(c1);  //Prints 999 (as expected) while seems like it would print c1.c2.value as 100 
+    }
 }
 
 class C2 {
-	Integer value;
+    Integer value;
 }
 
 class C1 {
-	private int x;
-	private C2 c2;
+    private int x;
+    private C2 c2;
 
-	public C1(int x, C2 c2) {
-		this.x = x;
-		this.c2 = c2;
-	}
+    public C1(int x, C2 c2) {
+        this.x = x;
+        this.c2 = c2;
+    }
 
-	public C2 getC2() {  return c2; }
+    public C2 getC2() {  return c2; }
 
-	public int getX() { return x; }
+    public int getX() { return x; }
 
-	@Override
-	public String toString() {
-		return "x: " + x + ", c2: " + c2.value;
-	}
+    @Override
+    public String toString() {
+        return "x: " + x + ", c2: " + c2.value;
+    }
 }
