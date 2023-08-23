@@ -3,10 +3,21 @@ This example is about Counting sort algorithm and is based on [1].
 USED TO SORT ONLY INTEGERS!
 
 The integers stored inside the array to sort would be used as indices. If they are small, then
-better.
+better. However, one problem with Counting sort is that if, for example, you have an arry
+of three slots containing the integers {1, 10009, 999999}, you will have to use arrays the size
+of the highest element. This is sub-optimal since you only need to sort three elements.
+
+    Time complexity:                                    Space complexity:
+    -------------------------------------               ---------------------
+    |  Best   |   Average     |  Worst  |               |       Worst       |
+    -------------------------------------               ---------------------
+    |  Ω(n+k) |   Θ(n+k)      |  O(n+k) |               |       O(k)        |
+    -------------------------------------               ---------------------
+
 
 Resources:
 [1] https://www.youtube.com/watch?v=YEabFTMDczQ&list=PLlsmxlJgn1HLCmaF51i5xAbgv1f49CsoP&index=7
+[2] https://www.bigocheatsheet.com/
 */
 
 import java.util.Arrays;
