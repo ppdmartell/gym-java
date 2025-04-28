@@ -8,5 +8,7 @@ class Example1 {
     public static void main(String[] args) {
         byte myMinByteValue = Byte.MIN_VALUE, myMaxByteValue = Byte.MAX_VALUE;
         System.out.println(myMinByteValue + " <-> " + myMaxByteValue);
+
+        System.out.println(Float.SIZE + " - " + Double.SIZE);
     }
 }
