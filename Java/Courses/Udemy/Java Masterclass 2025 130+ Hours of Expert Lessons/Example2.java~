@@ -1,0 +1,13 @@
+// The compound operator has an error, careful with it.
+
+class Example2 {
+    public static void main(String[] args) {
+        int a = 10;
+        a -= 5.5;
+        System.out.println(a); // Will show the result but as an int, with no error, which is bugged
+
+        int b = 10;
+        b = (int) (b - 5.5);
+        System.out.println(b); // Will throw a lossy conversion issue, as it should be. You need to cast to avoid it
+    }
+}
