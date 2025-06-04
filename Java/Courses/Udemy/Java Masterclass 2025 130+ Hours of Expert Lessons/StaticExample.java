@@ -2,7 +2,11 @@ class StaticExample {
 
     public static void main(String[] args) {
         Dog rex = new Dog("Rex");
+        Dog fluffy =  new Dog("Fluffy");
         rex.describeDog();
+        fluffy.describeDog();
+
+        //both will show Fluffy as name since static variables are shared among instances.
     }
 
 }
@@ -16,7 +20,7 @@ class Dog {
     }
 
     public void describeDog() {
-        System.out.print("name: " + name);
+        System.out.println("name: " + name);
     }
 
 }
