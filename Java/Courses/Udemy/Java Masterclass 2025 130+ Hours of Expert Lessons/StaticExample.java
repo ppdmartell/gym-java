@@ -16,7 +16,7 @@ class Dog {
     }
 
     public void describeDog() {
-        System.out.print("name: " + Dog.name);          //idem to previous comment.
+        System.out.print("name: " + name);
     }
 
 }
