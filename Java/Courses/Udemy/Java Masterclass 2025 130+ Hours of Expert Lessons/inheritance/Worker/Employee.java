@@ -1,5 +1,5 @@
 class Employee extends Worker {
-    
+
     private long employeeId;
     private String hireDate;
     private static int employeeNo = 1;
