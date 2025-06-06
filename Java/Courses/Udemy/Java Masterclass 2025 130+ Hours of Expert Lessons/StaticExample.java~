@@ -20,7 +20,7 @@ class Dog {
     }
 
     public void describeDog() {
-        System.out.print("name: " + name);
+        System.out.println("name: " + name);
     }
 
 }
