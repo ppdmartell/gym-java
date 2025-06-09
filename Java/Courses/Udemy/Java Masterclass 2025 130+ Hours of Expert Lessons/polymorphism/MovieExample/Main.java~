@@ -1,0 +1,11 @@
+class Main {
+
+    public static void main(String[] args) {
+       Movie movie = new Movie("Sin");
+       movie.watchMovie();
+
+       Adventure adventure = new Adventure("Indiana Jones");
+       adventure.watchMovie();
+    }
+
+}

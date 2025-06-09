@@ -1,0 +1,15 @@
+class Fiction extends Movie {
+
+       public Fiction(String title) {
+           super(title);
+       }
+
+       @Override
+       public void watchMovie() {
+            super.watchMovie();
+            System.out.printf(".. %s%n".repeat(3),
+            "A space ship appears",
+            "There is a fight",
+            "The end to be yet defined");
+        }
+}
