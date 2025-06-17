@@ -4,6 +4,14 @@ abstract class Mammal extends Animal {
         super(type, size, weight);
     }
 
+    @Override
+    public void move(String speed) {
+        System.out.println(getExplicitType() + " ");
+        System.out.println("slow".equals(speed) ? "walks (mammal)" : "run (mammal)");
+    }
+
+    public abstract void shedHair();
+
 }
 
 // An abstract class than extends another abstract class doesn't have to implement abstract methods
