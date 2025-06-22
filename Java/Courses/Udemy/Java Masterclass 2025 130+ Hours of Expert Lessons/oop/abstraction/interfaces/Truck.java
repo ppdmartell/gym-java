@@ -8,4 +8,21 @@ class Truck implements Trackable {
         // be Trackable.KM_TO_MILES
     }
 
+    @Override
+    public void load() {
+        System.out.println(getClass().getSimpleName() + ": Cargo loaded.");
+    }
+
+    /*
+     * Even when Truck only implements Trackable, it must Override method load(), because this method
+     * is part of interface Loadable, which Trackable interface extends. So Truck has to comply with
+     * the full contract (both interfaces), even when only implements on, Trackable.
+     *
+     * Otherwise, you will get the error:
+     * .\Truck.java:1: error: Truck is not abstract and does not override abstract method load() in Loadable
+     * class Truck implements Trackable {
+     * ^
+     * 1 error
+     * */
+
 }

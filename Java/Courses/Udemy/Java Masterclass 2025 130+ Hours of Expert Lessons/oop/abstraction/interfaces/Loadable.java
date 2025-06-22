@@ -1,0 +1,5 @@
+interface Loadable {
+
+    void load();
+
+}
