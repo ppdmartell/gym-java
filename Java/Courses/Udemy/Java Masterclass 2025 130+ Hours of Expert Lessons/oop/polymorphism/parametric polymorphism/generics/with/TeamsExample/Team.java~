@@ -1,7 +1,7 @@
 import java.util.List;
 import java.util.ArrayList;
 
-class Team<T extends Player> {
+class Team<T> {
 
     private String name;
     private List<T> teamMembers;

@@ -1,1 +1,1 @@
-record FootballPlayer(String name, String position) {}
+record FootballPlayer(String name, String position) implements Player {}
