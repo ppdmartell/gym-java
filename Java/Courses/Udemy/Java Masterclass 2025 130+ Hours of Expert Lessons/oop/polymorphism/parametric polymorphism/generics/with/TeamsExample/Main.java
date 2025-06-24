@@ -25,8 +25,11 @@ class Main {
 		// not even casted. And this was allowed with an interface. Hence generics is better in this case.
     }
 
-    public static void scoreResult(Team team1, int t1_score,
-                                   Team team2, int t2_score) {
+
+    // Don't do scoreResult(Team<? extends Player> team1, ...) in the parameters because you could then
+    // mix scoreResult between a BaseballPlayer team and a FootballPlayer team.
+    public static <T extends Player> void scoreResult(Team<T> team1, int t1_score,
+                                   Team<T> team2, int t2_score) {
 
         String message = team1.setScore(t1_score, t2_score);
         team2.setScore(t2_score, t1_score);

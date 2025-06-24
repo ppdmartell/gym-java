@@ -5,8 +5,8 @@ class Main {
         Team<BaseballPlayer> astros = new Team<>("Huston Astros");
         scoreResult(phillies, 3, astros, 5);
 
-        Player harper = new BaseballPlayer("B. Harper", "RF");
-        Player jensen = new BaseballPlayer("T. Jensen", "SS");
+        BaseballPlayer harper = new BaseballPlayer("B. Harper", "RF");
+        BaseballPlayer jensen = new BaseballPlayer("T. Jensen", "SS");
         phillies.addTeamMember(harper);
         phillies.addTeamMember(jensen);
         phillies.listTeamMembers();
@@ -15,8 +15,8 @@ class Main {
         Team<FootballPlayer> rma = new Team<>("Real Madrid");
         scoreResult(fcb, 2, rma, 2);
 		
-		Player messi = new FootballPlayer("L. Messi", "RS");
-        Player cr7 = new FootballPlayer("CR7", "MS");
+		FootballPlayer messi = new FootballPlayer("L. Messi", "RS");
+        FootballPlayer cr7 = new FootballPlayer("CR7", "MS");
         fcb.addTeamMember(messi);
         rma.addTeamMember(cr7);
         fcb.listTeamMembers();
