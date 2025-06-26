@@ -1,21 +1,26 @@
 import java.util.List;
 import java.util.ArrayList;
 
-class Team<T extends Player> {
+class Team<T extends Player, S> {      // Please note, S is not bounded
 
     private String name;
     private List<T> teamMembers;
     private int totalWins = 0;
     private int totalLosses = 0;
     private int totalTies = 0;
+    private S affiliation;
 
     public Team(String name) {
-        this.name = name;
-        this.teamMembers = new ArrayList<>();
+        this(name, null);
     }
 
-    public Team(String name, List<T> teamMembers) {
+    public Team(String name, S affiliation) {
+        this(name, affiliation, new ArrayList<>());
+    }
+
+    public Team(String name, S affiliation, List<T> teamMembers) {
         this.name = name;
+        this.affiliation = affiliation;
         this.teamMembers = teamMembers;
     }
 
@@ -26,7 +31,8 @@ class Team<T extends Player> {
     }
 
     public void listTeamMembers() {
-        System.out.println(name + " Roster:");
+        System.out.print(name + " Roster:");
+        System.out.println((affiliation == null ? "NOT AFFILIATED" : "Affiliation: " + affiliation));
         System.out.println(teamMembers);
     }
 

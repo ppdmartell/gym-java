@@ -1,0 +1,8 @@
+record Affiliation(String name, String type, String country) {
+
+    @Override
+    public String toString() {
+       return name + "(" + type + " in " + country + ")"; 
+    }
+
+}
