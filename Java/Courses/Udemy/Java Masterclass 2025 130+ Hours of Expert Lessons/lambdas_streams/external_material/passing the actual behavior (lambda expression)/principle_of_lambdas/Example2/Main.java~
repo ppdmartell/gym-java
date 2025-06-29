@@ -1,0 +1,30 @@
+import java.util.function.ToIntFunction;
+
+
+class Main {
+
+    public static void main(String[] args) {
+        printLambda(s -> s.length());
+
+
+        // Using the built-in functional interface toIntFunction<T>
+        printLambda(s -> s.length());
+    }
+
+    private static void printLambda(LambdaLength ll) {
+        System.out.println("length: " + ll.getLength("Get me the length of this String"));
+    }
+
+    private static void builtIn(ToIntFunction<String> tif) {
+        System.out.println("length using toIntFunction<String>: " + tif.applyAsInt("Get me the length of this String"));
+    }
+
+}
+
+interface LambdaLength {
+    int getLength(String s);
+}
+
+
+
+// In this example, the actual lambda expression is passed to the method.
