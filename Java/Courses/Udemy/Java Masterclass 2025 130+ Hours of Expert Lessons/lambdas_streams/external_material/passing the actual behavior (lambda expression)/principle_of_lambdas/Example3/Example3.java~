@@ -21,6 +21,11 @@ class Example3 {
         System.out.println("-----------------------------------------------");
         printLastNameWithStartingCLambda(people);
         System.out.println("-----------------------------------------------");
+        sortLambda(people);
+        System.out.println("-----------------------------------------------");
+        printLambda(people);
+        System.out.println("----------------using forEach------------------");
+        people.forEach(p -> System.out.println(Thread.currentThread().getName()) + ": " + p);
     }
 
     private static void sortClassic(List<Person> people) {
@@ -47,7 +52,7 @@ class Example3 {
     }
     
     private static void sortLambda(List<Person> people) {
-        Collections.sort(people, (p1, p2) -> p1.lastName().compareTo(p2.lastName()));
+        Collections.sort(people, (p1, p2) -> p2.lastName().compareTo(p1.lastName()));
     }
 
     private static void printLambda(List<Person> people) {

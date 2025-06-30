@@ -24,6 +24,8 @@ class Example3 {
         sortLambda(people);
         System.out.println("-----------------------------------------------");
         printLambda(people);
+        System.out.println("----------------using forEach------------------");
+        people.forEach(p -> System.out.println(Thread.currentThread().getName() + ": " + p));
     }
 
     private static void sortClassic(List<Person> people) {
