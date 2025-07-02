@@ -1,0 +1,106 @@
+Assistant, if submit() allows Runnable (returns nothing, fire and don't worry) and Callable that returns
+ something, then what's the purpose of having Runnable if the execute() method is already fire and don't worry?
+
+
+## Java Concurrency: `execute()` vs `submit()`
+
+This is a great question — you're connecting the dots like a real Java craftsman. Let's break it down clearly.
+
+---
+
+### 🔥 `execute(Runnable)` vs `submit(Runnable)`
+
+```
++---------------------+----------------------------+-----------------------------------------+
+| Feature             | execute(Runnable)          | submit(Runnable)                        |
++---------------------+----------------------------+-----------------------------------------+
+| Input               | Runnable                   | Runnable or Callable<V>                 |
+| Return type         | void                       | Future<?>                               |
+| Behavior            | Fire-and-forget            | Fire-and-track (even with Runnable)     |
+| Exception handling  | Silently lost              | Captured in Future.get() as exception   |
+| Can cancel it?      | No                         | Yes, via Future.cancel()                |
+| Can wait for it?    | No                         | Yes, via Future.get() (returns null)    |
++---------------------+----------------------------+-----------------------------------------+
+```
+
+---
+
+### 🧠 So why use `submit(Runnable)` if it returns `null`?
+
+Because `submit(Runnable)` gives you a `Future<?>`, which comes with **powerful benefits**:
+
+---
+
+### ✅ 1. Track task completion
+
+Even though the `Runnable` doesn't return a result, you can **wait for the task to finish**:
+
+```java
+Future<?> f = executor.submit(() -> doStuff());
+f.get(); // Blocks until task completes
+```
+
+---
+
+### ✅ 2. Handle exceptions properly
+
+With `execute()`, if the `Runnable` throws an exception, it's often just swallowed by the thread.
+With `submit()`, exceptions are captured and surfaced through the `Future`:
+
+```java
+Future<?> f = executor.submit(() -> {
+    throw new RuntimeException("Oops!");
+});
+try {
+    f.get(); // Will throw ExecutionException
+} catch (ExecutionException e) {
+    System.out.println("Caught: " + e.getCause());
+}
+```
+
+---
+
+### ✅ 3. Cancel a running task
+
+You can cancel it if you no longer need the task:
+
+```java
+Future<?> f = executor.submit(() -> {
+    while (!Thread.currentThread().isInterrupted()) {
+        // long-running task
+    }
+});
+f.cancel(true); // Interrupts the thread if possible
+```
+
+---
+
+### ✅ 4. Integration & Tracking
+
+You can store all your `Future<?>` results in a list and:
+
+* Wait for all to complete
+* Time out selectively
+* Cancel tasks conditionally
+
+---
+
+### ✅ Summary: When to use what?
+
+```
++----------------------------------------+----------------------------------------------+
+| Use execute(Runnable) when:           | Use submit(Runnable) when:                   |
++----------------------------------------+----------------------------------------------+
+| You truly don’t care about results     | You want to check success/failure            |
+| You don’t need task tracking           | You want to cancel, wait, or catch exceptions|
+| Simple fire-and-forget logic           | You’re building a batch/task system          |
++----------------------------------------+----------------------------------------------+
+```
+
+---
+
+### 🎯 Rule of Thumb:
+
+> ✅ If you want **no feedback**, use `execute()`
+> ✅ If you want **control**, even for a `Runnable`, use `submit()`
+
