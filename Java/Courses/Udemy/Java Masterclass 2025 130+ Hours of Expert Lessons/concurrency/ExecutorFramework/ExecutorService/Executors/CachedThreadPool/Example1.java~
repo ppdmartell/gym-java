@@ -1,0 +1,22 @@
+import java.util.concurrent.Executors;
+import java.util.concurrent.ExecutorService;
+
+class Example1 {
+
+    public static void main(String[] args) {
+        ExecutorService cachedEx = Executors.newCachedThreadPool();
+        cachedEx.execute(Example1::print);
+        cachedEx.execute(Example1::print);
+        cachedEx.execute(Example1::print);
+        cachedEx.execute(Example1::print);
+
+        cachedEx.shutdown();
+    }
+
+    private static void print() {
+        for (int i = 0; i < 10; i++) {
+            System.out.println(i + " -> " + Thread.currentThread().getName());
+        }
+    }
+
+}
