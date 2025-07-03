@@ -1,0 +1,17 @@
+import java.util.stream.Stream;
+import java.util.ArrayList;
+import java.util.stream.Collectors;
+import java.util.List;
+
+class Example1 {
+
+    public static void main(String[] args) {
+        List<Double> list = Stream.generate(() -> 1 + Math.random() * 99)
+              .limit(5)
+              .collect(Collectors.toCollection(ArrayList::new));
+
+        list.parallelStream()
+            .forEach(System.out::println);
+    }
+
+}
