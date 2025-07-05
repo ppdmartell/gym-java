@@ -1,10 +1,13 @@
 package com.example.mongodb.service.impl;
 
+import com.example.mongodb.exception.ResourceNotFoundException;
 import com.example.mongodb.model.Student;
 import com.example.mongodb.repository.StudentRepository;
 import com.example.mongodb.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.Optional;
 
 @Service
 public class StudentServiceImpl implements StudentService {
@@ -23,5 +26,10 @@ public class StudentServiceImpl implements StudentService {
     @Override
     public Student createStudent(Student student) {
         return studentRepository.save(student);
+    }
+
+    @Override
+    public Student getStudentById(String id) {
+        return studentRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Student not found for id: " + id));
     }
 }

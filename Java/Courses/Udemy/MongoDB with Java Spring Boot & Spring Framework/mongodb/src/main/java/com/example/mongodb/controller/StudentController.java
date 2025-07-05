@@ -3,10 +3,7 @@ package com.example.mongodb.controller;
 import com.example.mongodb.model.Student;
 import com.example.mongodb.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/student")
@@ -26,5 +23,10 @@ public class StudentController {
     @PostMapping("/create")
     public Student createStudent(@RequestBody Student student) {
         return studentService.createStudent(student);
+    }
+
+    @GetMapping("/get/{id}")
+    public Student getStudentById(@PathVariable String id) {
+        return studentService.getStudentById(id);
     }
 }
