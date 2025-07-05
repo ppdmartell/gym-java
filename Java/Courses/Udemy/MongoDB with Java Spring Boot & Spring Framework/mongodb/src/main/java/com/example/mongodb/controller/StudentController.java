@@ -1,5 +1,7 @@
 package com.example.mongodb.controller;
 
+import java.util.List;
+
 import com.example.mongodb.model.Student;
 import com.example.mongodb.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,5 +30,10 @@ public class StudentController {
     @GetMapping("/get/{id}")
     public Student getStudentById(@PathVariable String id) {
         return studentService.getStudentById(id);
+    }
+
+    @GetMapping("/get/all")
+    public List<Student> getAllStudents() {
+        return studentService.getAllStudents();
     }
 }

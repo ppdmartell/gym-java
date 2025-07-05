@@ -1,5 +1,7 @@
 package com.example.mongodb.service.impl;
 
+import java.util.List;
+
 import com.example.mongodb.exception.ResourceNotFoundException;
 import com.example.mongodb.model.Student;
 import com.example.mongodb.repository.StudentRepository;
@@ -31,5 +33,10 @@ public class StudentServiceImpl implements StudentService {
     @Override
     public Student getStudentById(String id) {
         return studentRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Student not found for id: " + id));
+    }
+
+    @Override
+    public List<Student> getAllStudents() {
+        return studentRepository.findAll();
     }
 }
