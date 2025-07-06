@@ -7,6 +7,7 @@ import com.example.mongodb.model.Student;
 public interface StudentService {
 
     Student createStudent(Student student);
+    Student updateStudent(Student student);
     Student getStudentById(String id);
     List<Student> getAllStudents();
 }
