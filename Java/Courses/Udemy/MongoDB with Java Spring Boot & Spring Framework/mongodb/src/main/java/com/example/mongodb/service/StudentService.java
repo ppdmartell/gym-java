@@ -14,4 +14,5 @@ public interface StudentService {
     List<Student> getStudentsByName(String name);
     List<Student> findByNameAndEmail(String name, String email);
     List<Student> findByNameOrEmail(String name, String email);
+    List<Student> createStudentsInBulk(List<Student> students);
 }

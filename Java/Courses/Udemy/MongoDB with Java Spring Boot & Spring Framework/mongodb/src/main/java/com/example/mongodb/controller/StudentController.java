@@ -5,6 +5,8 @@ import java.util.List;
 import com.example.mongodb.model.Student;
 import com.example.mongodb.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -25,6 +27,12 @@ public class StudentController {
     @PostMapping("/create")
     public Student createStudent(@RequestBody Student student) {
         return studentService.createStudent(student);
+    }
+
+    @PostMapping("/createbulk")
+    public ResponseEntity<List<Student>> createStudentsInBulk(@RequestBody List<Student> students) {
+        List<Student> saved = studentService.createStudentsInBulk(students);
+        return ResponseEntity.status(HttpStatus.CREATED).body(saved);
     }
 
     @PutMapping("/update")

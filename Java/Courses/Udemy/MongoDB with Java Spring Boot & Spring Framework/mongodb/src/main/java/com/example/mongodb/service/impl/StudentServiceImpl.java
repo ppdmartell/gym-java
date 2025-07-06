@@ -3,6 +3,8 @@ package com.example.mongodb.service.impl;
 import java.util.List;
 
 import com.example.mongodb.exception.ResourceNotFoundException;
+import com.example.mongodb.exception.StudentAlreadyExists;
+import com.example.mongodb.exception.StudentsListIsEmpty;
 import com.example.mongodb.model.Student;
 import com.example.mongodb.repository.StudentRepository;
 import com.example.mongodb.service.StudentService;
@@ -28,6 +30,13 @@ public class StudentServiceImpl implements StudentService {
     @Override
     public Student createStudent(Student student) {
         return studentRepository.save(student);
+    }
+
+    @Override
+    public List<Student> createStudentsInBulk(List<Student> students) {
+        this.isStudentListEmpty(students);
+        this.checkIfAnyStudentExists(students);
+        return studentRepository.saveAll(students);
     }
 
     @Override
@@ -61,21 +70,31 @@ public class StudentServiceImpl implements StudentService {
     @Override
     public List<Student> getStudentsByName(String name) {
         List<Student> students = studentRepository.findAllByName(name);
-        if (students.isEmpty()) throw new ResourceNotFoundException("No student found with name: " + name);
+        if(students.isEmpty()) throw new ResourceNotFoundException("No student found with name: " + name);
         return students;
     }
 
     @Override
     public List<Student> findByNameAndEmail(String name, String email) {
         List<Student> students = studentRepository.findByNameAndEmail(name, email);
-        if (students.isEmpty()) throw new ResourceNotFoundException("No student found with name: " + name + " and email: " + email);
+        if(students.isEmpty()) throw new ResourceNotFoundException("No student found with name: " + name + " and email: " + email);
         return students;
     }
 
     @Override
     public List<Student> findByNameOrEmail(String name, String email) {
         List<Student> students = studentRepository.findByNameOrEmail(name, email);
-        if (students.isEmpty()) throw new ResourceNotFoundException("No student found with name: " + name + " or email: " + email);
+        if(students.isEmpty()) throw new ResourceNotFoundException("No student found with name: " + name + " or email: " + email);
         return students;
+    }
+
+    private void checkIfAnyStudentExists(List<Student> students) {
+        for(Student s : students) {
+            if(studentRepository.getStudentByEmail(s.getEmail()).isPresent()) throw new StudentAlreadyExists("Student from the list already exists.");
+        }
+    }
+
+    private void isStudentListEmpty(List<Student> students) {
+        if(students.isEmpty()) throw new StudentsListIsEmpty("Students list to be created can't be empty.");
     }
 }
