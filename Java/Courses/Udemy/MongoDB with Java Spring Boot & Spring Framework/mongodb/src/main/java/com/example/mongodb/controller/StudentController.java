@@ -40,12 +40,12 @@ public class StudentController {
         return studentService.updateStudent(student);
     }
 
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/delete/id/{id}")
     public String deleteStudent(@PathVariable String id) {
         return studentService.deleteStudent(id);
     }
 
-    @GetMapping("/get/{id}")
+    @GetMapping("/get/id/{id}")
     public Student getStudentById(@PathVariable String id) {
         return studentService.getStudentById(id);
     }
@@ -55,9 +55,15 @@ public class StudentController {
         return studentService.getAllStudents();
     }
 
-    @GetMapping("/get/byname/{name}")
+    @GetMapping("/get/name/{name}")
     public List<Student> getStudentsByName(@PathVariable String name) {
         return studentService.getStudentsByName(name);
+    }
+
+    @GetMapping("/get/department/name")
+    public ResponseEntity<List<Student>> getStudentsByDepartmentName(@RequestParam String name) {
+        List<Student> retrieved = studentService.getStudentsByDepartmentName(name);
+        return ResponseEntity.status(HttpStatus.FOUND).body(retrieved);
     }
 
     // Tested in postman with http://localhost:8080/api/student/get/nameandemail?name=Peter&email=peter@test.com
@@ -81,5 +87,11 @@ public class StudentController {
     public ResponseEntity<List<Student>> getStudentsPaginated(@RequestParam int pageNo, @RequestParam int pageSize ) {
         List<Student> retrieved = studentService.getStudentsPaginated(pageNo, pageSize);
         return ResponseEntity.status(HttpStatus.FOUND).body(retrieved);
+    }
+
+    @GetMapping("/get/sorted/name")
+    public ResponseEntity<List<Student>> getStudentsSortedByName() {
+        List<Student> retrieved = studentService.getStudentsSortedByName();
+        return ResponseEntity.status(HttpStatus.OK).body(retrieved);
     }
 }

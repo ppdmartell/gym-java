@@ -16,4 +16,6 @@ public interface StudentService {
     List<Student> findByNameOrEmail(String name, String email);
     List<Student> createStudentsInBulk(List<Student> students);
     List<Student> getStudentsPaginated(int pageNo, int pageSize);
+    List<Student> getStudentsSortedByName();
+    List<Student> getStudentsByDepartmentName(String name);
 }

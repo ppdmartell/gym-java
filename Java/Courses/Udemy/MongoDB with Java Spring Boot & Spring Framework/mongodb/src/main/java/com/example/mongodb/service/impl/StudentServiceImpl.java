@@ -1,5 +1,7 @@
 package com.example.mongodb.service.impl;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import com.example.mongodb.exception.ResourceNotFoundException;
@@ -11,6 +13,7 @@ import com.example.mongodb.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -77,6 +80,13 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
+    public List<Student> getStudentsByDepartmentName(String name) {
+        List<Student> students = studentRepository.findByDepartmentName(name);
+        if(students.isEmpty()) throw new ResourceNotFoundException("Department not found for name: " + name);
+        return students;
+    }
+
+    @Override
     public List<Student> findByNameAndEmail(String name, String email) {
         List<Student> students = studentRepository.findByNameAndEmail(name, email);
         if(students.isEmpty()) throw new ResourceNotFoundException("No student found with name: " + name + " and email: " + email);
@@ -98,15 +108,27 @@ public class StudentServiceImpl implements StudentService {
     * */
     @Override
     public List<Student> getStudentsPaginated(int pageNo, int pageSize) {
-        if(pageNo <= 0 || pageSize <= 0) throw new IllegalArgumentException("Page number and page size can't be zero of negative.");
+        if(pageNo <= 0 || pageSize <= 0) throw new IllegalArgumentException("Page number and page size can't be zero or negative.");
         Pageable pageable = PageRequest.of(pageNo - 1, pageSize);
         return studentRepository.findAll(pageable).getContent();
     }
 
+    @Override
+    public List<Student> getStudentsSortedByName() {
+        if(checkIfAnyStudentExists()) throw new StudentsListIsEmpty("No student at all was found in the database.");
+        Sort sorter = Sort.by(Sort.Direction.ASC, "name");
+        return studentRepository.findAll(sorter);
+    }
+
+    //PRIVATE METHODS
     private void checkIfAnyStudentExists(List<Student> students) {
         for(Student s : students) {
             if(studentRepository.getStudentByEmail(s.getEmail()).isPresent()) throw new StudentAlreadyExists("Student from the list already exists.");
         }
+    }
+
+    private boolean checkIfAnyStudentExists() {
+        return studentRepository.findAll().isEmpty();
     }
 
     private void isStudentListEmpty(List<Student> students) {
