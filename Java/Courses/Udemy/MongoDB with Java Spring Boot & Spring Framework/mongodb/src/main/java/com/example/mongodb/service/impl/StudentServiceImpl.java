@@ -36,6 +36,13 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
+    public String deleteStudent(String id) {
+        Student student = studentRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException(("Student not found for id: " + id)));
+        studentRepository.delete(student);
+        return "Student with id: " + id + "has been deleted.\n" + student;
+    }
+
+    @Override
     public Student getStudentById(String id) {
         return studentRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Student not found for id: " + id));
     }
