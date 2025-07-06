@@ -75,4 +75,11 @@ public class StudentController {
     public List<Student> findByNameOrEmail(@RequestParam String name, @RequestParam String email) {
         return studentService.findByNameOrEmail(name, email);
     }
+
+    // Tested successfully with http://localhost:8080/api/student/get/paginated?pageNo=1&pageSize=5
+    @GetMapping("/get/paginated")
+    public ResponseEntity<List<Student>> getStudentsPaginated(@RequestParam int pageNo, @RequestParam int pageSize ) {
+        List<Student> retrieved = studentService.getStudentsPaginated(pageNo, pageSize);
+        return ResponseEntity.status(HttpStatus.FOUND).body(retrieved);
+    }
 }

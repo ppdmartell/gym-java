@@ -9,6 +9,8 @@ import com.example.mongodb.model.Student;
 import com.example.mongodb.repository.StudentRepository;
 import com.example.mongodb.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -86,6 +88,19 @@ public class StudentServiceImpl implements StudentService {
         List<Student> students = studentRepository.findByNameOrEmail(name, email);
         if(students.isEmpty()) throw new ResourceNotFoundException("No student found with name: " + name + " or email: " + email);
         return students;
+    }
+
+    /* Use getContent() over toList() if only want to read, since toList():
+    *   Converts the entire Page<Student> (which is an iterable) to a new List.
+    *   Internally calls StreamSupport.stream(...).collect(Collectors.toList()).
+    *   Slightly less efficient than getContent() because it doesn't leverage the Page interface directly.
+    *   Still works, but more generic, and not the idiomatic Spring way for paged results.
+    * */
+    @Override
+    public List<Student> getStudentsPaginated(int pageNo, int pageSize) {
+        if(pageNo <= 0 || pageSize <= 0) throw new IllegalArgumentException("Page number and page size can't be zero of negative.");
+        Pageable pageable = PageRequest.of(pageNo - 1, pageSize);
+        return studentRepository.findAll(pageable).getContent();
     }
 
     private void checkIfAnyStudentExists(List<Student> students) {

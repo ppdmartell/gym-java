@@ -15,4 +15,5 @@ public interface StudentService {
     List<Student> findByNameAndEmail(String name, String email);
     List<Student> findByNameOrEmail(String name, String email);
     List<Student> createStudentsInBulk(List<Student> students);
+    List<Student> getStudentsPaginated(int pageNo, int pageSize);
 }
