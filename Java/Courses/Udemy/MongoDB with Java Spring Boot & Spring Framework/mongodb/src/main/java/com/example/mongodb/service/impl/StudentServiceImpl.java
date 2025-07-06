@@ -51,4 +51,11 @@ public class StudentServiceImpl implements StudentService {
     public List<Student> getAllStudents() {
         return studentRepository.findAll();
     }
+
+    @Override
+    public List<Student> getStudentsByName(String name) {
+        List<Student> students = studentRepository.findAllByName(name);
+        if (students.isEmpty()) throw new ResourceNotFoundException("No student found with name: " + name);
+        return students;
+    }
 }
