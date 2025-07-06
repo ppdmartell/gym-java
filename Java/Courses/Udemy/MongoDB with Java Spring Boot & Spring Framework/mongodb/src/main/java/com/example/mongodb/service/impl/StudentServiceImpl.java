@@ -94,6 +94,13 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
+    public List<Student> getStudentsByEmailLike(String like) {
+        List<Student> students = studentRepository.findByEmailLike(like);
+        if(students.isEmpty()) throw new ResourceNotFoundException("No student was found with a portion of email like: " + like);
+        return students;
+    }
+
+    @Override
     public List<Student> findByNameAndEmail(String name, String email) {
         List<Student> students = studentRepository.findByNameAndEmail(name, email);
         if(students.isEmpty()) throw new ResourceNotFoundException("No student found with name: " + name + " and email: " + email);

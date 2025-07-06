@@ -60,6 +60,13 @@ public class StudentController {
         return studentService.getStudentsByName(name);
     }
 
+    // Tested in postman with http://localhost:8080/api/student/get/email/like?like=gmail
+    @GetMapping("/get/email/like")
+    public ResponseEntity<List<Student>> getStudentsByEmailLike(@RequestParam String like) {
+        List<Student> retrieved = studentService.getStudentsByEmailLike(like);
+        return ResponseEntity.status(HttpStatus.FOUND).body(retrieved);
+    }
+
     @GetMapping("/get/department/name")
     public ResponseEntity<List<Student>> getStudentsByDepartmentName(@RequestParam String name) {
         List<Student> retrieved = studentService.getStudentsByDepartmentName(name);

@@ -19,4 +19,5 @@ public interface StudentService {
     List<Student> getStudentsSortedByName();
     List<Student> getStudentsByDepartmentName(String name);
     List<Student> getStudentsBySubjectName(String name);
+    List<Student> getStudentsByEmailLike(String like);
 }
