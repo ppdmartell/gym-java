@@ -66,6 +66,12 @@ public class StudentController {
         return ResponseEntity.status(HttpStatus.FOUND).body(retrieved);
     }
 
+    @GetMapping("/get/subjects/name")
+    public ResponseEntity<List<Student>> getStudentsBySubjectName(@RequestParam String name) {
+        List<Student> retrieved = studentService.getStudentsBySubjectName(name);
+        return ResponseEntity.status(HttpStatus.FOUND).body(retrieved);
+    }
+
     // Tested in postman with http://localhost:8080/api/student/get/nameandemail?name=Peter&email=peter@test.com
     @GetMapping("/get/nameandemail")
     public List<Student> findByNameAndEmail(@RequestParam String name, @RequestParam String email) {

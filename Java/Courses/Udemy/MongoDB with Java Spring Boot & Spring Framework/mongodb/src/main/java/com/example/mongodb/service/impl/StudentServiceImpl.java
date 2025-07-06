@@ -87,6 +87,13 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
+    public List<Student> getStudentsBySubjectName(String name) {
+        List<Student> students = studentRepository.findBySubjectsName(name);
+        if(students.isEmpty()) throw new ResourceNotFoundException("No subject found with name: " + name);
+        return students;
+    }
+
+    @Override
     public List<Student> findByNameAndEmail(String name, String email) {
         List<Student> students = studentRepository.findByNameAndEmail(name, email);
         if(students.isEmpty()) throw new ResourceNotFoundException("No student found with name: " + name + " and email: " + email);

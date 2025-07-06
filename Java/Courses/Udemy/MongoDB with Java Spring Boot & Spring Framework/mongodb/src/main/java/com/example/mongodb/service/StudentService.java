@@ -18,4 +18,5 @@ public interface StudentService {
     List<Student> getStudentsPaginated(int pageNo, int pageSize);
     List<Student> getStudentsSortedByName();
     List<Student> getStudentsByDepartmentName(String name);
+    List<Student> getStudentsBySubjectName(String name);
 }
