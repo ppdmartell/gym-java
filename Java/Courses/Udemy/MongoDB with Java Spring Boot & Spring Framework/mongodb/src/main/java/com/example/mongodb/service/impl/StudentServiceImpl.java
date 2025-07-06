@@ -52,10 +52,30 @@ public class StudentServiceImpl implements StudentService {
         return studentRepository.findAll();
     }
 
+
+    /*
+    * Method studentRepository.findAllByName(name) can be automatically created using the IDE capabilities
+    * Please note, the method was created in StudentRepository interface that extends MongoRepository<Student, String>
+    * Because by default it appears it doesn't come, so this is a capability offered by MongoRepository interface (JPA)
+    */
     @Override
     public List<Student> getStudentsByName(String name) {
         List<Student> students = studentRepository.findAllByName(name);
         if (students.isEmpty()) throw new ResourceNotFoundException("No student found with name: " + name);
+        return students;
+    }
+
+    @Override
+    public List<Student> findByNameAndEmail(String name, String email) {
+        List<Student> students = studentRepository.findByNameAndEmail(name, email);
+        if (students.isEmpty()) throw new ResourceNotFoundException("No student found with name: " + name + " and email: " + email);
+        return students;
+    }
+
+    @Override
+    public List<Student> findByNameOrEmail(String name, String email) {
+        List<Student> students = studentRepository.findByNameOrEmail(name, email);
+        if (students.isEmpty()) throw new ResourceNotFoundException("No student found with name: " + name + " or email: " + email);
         return students;
     }
 }

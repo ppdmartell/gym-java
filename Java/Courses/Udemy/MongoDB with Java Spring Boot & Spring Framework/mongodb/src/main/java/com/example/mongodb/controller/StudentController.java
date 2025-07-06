@@ -51,4 +51,20 @@ public class StudentController {
     public List<Student> getStudentsByName(@PathVariable String name) {
         return studentService.getStudentsByName(name);
     }
+
+    // Tested in postman with http://localhost:8080/api/student/get/nameandemail?name=Peter&email=peter@test.com
+    @GetMapping("/get/nameandemail")
+    public List<Student> findByNameAndEmail(@RequestParam String name, @RequestParam String email) {
+        return studentService.findByNameAndEmail(name, email);
+    }
+
+    /* Tested with & in postman, since there is no OR character, just need to change to @GetMapping("/get/nameoremail")
+    * logic is controlled here.
+    * By the way, wilcard can be used for email /api/student/get/nameoremail?name=Peter&email=*@test.com
+    * in postman and will return without issues. But using wildcard with the name and email combined didn't work
+    */
+    @GetMapping("/get/nameoremail")
+    public List<Student> findByNameOrEmail(@RequestParam String name, @RequestParam String email) {
+        return studentService.findByNameOrEmail(name, email);
+    }
 }
