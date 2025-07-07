@@ -2,6 +2,7 @@ package com.example.mongodb.repository;
 
 import com.example.mongodb.model.Student;
 import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.data.mongodb.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -20,4 +21,7 @@ public interface StudentRepository extends MongoRepository<Student, String> {
     List<Student> findBySubjectsName(String subjectsName);
     List<Student> findByEmailLike(String email);
     List<Student> findByNameStartingWith(String word);
+
+    @Query ("{ \"name\" : \"?0\"}")
+    List<Student> getByName(String name);
 }

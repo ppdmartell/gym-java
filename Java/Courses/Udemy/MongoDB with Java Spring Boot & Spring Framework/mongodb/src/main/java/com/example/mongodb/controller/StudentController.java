@@ -60,6 +60,12 @@ public class StudentController {
         return studentService.getStudentsByName(name);
     }
 
+    @GetMapping("/get/name/native/{name}")
+    public ResponseEntity<List<Student>> getStudentByNameNativeWay(@PathVariable String name) {
+        List<Student> retrieved = studentService.getStudentByNameNativeWay(name);
+        return ResponseEntity.status(HttpStatus.FOUND).body(retrieved);
+    }
+
     // Tested with http://localhost:8080/api/student/get/name/startswith?word=Elon
     @GetMapping("/get/name/startswith")
     public ResponseEntity<List<Student>> getStudentsNameStartsWith(@RequestParam String word) {

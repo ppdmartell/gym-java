@@ -21,4 +21,5 @@ public interface StudentService {
     List<Student> getStudentsBySubjectName(String name);
     List<Student> getStudentsByEmailLike(String like);
     List<Student> getStudentsNameStartsWith(String word);
+    List<Student> getStudentByNameNativeWay(String name);
 }
