@@ -80,6 +80,13 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
+    public List<Student> getStudentsNameStartsWith(String word) {
+        List<Student> students = studentRepository.findByNameStartingWith(word);
+        if(students.isEmpty()) throw new ResourceNotFoundException("No student's name starts with: " + word);
+        return students;
+    }
+
+    @Override
     public List<Student> getStudentsByDepartmentName(String name) {
         List<Student> students = studentRepository.findByDepartmentName(name);
         if(students.isEmpty()) throw new ResourceNotFoundException("Department not found for name: " + name);

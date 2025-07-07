@@ -60,6 +60,13 @@ public class StudentController {
         return studentService.getStudentsByName(name);
     }
 
+    // Tested with http://localhost:8080/api/student/get/name/startswith?word=Elon
+    @GetMapping("/get/name/startswith")
+    public ResponseEntity<List<Student>> getStudentsNameStartsWith(@RequestParam String word) {
+        List<Student> retrieved = studentService.getStudentsNameStartsWith(word);
+        return ResponseEntity.status(HttpStatus.FOUND).body(retrieved);
+    }
+
     // Tested in postman with http://localhost:8080/api/student/get/email/like?like=gmail
     @GetMapping("/get/email/like")
     public ResponseEntity<List<Student>> getStudentsByEmailLike(@RequestParam String like) {
