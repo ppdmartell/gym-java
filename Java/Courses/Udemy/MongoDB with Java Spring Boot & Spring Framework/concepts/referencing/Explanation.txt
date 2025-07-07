@@ -1,0 +1,61 @@
+Referencing is when there is a relationship between Collections (Department and Subject are no longer documents, but collections on their own). The course and the code before was using embedding, where Department and Subject are documents, part of Student.
+
+Embedding (denormalization) — Recommended when data is closely related:
+===============================================================================
+- Everything is stored in one document
+- Fast reads (no joins!)
+- Great when: child data is only used in this context or doesn’t change frequently
+
+Example:
+----------
+{
+  "name": "John",
+  "email": "john@example.com",
+  "department": {
+    "name": "Math",
+    "location": "Building A"
+  }
+}
+
+
+Referencing (normalization) — When documents are large or reused
+===============================================================================
+- Like a foreign key (but not enforced)
+- You need manual joins (via $lookup in aggregations or multiple queries in code)
+- Use when: the child (e.g. Department) is shared across many documents and updated often
+
+
+Example:
+---------
+// Student document
+{
+  "name": "John",
+  "departmentId": "64f2..."
+}
+
+// Department document
+{
+  "_id": "64f2...",
+  "name": "Math",
+  "location": "Building A"
+}
+
+
+
+
+                                  When to Use Which
+Scenario                                                             Best Approach
+One-to-few, tightly coupled                                              Embed
+One-to-many, large or reused                                           Reference
+Read-heavy app needing fast queries                                      Embed
+Shared data across documents (e.g. user roles, categories)	       Reference
+
+
+
+
+Rule of Thumb (from MongoDB Docs):
+
+    “Design your schema according to the application's query patterns.”
+
+This means: if you're often reading data together, embed it.
+If data is updated independently or shared, reference it.

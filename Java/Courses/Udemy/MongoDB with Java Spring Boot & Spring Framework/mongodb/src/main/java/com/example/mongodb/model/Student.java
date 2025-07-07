@@ -1,6 +1,7 @@
 package com.example.mongodb.model;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.Transient;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.List;
@@ -16,6 +17,14 @@ public class Student {
 
     private Department department;
     private List<Subjects> subjects;
+
+
+    /* You annotate with @Transient a field you won't persist or retrieve from the database.
+    *  use it when you want to write some logic for this field.
+    *  BUT IT WILL BE SHOWN IN AN API CALL IF YOU ADD GETTER WITH THE LOGIC INSIDE (OR NOT)!
+    * */
+    @Transient
+    private double average;
 
     public String getId() {
         return id;
@@ -55,6 +64,10 @@ public class Student {
 
     public void setSubjects(List<Subjects> subjects) {
         this.subjects = subjects;
+    }
+
+    public double getAverage() {
+        return 3.14;
     }
 
     @Override
