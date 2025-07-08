@@ -5,9 +5,6 @@ import com.example.blog.model.dto.post.PostDto;
 import com.example.blog.model.entity.Post;
 import org.springframework.stereotype.Component;
 
-import java.time.LocalDateTime;
-import java.util.Optional;
-
 
 // This is manual mapper, consider using MapStruct
 @Component

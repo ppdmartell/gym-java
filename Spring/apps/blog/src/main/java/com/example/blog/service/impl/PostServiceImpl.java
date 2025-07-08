@@ -19,6 +19,7 @@ public class PostServiceImpl implements PostService {
         this.postMapper = postMapper;
     }
 
+    @Override
     public PostDto createPost(NewPostDto newPostDto) {
         Post post = postMapper.toEntity(newPostDto);
         postRepository.save(post);
