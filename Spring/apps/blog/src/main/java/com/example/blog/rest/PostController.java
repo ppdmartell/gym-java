@@ -2,7 +2,6 @@ package com.example.blog.rest;
 
 import com.example.blog.model.dto.post.NewPostDto;
 import com.example.blog.model.dto.post.PostDto;
-import com.example.blog.model.entity.Post;
 import com.example.blog.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
