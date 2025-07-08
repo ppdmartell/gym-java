@@ -1,7 +1,5 @@
 package com.example.blog.model.dto.post;
 
-import com.example.blog.model.dto.comment.CommentDto;
+import java.time.LocalDateTime;
 
-import java.util.List;
-
-public record PostDto(String id, String title, String body, String createdDated, List<CommentDto> comments) {}
+public record PostDto(String id, String title, String body, LocalDateTime createdDate, String updatedDate) {}
