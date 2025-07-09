@@ -11,6 +11,8 @@ import com.example.blog.repository.PostRepository;
 import com.example.blog.service.CommentService;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class CommentServiceImpl implements CommentService {
 
@@ -26,12 +28,35 @@ public class CommentServiceImpl implements CommentService {
 
     @Override
     public CommentDto addCommentToPost(String postId, NewCommentDto newCommentDto) {
-        Post post = postRepository.findById(postId).
-                orElseThrow(() -> new ResourceNotFoundException("No post found for id: " + postId));
+        Post post = checkIfPostExists(postId);
 
         Comment comment = commentMapper.toEntity(newCommentDto);
         commentRepository.save(comment);
         return commentMapper.toCommentDto(comment);
 
+    }
+
+    @Override
+    public List<CommentDto> getAllComments(String postId) {
+        Post post = checkIfPostExists(postId);
+        return commentRepository.findByPostId(postId);
+    }
+
+    @Override
+    public List<CommentDto> getAllCommentsSortedAsc(String postId) {
+        Post post = checkIfPostExists(postId);
+        return commentRepository.findByPostIdOrderByCreatedDateAsc(postId);
+    }
+
+    @Override
+    public List<CommentDto> getAllCommentsSortedDesc(String postId) {
+        Post post = checkIfPostExists(postId);
+        return commentRepository.findByPostIdOrderByCreatedDateDesc(postId);
+    }
+
+    // PRIVATE METHODS
+    private Post checkIfPostExists(String postId) {
+        return postRepository.findById(postId).
+                orElseThrow(() -> new ResourceNotFoundException("No post found for id: " + postId));
     }
 }
